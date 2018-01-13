@@ -15,6 +15,19 @@
 		</ul>
 	</div>
 </div>
-<div id="large_text">Add a new robot</div>
+<form id="text_field">
+	Robot/Team Number:<br>
+	<input type="number" name="firstname"><br>
+	<br>
+	<b><font size="+3">Autonomous:</font></b><br>
+	Did it cross the base line?<br>
+	<input type="radio" name="crossedBaseline" value="yes" > Yes<br>
+	<input type="radio" name="crossedBaseline" value="no" > No<br>
+	<br>
+	Does it place a cube? Where?<br>
+	<input type="radio" name="placedCubeAuto" value="yes, scale" > Yes, on scale<br>
+	<input type="radio" name="placedCubeAuto" value="yes, switch" > Yes, on switch<br>
+	<input type="radio" name="placedCubeAuto" value="no" > No<br>
+</form>
 </body>
 </html>
