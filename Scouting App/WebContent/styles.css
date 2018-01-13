@@ -8,6 +8,12 @@ body{
 	font-size: 18px;
 }
 
+form {
+	width: 550px;
+	height: 450px;
+	position: relative;
+}
+
 #nav{
 	background-color: #333;
 }
