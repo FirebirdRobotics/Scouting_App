@@ -45,6 +45,36 @@ body{
 	text-decoration: none;
 }
 
-#nav ul li a:hover{
+#nav ul li a:hover ul{
+	display: block;
+}
+
+#nav ul ul{
+	display: none;
+	position: absolute;
+	background-color: #333;
+	border: 5px solid #222;
+	border-top: 0;
+	margin-left: -5;
+}
+
+#nav ul ul li{
+	display: block;
+}
+
+#nav ul ul li a, visited {
+	color: #ccc;
+}
+
+#nav ul ul li a: hover{
+	color: #099;
+}
+
+#large_text{
+	margin: auto;
+	text-align: center;
+}
+
+#google_sheet{
 	
 }
