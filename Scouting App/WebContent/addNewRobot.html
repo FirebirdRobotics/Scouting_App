@@ -17,7 +17,7 @@
 </div>
 <form id="text_field">
 	Robot/Team Number:<br>
-	<input type="number" name="firstname"><br>
+	<input type="text" name="robotNumber"><br>
 	<br>
 	<b><font size="+3">Autonomous:</font></b><br>
 	Did it cross the base line?<br>
@@ -28,6 +28,35 @@
 	<input type="radio" name="placedCubeAuto" value="yes, scale" > Yes, on scale<br>
 	<input type="radio" name="placedCubeAuto" value="yes, switch" > Yes, on switch<br>
 	<input type="radio" name="placedCubeAuto" value="no" > No<br>
-</form>
+	<br>
+	How many cubes did it place on our switch?<br>
+	<input type="number" name="allySwitch"><br>
+	<br>
+	How many cubes did it place on the enemy switch?<br>
+	<input type="number" name="enemySwitch"><br>
+	<br>
+	How many cubes did it place on the scale?<br>
+	<input type="number" name="scale"><br>
+	<br>
+	Do they park or attempt to climb? Are they successful in their climb?<br>
+	<input type="radio" name="parkOrClimb" value="successful climb" > Attempted climb, successful<br>
+	<input type="radio" name="parkOrClimb" value="unsuccessful climb" > Attempted climb, unsuccessful<br>
+	<input type="radio" name="parkOrClimb" value="parked" > Parked<br>
+	<br>
+	Did it carry other robots?
+	<input type="radio" name="carriedRobots" value="yes" > Yes<br>
+	<input type="radio" name="carriedRobots" value="no" > No<br>
+	<br>
+	Comment Box (speed/accuracy of the robot, did it break down, did their drive team seem confused)<br>
+	<form action="blank.htm" method="post">
+	<div>
+	<textarea name="comments" id="comments" rows="10" cols="80">
+	
+	</textarea>
+	</div>
+	<input type="submit" value="Submit">
+	</form>
+	<br>
+	</form>
 </body>
 </html>
