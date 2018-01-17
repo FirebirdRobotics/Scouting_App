@@ -4,6 +4,7 @@
 <meta charset="ISO-8859-1">
 	<title>CHS FIRST Robotics Scouting Application</title>
 	<link href="styles.css" type="text/css" rel="stylesheet"/>
+	<link href="test.js" type="text/js" rel="stylesheet"/>
 </head>
 <body>
 <div id="nav">
@@ -25,19 +26,40 @@
 	<input type="radio" name="crossedBaseline" value="no" > No<br>
 	<br>
 	Did it place a cube? Where?<br>
-	<input type="radio" name="placedCubeAuto" value="yes, scale" > Yes, on scale<br>
-	<input type="radio" name="placedCubeAuto" value="yes, switch" > Yes, on switch<br>
-	<input type="radio" name="placedCubeAuto" value="no" > No<br>
+	<input type="radio" name="placedCubeAuto"> Yes, on scale<br>
+	<input type="radio" name="placedCubeAuto"> Yes, on switch<br>
+	<input type="radio" name="placedCubeAuto"> No<br>
 	<br>
 	<b><font size="+3">Teleop:</font></b><br>
 	How many cubes did it place on our switch?<br>
-	<input type="number" name="allySwitch"><br>
+	<span id="demo" style="font-weight:bold;color:black">1</span><br>
+	<div class="slidecontainer">
+		<input type="range" min="1" max="10" value="1" class="slider" id="myRange">
+	</div><br>
 	<br>
 	How many cubes did it place on the enemy switch?<br>
-	<input type="number" name="enemySwitch"><br>
+	<input type="radio" name="enemySwitch">1
+	<input type="radio" name="enemySwitch">2
+	<input type="radio" name="enemySwitch">3
+	<input type="radio" name="enemySwitch">4
+	<input type="radio" name="enemySwitch">5<br>
+	<input type="radio" name="enemySwitch">6
+	<input type="radio" name="enemySwitch">7
+	<input type="radio" name="enemySwitch">8
+	<input type="radio" name="enemySwitch">9
+	<input type="radio" name="enemySwitch">10+<br>
 	<br>
 	How many cubes did it place on the scale?<br>
-	<input type="number" name="scale"><br>
+	<input type="radio" name="scale">1
+	<input type="radio" name="scale">2
+	<input type="radio" name="scale">3
+	<input type="radio" name="scale">4
+	<input type="radio" name="scale">5<br>
+	<input type="radio" name="scale">6
+	<input type="radio" name="scale">7
+	<input type="radio" name="scale">8
+	<input type="radio" name="scale">9
+	<input type="radio" name="scale">10+<br>
 	<br>
 	Do they park or attempt to climb? Are they successful in their climb?<br>
 	<input type="radio" name="parkOrClimb" value="successful climb" > Attempted climb, successful<br>
@@ -52,7 +74,6 @@
 	<form action="blank.htm" method="post">
 	<div>
 	<textarea name="comments" id="comments" rows="10" cols="80">
-	
 	</textarea>
 	</div>
 	<input type="submit" value="Submit">
