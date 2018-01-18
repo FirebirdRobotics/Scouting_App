@@ -4,7 +4,6 @@
 <meta charset="ISO-8859-1">
 	<title>CHS FIRST Robotics Scouting Application</title>
 	<link href="styles.css" type="text/css" rel="stylesheet"/>
-	<link href="test.js" type="text/js" rel="stylesheet"/>
 </head>
 <body>
 <div id="nav">
@@ -13,6 +12,7 @@
 			<li><a href="index.html">Main Menu</a></li>
 			<li><a href="addNewRobot.html">New Robot</a></li>
 			<li><a href="viewData.html">View Data</a></li>
+			<li><a href="login.html">Log In</a></li>
 		</ul>
 	</div>
 </div>
@@ -34,32 +34,20 @@
 	How many cubes did it place on our switch?<br>
 	<span id="demo" style="font-weight:bold;color:black">1</span><br>
 	<div class="slidecontainer">
-		<input type="range" min="1" max="10" value="1" class="slider" id="myRange">
+		<input type="range" min="1" max="30" value="1" class="slider" id="myRange">
 	</div><br>
 	<br>
 	How many cubes did it place on the enemy switch?<br>
-	<input type="radio" name="enemySwitch">1
-	<input type="radio" name="enemySwitch">2
-	<input type="radio" name="enemySwitch">3
-	<input type="radio" name="enemySwitch">4
-	<input type="radio" name="enemySwitch">5<br>
-	<input type="radio" name="enemySwitch">6
-	<input type="radio" name="enemySwitch">7
-	<input type="radio" name="enemySwitch">8
-	<input type="radio" name="enemySwitch">9
-	<input type="radio" name="enemySwitch">10+<br>
+	<span id="demoTwo" style="font-weight:bold;color:black">1</span><br>
+	<div class="slidecontainer">
+		<input type="range" min="1" max="30" value="1" class="slider" id="myRangeTwo">
+	</div><br>
 	<br>
 	How many cubes did it place on the scale?<br>
-	<input type="radio" name="scale">1
-	<input type="radio" name="scale">2
-	<input type="radio" name="scale">3
-	<input type="radio" name="scale">4
-	<input type="radio" name="scale">5<br>
-	<input type="radio" name="scale">6
-	<input type="radio" name="scale">7
-	<input type="radio" name="scale">8
-	<input type="radio" name="scale">9
-	<input type="radio" name="scale">10+<br>
+	<span id="demoThree" style="font-weight:bold;color:black">1</span><br>
+	<div class="slidecontainer">
+		<input type="range" min="1" max="30" value="1" class="slider" id="myRangeThree">
+	</div><br>
 	<br>
 	Do they park or attempt to climb? Are they successful in their climb?<br>
 	<input type="radio" name="parkOrClimb" value="successful climb" > Attempted climb, successful<br>
@@ -80,5 +68,28 @@
 	</form>
 	<br>
 	</form>
+	<script>
+	var slider = document.getElementById("myRange");
+	var output = document.getElementById("demo");
+	var sliderTwo = document.getElementById("myRangeTwo");
+	var outputTwo = document.getElementById("demoTwo");
+	var sliderThree = document.getElementById("myRangeThree");
+	var outputThree = document.getElementById("demoThree");
+	output.innerHTML = slider.value;
+	outputTwo.innerHTML = sliderTwo.value;
+	outputThree.innerHTML = sliderThree.value;
+
+	slider.oninput = function() {
+	    output.innerHTML = this.value;
+	}
+	
+	sliderTwo.oninput = function() {
+		outputTwo.innerHTML = this.value;
+	}
+	
+	sliderThree.oninput = function() {
+		outputThree.innerHTML = this.value;
+	}
+	</script>
 </body>
 </html>
