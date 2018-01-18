@@ -8,12 +8,6 @@ body{
 	font-size: 18px;
 }
 
-form {
-	width: 550px;
-	height: 450px;
-	position: relative;
-}
-
 #nav{
 	background-color: #333;
 }
@@ -100,8 +94,9 @@ form {
 .slider {
     -webkit-appearance: none;
     appearance: none;
-    width: 100%;
-    height: 25px;
+    width: 40%;
+    height: 15px;
+    border-radius: 5px;
     background: #d3d3d3;
     outline: none;
     opacity: 0.7;
@@ -118,6 +113,7 @@ form {
     appearance: none;
     width: 25px;
     height: 25px;
+    border-radius: 50%;
     background: #4CAF50;
     cursor: pointer;
 }
