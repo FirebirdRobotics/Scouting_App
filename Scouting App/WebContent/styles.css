@@ -4,87 +4,93 @@ body{
 	padding: 0;
 	margin: 0;
 	overflow-y: scroll;
-	font-family: Arial;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 }
 
-#nav{
-	background-color: #333;
+#navbar{
+	width: 100%;
+	line-height: 100%;
+	overflow: hidden;
+	background-color: #444;
 }
 
-#nav-wrapper{
-	width: 960px;
-	margin: 0 auto;
-	text-align: left;
+#navbar h1{
+	float: left;
 }
 
-#nav ul{
-	list-style-type: none;
+#navbar h1 a{
+	text-decoration: none;
+	color: white;
+	margin-left: 15px;
+}
+
+#navbar ul{
+	list-style: none;
 	padding: 0;
 	margin: 0;
 	postition: relative;
 }
 
-#nav ul li{
+#navbar ul li{
 	display: inline-block;
+	list-style-type: none;
+	width: 200px;
+	opacity: 0.8;
+	float: right;
 }
 
-#nav ul li:hover{
-	background-color: #ff0000;
+#navbar ul li a{
+	text-align: center;
 }
 
-#nav ul li img{
+#navbar ul li:hover{
+	background-color: #e10000;
+	opacity: 1;
+}
+
+#navbar ul li img{
 	vertical-align: middle;
 	padding-left: 5px;
 }
 
-#nav ul li a,visited{
-	color: #e5e5e5;
+#navbar ul li a,visited{
+	color: #ffffff;
 	display: block;
 	padding: 15px;
 	text-decoration: none;
 }
 
-#nav ul li a:hover{
+#navbar ul li a:hover{
 	color: white;
 	text-decoration: none;
 }
 
-#nav ul li a:hover ul{
+#navbar ul li a:hover ul{
 	display: block;
 }
 
-#nav ul ul{
-	display: none;
-	position: absolute;
-	background-color: #333;
-	border: 5px solid #222;
-	border-top: 0;
-	margin-left: -5;
+#navbar ul li a.active{
+	background-color: #f00000;
+	text-decoration: none;
 }
 
-#nav ul ul li{
-	display: block;
-}
-
-#nav ul ul li a, visited {
-	color: #ccc;
-}
-
-#nav ul ul li a: hover{
-	color: #099;
-}
-
-#text_field{
+#survey{
 	padding: 25px;
 }
 
-#text_field input{
-	display: inline-block;
+input{
+	font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+textarea{
+	font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 #google_sheet{
-	border: 0;
+	border: 0px;
 }
 
 .slidecontainer {
@@ -114,7 +120,7 @@ body{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #4CAF50;
+    background: #f00000;
     cursor: pointer;
 }
 
