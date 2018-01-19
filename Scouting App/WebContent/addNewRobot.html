@@ -4,71 +4,70 @@
 <meta charset="ISO-8859-1">
 	<title>CHS FIRST Robotics Scouting Application</title>
 	<link href="styles.css" type="text/css" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-<div id="nav">
-	<div id="nav_wrapper">
-		<ul>
-			<li><a href="index.html">Main Menu</a></li>
-			<li><a href="addNewRobot.html">New Robot</a></li>
-			<li><a href="viewData.html">View Data</a></li>
-			<li><a href="login.html">Log In</a></li>
-		</ul>
-	</div>
+<div id="navbar">
+	<h1><a href="index.html">Scouting App</a></h1>
+	<ul>
+		<li><a href="login.html">Log In</a></li>
+		<li><a href="viewData.html">View Data</a></li>
+		<li><a class="active" href="addNewRobot.html">New Robot</a></li>
+		<li><a href="index.html">Main Menu</a></li>
+	</ul>
 </div>
-<form id="text_field">
+<form id="survey">
 	<b><font size="+3">Robot/Team Number:</font></b><br>
-	<input type="text" name="robotNumber"><br>
+		<input type="text" name="robotNumber"><br>
 	<br>
 	<b><font size="+3">Autonomous:</font></b><br>
-	Did it cross the base line?<br>
-	<input type="radio" name="crossedBaseline" value="yes" > Yes<br>
-	<input type="radio" name="crossedBaseline" value="no" > No<br>
+		Did it cross the base line?<br>
+		<input type="radio" name="crossedBaseline" value="yes" > Yes<br>
+		<input type="radio" name="crossedBaseline" value="no" > No<br>
 	<br>
-	Did it place a cube? Where?<br>
-	<input type="radio" name="placedCubeAuto"> Yes, on scale<br>
-	<input type="radio" name="placedCubeAuto"> Yes, on switch<br>
-	<input type="radio" name="placedCubeAuto"> No<br>
+		Did it place a cube? Where?<br>
+		<input type="radio" name="placedCubeAuto"> Yes, on scale<br>
+		<input type="radio" name="placedCubeAuto"> Yes, on switch<br>
+		<input type="radio" name="placedCubeAuto"> No<br>
 	<br>
 	<b><font size="+3">Teleop:</font></b><br>
-	How many cubes did it place on our switch?<br>
-	<span id="demo" style="font-weight:bold;color:black">1</span><br>
+		How many cubes did it place on our switch?<br>
+		<span id="demo" style="font-weight:bold;color:black">1</span><br>
 	<div class="slidecontainer">
 		<input type="range" min="1" max="30" value="1" class="slider" id="myRange">
 	</div><br>
 	<br>
-	How many cubes did it place on the enemy switch?<br>
-	<span id="demoTwo" style="font-weight:bold;color:black">1</span><br>
+		How many cubes did it place on the enemy switch?<br>
+		<span id="demoTwo" style="font-weight:bold;color:black">1</span><br>
 	<div class="slidecontainer">
 		<input type="range" min="1" max="30" value="1" class="slider" id="myRangeTwo">
 	</div><br>
 	<br>
-	How many cubes did it place on the scale?<br>
-	<span id="demoThree" style="font-weight:bold;color:black">1</span><br>
+		How many cubes did it place on the scale?<br>
+		<span id="demoThree" style="font-weight:bold;color:black">1</span><br>
 	<div class="slidecontainer">
 		<input type="range" min="1" max="30" value="1" class="slider" id="myRangeThree">
 	</div><br>
 	<br>
-	Do they park or attempt to climb? Are they successful in their climb?<br>
-	<input type="radio" name="parkOrClimb" value="successful climb" > Attempted climb, successful<br>
-	<input type="radio" name="parkOrClimb" value="unsuccessful climb" > Attempted climb, unsuccessful<br>
-	<input type="radio" name="parkOrClimb" value="parked" > Parked<br>
+		Do they park or attempt to climb? Are they successful in their climb?<br>
+		<input type="radio" name="parkOrClimb" value="successful climb" > Attempted climb, successful<br>
+		<input type="radio" name="parkOrClimb" value="unsuccessful climb" > Attempted climb, unsuccessful<br>
+		<input type="radio" name="parkOrClimb" value="parked" > Parked<br>
 	<br>
-	Did it carry other robots?<br>
-	<input type="radio" name="carriedRobots" value="yes" > Yes<br>
-	<input type="radio" name="carriedRobots" value="no" > No<br>
+		Did it carry other robots?<br>
+		<input type="radio" name="carriedRobots" value="yes" > Yes<br>
+		<input type="radio" name="carriedRobots" value="no" > No<br>
 	<br>
-	Comment Box (speed/accuracy of the robot, did it break down, did their drive team seem confused)<br>
-	<form action="blank.htm" method="post">
+		Comment Box (speed/accuracy of the robot, did it break down, did their drive team seem confused)<br>
 	<div>
-	<textarea name="comments" id="comments" rows="10" cols="80">
-	</textarea>
+		<textarea name="comments" id="comments" rows="10" cols="80"></textarea>
 	</div>
-	<input type="submit" value="Submit">
-	</form>
 	<br>
-	</form>
-	<script>
+		<input type="submit" value="Submit">
+	<br>
+</form>
+<script>
+		// Slider Code
 	var slider = document.getElementById("myRange");
 	var output = document.getElementById("demo");
 	var sliderTwo = document.getElementById("myRangeTwo");
@@ -90,6 +89,6 @@
 	sliderThree.oninput = function() {
 		outputThree.innerHTML = this.value;
 	}
-	</script>
+</script>
 </body>
 </html>
