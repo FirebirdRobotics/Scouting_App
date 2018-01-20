@@ -5,7 +5,7 @@ body{
 	margin: 0;
 	overflow-y: scroll;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 18px;
+	font-size: 24px;
 }
 
 #navbar{
@@ -37,6 +37,7 @@ body{
 	list-style-type: none;
 	width: 200px;
 	opacity: 0.8;
+	font-size: 24px;
 	float: right;
 }
 
@@ -80,7 +81,7 @@ body{
 }
 
 input{
-	font-size: 18px;
+	font-size: 24px;
 	font-family: 'Open Sans', sans-serif;
 }
 
