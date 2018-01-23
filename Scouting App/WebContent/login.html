@@ -8,15 +8,56 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-<div id="navbar">
-	<div id="nav_wrapper">
-		<ul>
-			<li><a class="active" href="login.html">Log In</a></li>
-			<li><a href="viewData.html">View Data</a></li>
-			<li><a href="addNewRobot.html">New Robot</a></li>
-			<li><a href="index.html">Main Menu</a></li>
-		</ul>
+<header class="large">
+	<nav class="navbar">
+		<span class="open-slide">
+			<a href="#" onClick="openSlideMenu()">
+			<!-- ADD MENU SLIDE ICON HERE - we r going to use actual images bc they scale better and its much easier to use than svg code -->
+				<svg width="30" height="30">
+					<path d="M0,6 30,6" stroke="#fff" stroke-width="4"/>
+					<path d="M0,17 30,17" stroke="#fff" stroke-width="4"/>
+					<path d="M0,28 30,28" stroke="#fff" stroke-width="4"/>
+				</svg>
+			</a>
+		</span>
+		
+		<span class="login">
+			<a href="login.html">
+			<!-- SAME THING AS ABOVE -->
+				<svg width="30" height="30">
+					<path d="M28,30 28,4" stroke="#fff" stroke-width="4"/>
+					<path d="M11,6 28,6" stroke="#fff" stroke-width="4"/>
+					<path d="M11,28 28,28" stroke="#fff" stroke-width="4"/>
+					<path d="M13,6 13,10" stroke="#fff" stroke-width="4"/>
+					<path d="M13,28 13,24" stroke="#fff" stroke-width="4"/>
+					
+					<path d="M0,17 21,17" stroke="#fff" stroke-width="3"/>
+					<path d="M10,12 21,18" stroke="#fff" stroke-width="3"/>
+					<path d="M10,22 21,17" stroke="#fff" stroke-width="3"/>
+				</svg>
+			</a>
+		</span>
+	</nav>
+	
+	<div id="side-menu" class="side-navbar">
+		<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br>
+		<a href="index.html">Home</a>
+		<a href="addNewRobot.html">Add Robot</a>
+		<a href="viewData.html">View Data</a>
 	</div>
-</div>
+</header>
+
+	<script type="text/javascript">
+		//Sidebar
+	function openSlideMenu(){
+		document.getElementById('side-menu').style.width ='250px';
+		document.getElementById('main').style.marginLeft ='250px';
+	}
+	
+	function closeSlideMenu(){
+		document.getElementById('side-menu').style.width ='0';
+		document.getElementById('main').style.marginLeft ='0';
+	}
+	</script>
 </body>
 </html>
