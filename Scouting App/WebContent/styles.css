@@ -4,80 +4,105 @@ body{
 	padding: 0;
 	margin: 0;
 	overflow-y: scroll;
+	overflow-x: hidden;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 24px;
 }
 
-#navbar{
-	width: 100%;
-	line-height: 100%;
+.navbar{
+	background-color: #333;
 	overflow: hidden;
-	background-color: #444;
+	height: 60px;
 }
 
-#navbar h1{
+.navbar a{
 	float: left;
-}
-
-#navbar h1 a{
-	text-decoration: none;
-	color: white;
-	margin-left: 15px;
-}
-
-#navbar ul{
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	postition: relative;
-}
-
-#navbar ul li{
-	display: inline-block;
-	list-style-type: none;
-	width: 200px;
-	opacity: 0.8;
-	font-size: 24px;
-	float: right;
-}
-
-#navbar ul li a{
+	display: block;
+	color: #f2f2f2;
 	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
 }
 
-#navbar ul li:hover{
+.navbar ul{
+	margin: 8px 0 0 0;
+	list-style: none;
+}
+
+.navbar a:hover{
 	background-color: #e10000;
+}
+
+.side-navbar{
+	height: 100%;
+	width:0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	opacity: 0.9;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.5s;
+}
+
+.side-navbar a{
+	padding: 10px 10px 10px 30px;
+	text-decoration: none;
+	font-size: 22px;
+	color: #ccc;
+	display: block;
+	transition: 0.3s;
+}
+
+.side-navbar .btn-close{
+	position: absolute;
+	top: 0;
+	right: 22px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+.side-navbar:hover{
 	opacity: 1;
 }
 
-#navbar ul li img{
-	vertical-align: middle;
-	padding-left: 5px;
+.login{
+	float: right;
 }
 
-#navbar ul li a,visited{
-	color: #ffffff;
-	display: block;
-	padding: 15px;
-	text-decoration: none;
-}
-
-#navbar ul li a:hover{
+.heading{
 	color: white;
-	text-decoration: none;
+	text-align: center;
+	font-size: 40px;
 }
 
-#navbar ul li a:hover ul{
+.qty{
+	text-align: center;
 	display: block;
+	width: 40%;
+	margin: auto;
+	font-size: 60px;
 }
 
-#navbar ul li a.active{
-	background-color: #f00000;
+button{
+	color: #333;
+	background-color: #d3d3d3;
+	border-bottom: 4px solid #333;
 	text-decoration: none;
+	font-size: 60px;
+	width: 49%;
+	height: auto;
+	font-weight: bold;
 }
 
-#survey{
-	padding: 25px;
+#main{
+	transition: margin-left 0.5s;
+	padding: 20px;
+	overflow: hidden;
+	width: 100%;
 }
 
 input{
@@ -85,9 +110,16 @@ input{
 	font-family: 'Open Sans', sans-serif;
 }
 
+
+input[type="radio"]{
+	width: 30px;
+	height: 30px;
+}
+
 textarea{
 	font-size: 18px;
 	font-family: 'Open Sans', sans-serif;
+	width: 60%;
 }
 
 #google_sheet{
@@ -101,7 +133,7 @@ textarea{
 .slider {
     -webkit-appearance: none;
     appearance: none;
-    width: 40%;
+    width: 80%;
     height: 15px;
     border-radius: 5px;
     background: #d3d3d3;
@@ -130,4 +162,8 @@ textarea{
     height: 25px;
     background: #4CAF50;
     cursor: pointer;
+}
+
+@media(max-width:568px){
+	.open-slide{display:none}
 }
