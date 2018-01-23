@@ -8,66 +8,100 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-<div id="navbar">
-	<h1><a href="index.html">Scouting App</a></h1>
-	<ul>
-		<li><a href="login.html">Log In</a></li>
-		<li><a href="viewData.html">View Data</a></li>
-		<li><a class="active" href="addNewRobot.html">New Robot</a></li>
-		<li><a href="index.html">Main Menu</a></li>
-	</ul>
-</div>
-<form id="survey">
-	<b><font size="+3">Robot/Team Number:</font></b><br>
-		<input type="text" name="robotNumber"><br>
-	<br>
-	<b><font size="+3">Autonomous:</font></b><br>
-		Did it cross the base line?<br>
-		<input type="radio" name="crossedBaseline" value="yes" > Yes<br>
-		<input type="radio" name="crossedBaseline" value="no" > No<br>
-	<br>
-		Did it place a cube? Where?<br>
-		<input type="radio" name="placedCubeAuto"> Yes, on scale<br>
-		<input type="radio" name="placedCubeAuto"> Yes, on switch<br>
-		<input type="radio" name="placedCubeAuto"> No<br>
-	<br>
-	<b><font size="+3">Teleop:</font></b><br>
-		How many cubes did it place on our switch?<br>
-		<span id="demo" style="font-weight:bold;color:black">1</span><br>
-	<div class="slidecontainer">
-		<input type="range" min="1" max="30" value="1" class="slider" id="myRange">
-	</div><br>
-	<br>
-		How many cubes did it place on the enemy switch?<br>
-		<span id="demoTwo" style="font-weight:bold;color:black">1</span><br>
-	<div class="slidecontainer">
-		<input type="range" min="1" max="30" value="1" class="slider" id="myRangeTwo">
-	</div><br>
-	<br>
-		How many cubes did it place on the scale?<br>
-		<span id="demoThree" style="font-weight:bold;color:black">1</span><br>
-	<div class="slidecontainer">
-		<input type="range" min="1" max="30" value="1" class="slider" id="myRangeThree">
-	</div><br>
-	<br>
-		Do they park or attempt to climb? Are they successful in their climb?<br>
-		<input type="radio" name="parkOrClimb" value="successful climb" > Attempted climb, successful<br>
-		<input type="radio" name="parkOrClimb" value="unsuccessful climb" > Attempted climb, unsuccessful<br>
-		<input type="radio" name="parkOrClimb" value="parked" > Parked<br>
-	<br>
-		Did it carry other robots?<br>
-		<input type="radio" name="carriedRobots" value="yes" > Yes<br>
-		<input type="radio" name="carriedRobots" value="no" > No<br>
-	<br>
-		Comment Box (speed/accuracy of the robot, did it break down, did their drive team seem confused)<br>
-	<div>
-		<textarea name="comments" id="comments" rows="10" cols="80"></textarea>
+	<nav class="navbar">
+		<span class="open-slide">
+			<a href="#" onClick="openSlideMenu()">
+			<!-- ADD MENU SLIDE ICON HERE - we r going to use actual images bc they scale better and its much easier to use than svg code -->
+				<svg width="30" height="30">
+					<path d="M0,6 30,6" stroke="#fff" stroke-width="4"/>
+					<path d="M0,17 30,17" stroke="#fff" stroke-width="4"/>
+					<path d="M0,28 30,28" stroke="#fff" stroke-width="4"/>
+				</svg>
+			</a>
+		</span>
+		
+		<span class="login">
+			<a href="login.html">
+			<!-- SAME THING AS ABOVE -->
+				<svg width="30" height="30">
+					<path d="M28,30 28,4" stroke="#fff" stroke-width="4"/>
+					<path d="M11,6 28,6" stroke="#fff" stroke-width="4"/>
+					<path d="M11,28 28,28" stroke="#fff" stroke-width="4"/>
+					<path d="M13,6 13,10" stroke="#fff" stroke-width="4"/>
+					<path d="M13,28 13,24" stroke="#fff" stroke-width="4"/>
+					
+					<path d="M0,17 21,17" stroke="#fff" stroke-width="3"/>
+					<path d="M10,12 21,18" stroke="#fff" stroke-width="3"/>
+					<path d="M10,22 21,17" stroke="#fff" stroke-width="3"/>
+				</svg>
+			</a>
+		</span>
+	</nav>
+	
+	<div id="side-menu" class="side-navbar">
+		<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br>
+		<a href="index.html">Home</a>
+		<a href="addNewRobot.html">Add Robot</a>
+		<a href="viewData.html">View Data</a>
 	</div>
-	<br>
-		<input type="submit" value="Submit">
-	<br>
-</form>
-<script>
+
+	<div id="main">
+		<b><font size="+3">Robot/Team Number:</font></b><br>
+			<input type="text" name="robotNumber"><br>
+		<br>
+		<b><font size="+3">Autonomous:</font></b><br>
+			Did it cross the base line?<br>
+			<input type="radio" name="crossedBaseline" value="yes" > Yes<br>
+			<input type="radio" name="crossedBaseline" value="no" > No<br>
+		<br>
+			Did it place a cube? Where?<br>
+			<input type="radio" name="placedCubeAuto"> Yes, on scale<br>
+			<input type="radio" name="placedCubeAuto"> Yes, on switch<br>
+			<input type="radio" name="placedCubeAuto"> No<br>
+		<br>
+		<b><font size="+3">Teleop:</font></b><br>
+			Test Number Counter<br>
+		<div class="numCounter">
+			<input class="qty" id="qty" value="0"/><br>
+			<button id="sub" onclick="modifyQty(-1)">-</button>
+			<button id="add" onclick="modifyQty(1)">+</button>
+		</div><br>
+			How many cubes did it place on ally switch?<br>
+			<span id="demo" style="font-weight:bold;color:black">1</span><br>
+		<div class="slidecontainer">
+			<input type="range" min="0" max="30" value="0" class="slider" id="myRange">
+		</div><br>
+		<br>
+			How many cubes did it place on the enemy switch?<br>
+			<span id="demoTwo" style="font-weight:bold;color:black">1</span><br>
+		<div class="slidecontainer">
+			<input type="range" min="0" max="30" value="0" class="slider" id="myRangeTwo">
+		</div><br>
+		<br>
+			How many cubes did it place on the scale?<br>
+			<span id="demoThree" style="font-weight:bold;color:black">1</span><br>
+		<div class="slidecontainer">
+			<input type="range" min="0" max="30" value="0" class="slider" id="myRangeThree">
+		</div><br>
+		<br>
+			Do they park or attempt to climb? Are they successful in their climb?<br>
+			<input type="radio" name="parkOrClimb" value="successful climb" > Attempted climb, successful<br>
+			<input type="radio" name="parkOrClimb" value="unsuccessful climb" > Attempted climb, unsuccessful<br>
+			<input type="radio" name="parkOrClimb" value="parked" > Parked<br>
+		<br>
+			Did it carry other robots?<br>
+			<input type="radio" name="carriedRobots" value="yes" > Yes<br>
+			<input type="radio" name="carriedRobots" value="no" > No<br>
+		<br>
+			Comment Box (speed/accuracy of the robot, did it break down, did their drive team seem confused)<br>
+		<div>
+			<textarea name="comments" id="comments" rows="8"></textarea>
+		</div>
+		<br>
+			<input type="submit" value="Submit">
+		<br>
+	</div>
+	<script type="text/javascript">
 		// Slider Code
 	var slider = document.getElementById("myRange");
 	var output = document.getElementById("demo");
@@ -90,6 +124,17 @@
 	sliderThree.oninput = function() {
 		outputThree.innerHTML = this.value;
 	}
-</script>
+	
+		// Sidebar
+	function openSlideMenu(){
+		document.getElementById('side-menu').style.width ='250px';
+		document.getElementById('main').style.marginLeft ='250px';
+	}
+	
+	function closeSlideMenu(){
+		document.getElementById('side-menu').style.width ='0';
+		document.getElementById('main').style.marginLeft ='0';
+	}
+	</script>
 </body>
 </html>
