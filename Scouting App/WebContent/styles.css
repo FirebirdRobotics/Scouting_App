@@ -46,6 +46,7 @@ body{
 	overflow-x: hidden;
 	padding-top: 60px;
 	transition: 0.5s;
+	text-align: left;
 }
 
 .side-navbar a{
@@ -127,6 +128,7 @@ button{
 input{
 	font-size: 24px;
 	font-family: 'Open Sans', sans-serif;
+	width: 50%;
 }
 
 
@@ -135,10 +137,16 @@ input[type="radio"]{
 	height: 30px;
 }
 
+input[type="submit"]{
+	display: block;
+	text-align: center;
+	padding: 30%;
+}
+
 textarea{
 	font-size: 18px;
 	font-family: 'Open Sans', sans-serif;
-	width: 60%;
+	width: 100%;
 }
 
 img{
@@ -147,48 +155,37 @@ img{
 	float: left;
 }
 
-#google_sheet{
-	border: 0px;
+.innerBox{
+	width: 60%;
+	height: 60%;
+	display: inline-block;
+	background-color: #444;
+	color: white;
+	margin-top: 60px;
 }
 
-.slidecontainer {
-    width: 100%;
+.innerBox img{
+	width: 60%;
+	padding: 20%;
+	padding-top: 10px;
+	padding-bottom: 30px;
 }
 
-.slider {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 80%;
-    height: 15px;
-    border-radius: 5px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+.innerBox hr{
+	width: 80%;
 }
 
-.slider:hover {
-    opacity: 1;
+h1{
+	text-align: center;
 }
 
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #f00000;
-    cursor: pointer;
+.login-bg{
+	background-color: #f0f0f0;
+	text-align: center;
 }
 
-.slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: #4CAF50;
-    cursor: pointer;
-}
-
-@media(max-width:568px){
-	.open-slide{display:none}
+@media (max-width: 800px){
+	.innerBox{
+		width: 80%;
+	}
 }
