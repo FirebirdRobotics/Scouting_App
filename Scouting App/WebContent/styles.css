@@ -112,10 +112,12 @@ body{
 
 .redButton:hover{
 	opacity: 1;
+	cursor: pointer;
 }
 
 .greenButton:hover{
 	opacity: 1;
+	cursor: pointer;
 }
 
 #main{
@@ -167,6 +169,7 @@ input[type="submit"]{
 
 .loginbtn:hover{
 	opacity: 1;
+	cursor: pointer;
 }
 
 textarea{
@@ -234,6 +237,11 @@ img{
 	transition: 0.5s;
 }
 
+.signupButton:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+
 .footerDiv{
 	width: 100%;
 	height: 20%;
@@ -251,6 +259,10 @@ h1{
 
 @media (max-width: 800px){
 	.innerBox{
+		width: 80%;
+	}
+	
+	.innerBoxLower{
 		width: 80%;
 	}
 }
