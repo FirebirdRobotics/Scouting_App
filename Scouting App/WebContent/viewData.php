@@ -43,38 +43,47 @@
 		<a href="viewData.php">View Data</a>
 	</div>
 	
-	<!-- <?php
+	<?php
+	
 	$servername = "localhost";
-	$username = "username";
-	$password = "password";
-	$dbname = "myDB";
-
+	$username = "root";
+	$password = "root";
+	$dbname = "firebirds";
+	
+	
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
-
+	
 	// Check connection
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);
-	} 
+	}
 	
-	// Create database
-	$sql = "CREATE TABLE MyGuests (
-	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-	firstname VARCHAR(30) NOT NULL,
-	lastname VARCHAR(30) NOT NULL,
-	email VARCHAR(50),
-	reg_date TIMESTAMP
-	)";
-
+	// Add variables
+	$robot_number = mysqli_real_escape_string($conn, $_REQUEST['robotNumber']);
+	$crossed_baseline = mysqli_real_escape_string($conn, $_REQUEST['crossedBaseline']); // idk how to do add a set to database
+	$place_cube_auto = mysqli_real_escape_string($conn, $_REQUEST['placedCubeAuto']); // idk how to do add a set to database
+	$ally_switch = mysqli_real_escape_string($conn, $_REQUEST['allySwitch']);
+	$enemy_switch = mysqli_real_escape_string($conn, $_REQUEST['enemySwitch']);
+	$scale_cube = mysqli_real_escape_string($conn, $_REQUEST['scale']);
+	$attempt_climb = mysqli_real_escape_string($conn, $_REQUEST['attemptedClimb']); // idk how to do add a set to database
+	$carry_robots = mysqli_real_escape_string($conn, $_REQUEST['carriedRobots']); // idk how to do add a set to database
+	$comments = mysqli_real_escape_string($conn, $_REQUEST['comments']);
+	
+	// Insert the above variables into the table values
+	$sql="INSERT INTO robots (`robotNumber`, `crossedBaseline`, `placedCubeAuto`, `allySwitch`, `enemySwitch`, `scale`, `attemptedClimb`, `carriedRobots`, `comments`)
+		             VALUES ('$robot_number', '$crossed_baseline', '$place_cube_auto', '$ally_switch', '$enemy_switch', '$scale_cube', '$attempt_climb', '$carry_robots', '$comments')";
+	
+	
 	if ($conn->query($sql) === TRUE) {
-    	echo "Table MyGuests created successfully";
+	    echo "New record created successfully";
+	} else {
+	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}
-	else {
-    	echo "Error creating database: " . $conn->error;
-	}
-
+	
 	$conn->close();
-	?> -->
+	
+	?>
 	
 	<script type="text/javascript">
 		//Sidebar
