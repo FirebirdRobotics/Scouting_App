@@ -44,6 +44,7 @@
 	</div>
 	
 	<div id="main">
+		<form action="viewData.php">
 		<b><font size="+3">Robot/Team Number:</font></b><br>
 			<input type="text" class="robotNumber" name="robotNumber"><br>
 		<br>
@@ -53,36 +54,37 @@
 			<input type="radio" name="crossedBaseline" value="no"> No<br>
 		<br>
 			Did it place a cube? Where?<br>
-			<input type="radio" name="placedCubeAuto"> Yes, on scale<br>
-			<input type="radio" name="placedCubeAuto"> Yes, on switch<br>
-			<input type="radio" name="placedCubeAuto"> No<br>
+			<input type="radio" name="placedCubeAuto" value="placedOnScale"> Yes, on scale<br>
+			<input type="radio" name="placedCubeAuto" value="placedOnSwitch"> Yes, on switch<br>
+			<input type="radio" name="placedCubeAuto" value="didNotPlace"> No<br>
 		<br>
 		<b><font size="+3">Teleop:</font></b><br>
 			How many cubes did it place on ally switch?<br>
 			<div class="numCounter">
-				<input class="qty" id="qty" value="0"/>
+				<input class="qty" id="qty" value="0" name="allySwitch"/>
 				<button class="redButton counterButton" id="sub" onclick="modifyQty(-1)">━</button>
 				<button class="greenButton counterButton" id="add" onclick="modifyQty(1)">╋</button>
 			</div><br><br><br>
 		<br>
 			How many cubes did it place on the enemy switch?<br>
 			<div class="numCounter">
-				<input class="qty" id="qty2" value="0"/>
+				<input class="qty" id="qty2" value="0" name="enemySwitch"/>
 				<button class="redButton counterButton" id="sub" onclick="modifyQty2(-1)">━</button>
 				<button class="greenButton counterButton" id="add" onclick="modifyQty2(1)">╋</button>
 			</div><br><br><br>
 		<br>
 			How many cubes did it place on the scale?<br>
 			<div class="numCounter">
-				<input class="qty" id="qty3" value="0"/>
+				<input class="qty" id="qty3" value="0" name="scale"/>
 				<button class="redButton counterButton" id="sub" onclick="modifyQty3(-1)">━</button>
 				<button class="greenButton counterButton" id="add" onclick="modifyQty3(1)">╋</button>
 			</div><br><br><br>
 		<br>
 			Do they park or attempt to climb? Are they successful in their climb?<br>
-			<input type="radio" name="parkOrClimb" value="successful climb" > Attempted climb, successful<br>
-			<input type="radio" name="parkOrClimb" value="unsuccessful climb" > Attempted climb, unsuccessful<br>
-			<input type="radio" name="parkOrClimb" value="parked" > Parked<br>
+			<input type="radio" name="attemptedClimb" value="successfulClimb" > Attempted climb, successful<br>
+			<input type="radio" name="attemptedClimb" value="unsuccessfulClimb" > Attempted climb, unsuccessful<br>
+			<input type="radio" name="attemptedClimb" value="parked" > Parked<br>
+			<input type="radio" name="attemptedClimb" value="didNotTry" > Did not try<br>
 		<br>
 			Did it carry other robots?<br>
 			<input type="radio" name="carriedRobots" value="yes" > Yes<br>
@@ -93,9 +95,8 @@
 			<textarea name="comments" id="comments" rows="8" placeholder="ex. speed/accuracy of the robot, did it break down, did their drive team seem confused, etc."></textarea>
 		</div>
 		<br>
-			<form action="#">
-				<input type="submit" value="Submit">
-			</form>
+			<input type="submit" value="Submit">
+		</form>
 		<br>
 	</div>
 	<script type="text/javascript">
