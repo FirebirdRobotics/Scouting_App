@@ -61,22 +61,22 @@
 			How many cubes did it place on ally switch?<br>
 			<div class="numCounter">
 				<input class="qty" id="qty" value="0"/>
-				<button class="redButton counterButton" id="sub" onclick="modifyQty(-1)">â”�</button>
-				<button class="greenButton counterButton" id="add" onclick="modifyQty(1)">â•‹</button>
+				<button class="redButton counterButton" id="sub" onclick="modifyQty(-1)">━</button>
+				<button class="greenButton counterButton" id="add" onclick="modifyQty(1)">╋</button>
 			</div><br><br><br>
 		<br>
 			How many cubes did it place on the enemy switch?<br>
 			<div class="numCounter">
 				<input class="qty" id="qty2" value="0"/>
-				<button class="redButton counterButton" id="sub" onclick="modifyQty2(-1)">â”�</button>
-				<button class="greenButton counterButton" id="add" onclick="modifyQty2(1)">â•‹</button>
+				<button class="redButton counterButton" id="sub" onclick="modifyQty2(-1)">━</button>
+				<button class="greenButton counterButton" id="add" onclick="modifyQty2(1)">╋</button>
 			</div><br><br><br>
 		<br>
 			How many cubes did it place on the scale?<br>
 			<div class="numCounter">
 				<input class="qty" id="qty3" value="0"/>
-				<button class="redButton counterButton" id="sub" onclick="modifyQty3(-1)">â”�</button>
-				<button class="greenButton counterButton" id="add" onclick="modifyQty3(1)">â•‹</button>
+				<button class="redButton counterButton" id="sub" onclick="modifyQty3(-1)">━</button>
+				<button class="greenButton counterButton" id="add" onclick="modifyQty3(1)">╋</button>
 			</div><br><br><br>
 		<br>
 			Do they park or attempt to climb? Are they successful in their climb?<br>
