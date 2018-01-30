@@ -142,7 +142,11 @@ input[type="submit"]{
 	font-size: 48px;
 	display: block;
 	text-align: center;
-	padding: 5%;
+	padding: 2%;
+}
+
+.robotNumber{
+	font-size: 60px;
 }
 
 .form-control{
