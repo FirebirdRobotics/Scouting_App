@@ -50,13 +50,13 @@
 		<br>
 		<b><font size="+3">Autonomous:</font></b><br>
 			Did it cross the base line?<br>
-			<input type="radio" name="crossedBaseline" value="yes"> Yes<br>
-			<input type="radio" name="crossedBaseline" value="no"> No<br>
+			<input type="radio" name="crossedBaseline" value="Yes"> Yes<br>
+			<input type="radio" name="crossedBaseline" value="No"> No<br>
 		<br>
 			Did it place a cube? Where?<br>
-			<input type="radio" name="placedCubeAuto" value="placedOnScale"> Yes, on scale<br>
-			<input type="radio" name="placedCubeAuto" value="placedOnSwitch"> Yes, on switch<br>
-			<input type="radio" name="placedCubeAuto" value="didNotPlace"> No<br>
+			<input type="radio" name="placedCubeAuto" value="Yes, on scale"> Yes, on scale<br>
+			<input type="radio" name="placedCubeAuto" value="Yes, on switch"> Yes, on switch<br>
+			<input type="radio" name="placedCubeAuto" value="Did not place"> No<br>
 		<br>
 		<b><font size="+3">Teleop:</font></b><br>
 			How many cubes did it place on ally switch?<br>
@@ -81,14 +81,14 @@
 			</div><br><br><br>
 		<br>
 			Do they park or attempt to climb? Are they successful in their climb?<br>
-			<input type="radio" name="attemptedClimb" value="successfulClimb" > Attempted climb, successful<br>
-			<input type="radio" name="attemptedClimb" value="unsuccessfulClimb" > Attempted climb, unsuccessful<br>
-			<input type="radio" name="attemptedClimb" value="parked" > Parked<br>
-			<input type="radio" name="attemptedClimb" value="didNotTry" > Did not try<br>
+			<input type="radio" name="attemptedClimb" value="Attempted climb, successful" > Attempted climb, successful<br>
+			<input type="radio" name="attemptedClimb" value="Attempt climb, unsuccessful" > Attempted climb, unsuccessful<br>
+			<input type="radio" name="attemptedClimb" value="Parked" > Parked<br>
+			<input type="radio" name="attemptedClimb" value="Did not try" > Did not try<br>
 		<br>
 			Did it carry other robots?<br>
-			<input type="radio" name="carriedRobots" value="yes" > Yes<br>
-			<input type="radio" name="carriedRobots" value="no" > No<br>
+			<input type="radio" name="carriedRobots" value="Yes" > Yes<br>
+			<input type="radio" name="carriedRobots" value="No" > No<br>
 		<br>
 			<b><font size="+3">Comments:</font></b><br>
 		<div>
