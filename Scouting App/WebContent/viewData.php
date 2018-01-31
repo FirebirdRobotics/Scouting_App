@@ -58,21 +58,25 @@
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);
 	}
+
+	echo "<pre>";
+	print_r($_POST);
+	echo "</pre>";	
 	
 	// Add variables
-	$robot_number = mysqli_real_escape_string($conn, $_REQUEST['robotNumber']);
-	$crossed_baseline = mysqli_real_escape_string($conn, $_REQUEST['crossedBaseline']); // idk how to do add a set to database
-	$place_cube_auto = mysqli_real_escape_string($conn, $_REQUEST['placedCubeAuto']); // idk how to do add a set to database
-	$ally_switch = mysqli_real_escape_string($conn, $_REQUEST['allySwitch']);
-	$enemy_switch = mysqli_real_escape_string($conn, $_REQUEST['enemySwitch']);
-	$scale_cube = mysqli_real_escape_string($conn, $_REQUEST['scale']);
-	$attempt_climb = mysqli_real_escape_string($conn, $_REQUEST['attemptedClimb']); // idk how to do add a set to database
-	$carry_robots = mysqli_real_escape_string($conn, $_REQUEST['carriedRobots']); // idk how to do add a set to database
-	$comments = mysqli_real_escape_string($conn, $_REQUEST['comments']);
+	$robot_number = mysqli_real_escape_string($conn, $_POST['robotNumber']);
+	$crossed_baseline = mysqli_real_escape_string($conn, $_POST['crossedBaseline']); // for these four sets, we need to have it so that when the data is taken from the database, it displays something else
+	$place_cube_auto = mysqli_real_escape_string($conn, $_POST['placedCubeAuto']); // above comment
+	$ally_switch = mysqli_real_escape_string($conn, $_POST['allySwitch']);
+	$enemy_switch = mysqli_real_escape_string($conn, $_POST['enemySwitch']);
+	$scale_cube = mysqli_real_escape_string($conn, $_POST['scale']);
+	$attempt_climb = mysqli_real_escape_string($conn, $_POST['attemptedClimb']); // above comment
+	$carry_robots = mysqli_real_escape_string($conn, $_POST['carriedRobots']); // above comment
+	$comments = mysqli_real_escape_string($conn, $_POST['comments']);
 	
 	// Insert the above variables into the table values
-	$sql="INSERT INTO robots (`robotNumber`, `crossedBaseline`, `placedCubeAuto`, `allySwitch`, `enemySwitch`, `scale`, `attemptedClimb`, `carriedRobots`, `comments`)
-		             VALUES ('$robot_number', '$crossed_baseline', '$place_cube_auto', '$ally_switch', '$enemy_switch', '$scale_cube', '$attempt_climb', '$carry_robots', '$comments')";
+	$sql="REPLACE INTO robots (`robotNumber`, `crossedBaseline`, `placedCubeAuto`, `allySwitch`, `enemySwitch`, `scale`, `attemptedClimb`, `carriedRobots`, `comments`)
+		               VALUES ('$robot_number', '$crossed_baseline', '$place_cube_auto', '$ally_switch', '$enemy_switch', '$scale_cube', '$attempt_climb', '$carry_robots', '$comments')";
 	
 	
 	if ($conn->query($sql) === TRUE) {
@@ -84,6 +88,10 @@
 	$conn->close();
 	
 	?>
+	
+	<form action="addNewRobot.php">
+		<input type="submit" value="Add another robot">
+	</form>
 	
 	<script type="text/javascript">
 		//Sidebar
