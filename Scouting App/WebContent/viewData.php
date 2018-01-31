@@ -6,8 +6,25 @@
 	<title>Firebirds Robotics Scouting</title>
 	<link href="styles.css" type="text/css" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<style>
+	   td,th{
+	       border: 1px solid black;
+	   }
+	</style>
+	<!-- 
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+		<script>
+	$(document).ready(function() {
+	    $('#example').DataTable();
+	} );
+	</script>
+ -->
 </head>
 <body>
+
 	<nav class="navbar">
 		<span class="open-slide">
 			<a href="#" onClick="openSlideMenu()">
@@ -59,9 +76,9 @@
 	    die("Connection failed: " . $conn->connect_error);
 	}
 
-	echo "<pre>";
-	print_r($_POST);
-	echo "</pre>";	
+	//echo "<pre>";
+	//print_r($_POST);
+	//echo "</pre>";	
 	
 	// Add variables
 	$robot_number = mysqli_real_escape_string($conn, $_POST['robotNumber']);
@@ -84,6 +101,41 @@
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}
+	
+	echo "<br><br>";
+	?>
+	<table class="display" id="example">
+	<?php 
+	echo "<tr>
+                    <th>Robot Numberr</th>
+                    <th>Crossed Baseline?</th>
+                    <th>Placed Cube Autonomous</th>
+                    <th>Cubes on Ally Switch</th>
+                    <th>Cubes on Enemy Switch</th>
+                    <th>Cubes on Scale</th>
+                    <th>Attempted Climb</th>
+                    <th>Climb</th>
+                    <th>Comments</th>
+          </tr>";
+	$sql = "SELECT * FROM robots";
+	$result = $conn->query($sql);
+	
+	while($row = mysqli_fetch_assoc($result))
+	{
+	    extract($row);
+	    echo "<tr>
+                    <td>$robotNumber</td>
+                    <td>$crossedBaseline</td>
+                    <td>$placedCubeAuto</td>
+                    <td>$allySwitch</td>
+                    <td>$enemySwitch</td>
+                    <td>$scale</td>
+                    <td>$attemptedClimb</td>
+                    <td>$carriedRobots</td>
+                    <td>$comments</td>
+            </tr>";
+	}
+	echo "</table><br><br>";
 	
 	$conn->close();
 	
