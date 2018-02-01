@@ -312,6 +312,12 @@ h1{
 	text-align: center;
 }
 
+input::-webkit-outer-spin-button, 
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 @media (max-width: 800px){
 	.innerBox{
 		width: 80%;
