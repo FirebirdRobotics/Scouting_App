@@ -137,7 +137,7 @@ $(document).ready(function() {
                     <td>$comments</td>
             </tr>";
 	}
-	echo "<tbody></table><br><br>";
+	echo "</tbody></table><br><br>";
 	
 	$conn->close();
 	
