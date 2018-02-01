@@ -11,17 +11,19 @@
 	       border: 1px solid black;
 	   }
 	</style>
-	<!-- 
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
-	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-		<script>
-	$(document).ready(function() {
-	    $('#example').DataTable();
-	} );
-	</script>
- -->
+<link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#table1').DataTable({
+  lengthMenu: [[10, 20, 100, -1], [10, 20, 100, "All"]],
+  order: [0, 'asc'],
+}
+);
+} );
+</script>
 </head>
 <body>
 
@@ -104,7 +106,7 @@
 	
 	echo "<br><br>";
 	?>
-	<table class="display" id="example">
+	<table class="display" id="table1"><thead>
 	<?php 
 	echo "<tr>
                     <th>Robot Numberr</th>
@@ -116,7 +118,7 @@
                     <th>Attempted Climb</th>
                     <th>Climb</th>
                     <th>Comments</th>
-          </tr>";
+          </tr><thead><tbody>";
 	$sql = "SELECT * FROM robots";
 	$result = $conn->query($sql);
 	
@@ -135,7 +137,7 @@
                     <td>$comments</td>
             </tr>";
 	}
-	echo "</table><br><br>";
+	echo "<tbody></table><br><br>";
 	
 	$conn->close();
 	
