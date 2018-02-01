@@ -49,14 +49,12 @@
 		<form action="#"> <!-- The form action would be this same file linked on the website 
 		                       (on firesoup the form action is "http://firesoup.com/login/signup.php" to create a new user).
 		                       Find out where the actual PHP goes (at the beginning of the file or...? The php is in a separate file in the example) -->
+		<!-- ADD FIELDS CORRESPONDING TO THE ONES ON THE PHPMYADMIN DATABASE -->
+		
 		<div class="tableDiv">
 		<div class="username">
 			<label class="usernameLabel" align="left">Username</label>
 			<input type="text" class="usernameInput" name="username" id="username">
-		</div>
-		<div class="email">
-			<label class="emailLabel" align="left">Email</label>
-			<input type="text" name="email" id="email">
 		</div>
 		<div class="password">
 			<label class="passwordLabel" align="left">Password</label>
@@ -65,6 +63,10 @@
 		<div class="confirmPassword">
 			<label class="confirmPasswordLabel" align="left">Confirm Password</label>
 			<input type="text" name="confirmPassword" id="confirmPassword">
+		</div>
+		<div class="email">
+			<label class="emailLabel" align="left">Email</label>
+			<input type="text" name="email" id="email">
 		</div>
 		</div>
 		<button type="submit" class="signupButton">Create a New Account</button>
