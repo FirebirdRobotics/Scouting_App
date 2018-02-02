@@ -227,6 +227,8 @@ img{
 	background-color: #555;
 	color: white;
 	margin-top: 60px;
+	align: middle;
+	margin-bottom: 60px;
 }
 
 .innerCreateAccountBox img{
@@ -256,10 +258,6 @@ img{
 	width: 90%;
 }
 
-.tableDiv{
-	display: table;
-}
-
 .signupForm{
 	margin-top: 10px;
 }
@@ -285,18 +283,6 @@ img{
 	cursor: pointer;
 }
 
-.username{
-	margin: 20px;
-}
-
-.password{
-	margin: 20px;
-}
-
-.confirmPassword{
-	margin: 20px;
-}
-
 .footerDiv{
 	width: 100%;
 	height: 20%;
@@ -305,6 +291,11 @@ img{
 
 h1{
 	text-align: center;
+}
+
+table{
+	width: 100%;
+	text-align: left;
 }
 
 .login-bg{
