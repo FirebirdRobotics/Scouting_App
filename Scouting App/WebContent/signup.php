@@ -20,7 +20,7 @@
 		</span>
 		
 		<span class="login">
-			<a href="login.php">
+			<a href="loginMenu.php">
 				<svg width="30" height="30">
 					<path d="M28,30 28,4" stroke="#fff" stroke-width="4"/>
 					<path d="M11,6 28,6" stroke="#fff" stroke-width="4"/>
@@ -46,35 +46,40 @@
 	<div class="innerCreateAccountBox">
 		<img align="middle" class="loginImage" src="H:/transparentLogo.png">
 		<hr>
-		<form action="#"> <!-- The form action would be this same file linked on the website 
-		                       (on firesoup the form action is "http://firesoup.com/login/signup.php" to create a new user).
-		                       Find out where the actual PHP goes (at the beginning of the file or...? The php is in a separate file in the example) -->
-		<!-- ADD FIELDS CORRESPONDING TO THE ONES ON THE PHPMYADMIN DATABASE -->
-		
-		<div class="tableDiv">
-		<div class="username">
-			<label class="usernameLabel" align="left">Username</label>
-			<input type="text" class="usernameInput" name="username" id="username">
-		</div>
-		<div class="password">
-			<label class="passwordLabel" align="left">Password</label>
-			<input type="text" name="password" id="password">
-		</div>
-		<div class="confirmPassword">
-			<label class="confirmPasswordLabel" align="left">Confirm Password</label>
-			<input type="text" name="confirmPassword" id="confirmPassword">
-		</div>
-		<div class="email">
-			<label class="emailLabel" align="left">Email</label>
-			<input type="text" name="email" id="email">
-		</div>
-		</div>
+		<form action="insertUser.php">
+		<table>
+		<tr>
+			<td><label align="left">First Name</label></td>
+			<td><input type="text" name="firstName"></td>
+		</tr>
+		<tr>
+			<td><label align="left">Last Name</label></td>
+			<td><input type="text" name="lastName"></td>
+		</tr>
+		<tr>
+			<td><label align="left">Username</label></td> <!-- Would like to add a username checker -->
+			<td><input type="text" name="username"></td>
+		</tr>
+		<tr>
+			<td><label align="left">Password</label></td> <!-- Also would like to add character blurs/blocks for password -->
+			<td><input type="text" name="password"></td>
+		</tr>
+		<tr>
+			<td><label align="left">Confirm Password</label></td> <!-- ALSO would like password dots for this -->
+			<td><input type="text" name="confirmPassword"></td>
+		</tr>
+		<tr>
+			<td><label align="left">Email</label></td>
+			<td><input type="text" name="email"></td>
+		</tr>
+		</table>
 		<button type="submit" class="signupButton">Create a New Account</button>
 		</form>
 	</div>
 	
-	
-	
+	<div class="footerDiv">
+	<br><br><br>
+	</div>
 	
 	<script type="text/javascript">
 		//Sidebar
