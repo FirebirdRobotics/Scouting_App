@@ -22,10 +22,15 @@
 	
 	// Add variables
 	$first_name = mysqli_real_escape_string($conn, $_POST['firstName']);
+	$last_name = mysqli_real_escape_string($conn, $_POST['lastName']);
+	$username = mysqli_real_escape_string($conn, $_POST['username']);
+	$password = mysqli_real_escape_string($conn, $_POST['password']);
+	$confirm_password = mysqli_real_escape_string($conn, $_POST['confirmPassword']);
+	$email = mysqli_real_escape_string($conn, $_POST['email']);
 	
 	// Insert the above variables into the table values
-	$sql="REPLACE INTO robots (``)
-		               VALUES ('')";
+	$sql="REPLACE INTO users (`firstName`, `lastName`, `username`, `password`, `confirmPassword`, `email`)
+		               VALUES ('$first_name', '$last_name', '$username', '$password', '$confirm_password', '$email')";
 	
 	
 	if ($conn->query($sql) === TRUE) {
