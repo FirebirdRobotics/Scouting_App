@@ -20,7 +20,7 @@
 		</span>
 		
 		<span class="login">
-			<a href="login.php">
+			<a href="loginMenu.php">
 				<svg width="30" height="30">
 					<path d="M28,30 28,4" stroke="#fff" stroke-width="4"/>
 					<path d="M11,6 28,6" stroke="#fff" stroke-width="4"/>
@@ -96,14 +96,14 @@
 			</div><br><br><br>
 		<br>
 			Do they park or attempt to climb? Are they successful in their climb?<br>
-			<input type="radio" name="attemptedClimb" value="successfulClimb" > Attempted climb, successful<br>
-			<input type="radio" name="attemptedClimb" value="unsuccessfulClimb" > Attempted climb, unsuccessful<br>
-			<input type="radio" name="attemptedClimb" value="parked" > Parked<br>
-			<input type="radio" name="attemptedClimb" value="didNotTry" > Did not try<br>
+			<input type="radio" name="attemptedClimb" value="successfulClimb"> Attempted climb, successful<br>
+			<input type="radio" name="attemptedClimb" value="unsuccessfulClimb"> Attempted climb, unsuccessful<br>
+			<input type="radio" name="attemptedClimb" value="parked"> Parked<br>
+			<input type="radio" name="attemptedClimb" value="didNotTry"> Did not try<br>
 		<br>
 			Did it carry other robots?<br>
-			<input type="radio" name="carriedRobots" value="yes" > Yes<br>
-			<input type="radio" name="carriedRobots" value="no" > No<br>
+			<input type="radio" name="carriedRobots" value="yes"> Yes<br>
+			<input type="radio" name="carriedRobots" value="no"> No<br>
 		<br>
 			<b><font size="+3">Comments:</font></b><br>
 		<div>
