@@ -44,7 +44,7 @@
 	</div>
 	
 	<div id="main">
-		<form action="insert.php" method="POST">
+		<form action="insertRobot.php" method="POST">
 		
 		<!-- 
 		
@@ -53,58 +53,116 @@
 		- Add a round selection for which round the data is for
 		- Hoping to add something like a username checker for the robotNumber and roundNumber
 		
-		
-		
-		
-		
-		
 		-->
 		
 		<b><font size="+3">Robot/Team Number:</font></b><br>
 			<input type="number" class="robotNumber" name="robotNumber" required><br>
 		<br>
 		<b><font size="+3">Autonomous:</font></b><br>
-			Did it cross the base line?<br>
-			<input type="radio" name="crossedBaseline" value="yes"> Yes<br>
-			<input type="radio" name="crossedBaseline" value="no"> No<br>
-		<br>
-			Did it place a cube? Where?<br>
-			<input type="radio" name="placedCubeAuto" value="placedOnScale"> Yes, on scale<br>
-			<input type="radio" name="placedCubeAuto" value="placedOnSwitch"> Yes, on switch<br>
-			<input type="radio" name="placedCubeAuto" value="didNotPlace"> No<br>
-		<br>
+			Did it cross the base line?
+			<ul>
+			<li>
+				<input type="radio" name="crossedBaseline" value="yes" id="baseline-yes">
+				<label for="baseline-yes">Yes</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			<li>
+				<input type="radio" name="crossedBaseline" value="no" id="baseline-no">
+				<label for="baseline-no">No</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			</ul>
+			
+			Did it place a cube? Where?
+			<ul>
+			<li>
+				<input type="radio" name="placedCubeAuto" value="placedOnScale" id="autoCube-scale">
+				<label for="autoCube-scale">Yes, on scale</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			<li>
+				<input type="radio" name="placedCubeAuto" value="placedOnSwitch" id="autoCube-switch">
+				<label for="autoCube-switch">Yes, on switch</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			<li>
+				<input type="radio" name="placedCubeAuto" value="didNotPlace" id="autoCube-none">
+				<label for="autoCube-none">None</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			</ul>
+			
 		<b><font size="+3">Teleop:</font></b><br>
 			How many cubes did it place on ally switch?<br>
 			<div class="numCounter">
 				<input class="qty" id="qty" value="0" name="allySwitch"/>
 				<button class="redButton counterButton" id="sub" onclick="modifyQty(-1); return false;">━</button>
 				<button class="greenButton counterButton" id="add" onclick="modifyQty(1); return false;">╋</button>
-			</div><br><br><br>
-		<br>
+			</div><br><br><br><br>
+			
 			How many cubes did it place on the enemy switch?<br>
 			<div class="numCounter">
 				<input class="qty" id="qty2" value="0" name="enemySwitch"/>
 				<button class="redButton counterButton" id="sub" onclick="modifyQty2(-1); return false;">━</button>
 				<button class="greenButton counterButton" id="add" onclick="modifyQty2(1); return false;">╋</button>
-			</div><br><br><br>
-		<br>
+			</div><br><br><br><br>
+			
 			How many cubes did it place on the scale?<br>
 			<div class="numCounter">
 				<input class="qty" id="qty3" value="0" name="scale"/>
 				<button class="redButton counterButton" id="sub" onclick="modifyQty3(-1); return false;">━</button>
 				<button class="greenButton counterButton" id="add" onclick="modifyQty3(1); return false;">╋</button>
-			</div><br><br><br>
-		<br>
-			Do they park or attempt to climb? Are they successful in their climb?<br>
-			<input type="radio" name="attemptedClimb" value="successfulClimb"> Attempted climb, successful<br>
-			<input type="radio" name="attemptedClimb" value="unsuccessfulClimb"> Attempted climb, unsuccessful<br>
-			<input type="radio" name="attemptedClimb" value="parked"> Parked<br>
-			<input type="radio" name="attemptedClimb" value="didNotTry"> Did not try<br>
-		<br>
-			Did it carry other robots?<br>
-			<input type="radio" name="carriedRobots" value="yes"> Yes<br>
-			<input type="radio" name="carriedRobots" value="no"> No<br>
-		<br>
+			</div><br><br><br><br>
+			
+			Do they park or attempt to climb? Are they successful in their climb?
+			<ul>
+			<li>
+				<input type="radio" name="attemptedClimb" value="successfulClimb" id="attemptedClimbSuccessful">
+				<label for="attemptedClimbSuccessful">Attempted climb, successful</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			<li>
+				<input type="radio" name="attemptedClimb" value="unsuccessfulClimb" id="attemptedClimbUnsuccessful">
+				<label for="attemptedClimbUnsuccessful">Attempted climb, unsuccessful</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			<li>
+				<input type="radio" name="attemptedClimb" value="parked" id="attemptedClimbParked">
+				<label for="attemptedClimbParked">Parked</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			<li>
+				<input type="radio" name="attemptedClimb" value="didNotTry" id="didNotTry">
+				<label for="didNotTry">Did not try</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			</ul>
+			
+			Did it carry other robots?
+			<ul>
+			<li>
+				<input type="radio" name="carriedRobots" value="yes" id="carriedRobotsYes">
+				<label for="carriedRobotsYes">Yes</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			<li>
+				<input type="radio" name="carriedRobots" value="no" id="carriedRobotsNo">
+				<label for="carriedRobotsNo">No</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			</ul>
+			
 			<b><font size="+3">Comments:</font></b><br>
 		<div>
 			<textarea name="comments" id="comments" rows="8" placeholder="ex. speed/accuracy of the robot, did it break down, did their drive team seem confused, etc."></textarea>
