@@ -50,27 +50,27 @@
 		<table>
 		<tr>
 			<td><label align="left">First Name</label></td>
-			<td><input type="text" name="firstName"></td>
+			<td><input type="text" name="firstName" required></td>
 		</tr>
 		<tr>
 			<td><label align="left">Last Name</label></td>
-			<td><input type="text" name="lastName"></td>
+			<td><input type="text" name="lastName" required></td>
 		</tr>
 		<tr>
 			<td><label align="left">Username</label></td> <!-- Would like to add a username checker -->
-			<td><input type="text" name="username"></td>
+			<td><input type="text" name="username" required></td>
 		</tr>
 		<tr>
 			<td><label align="left">Password</label></td> <!-- Also would like to add character blurs/blocks for password -->
-			<td><input type="text" name="password"></td>
+			<td><input type="text" name="password" required></td>
 		</tr>
 		<tr>
 			<td><label align="left">Confirm Password</label></td> <!-- ALSO would like password dots for this -->
-			<td><input type="text" name="confirmPassword"></td>
+			<td><input type="text" name="confirmPassword" required></td>
 		</tr>
 		<tr>
 			<td><label align="left">Email</label></td>
-			<td><input type="text" name="email"></td>
+			<td><input type="text" name="email" required></td>
 		</tr>
 		</table>
 		<button type="submit" class="signupButton">Create a New Account</button>
