@@ -90,7 +90,7 @@ $(document).ready(function() {
                     <th>Cubes on Enemy Switch</th>
                     <th>Cubes on Scale</th>
                     <th>Attempted Climb</th>
-                    <th>Climb</th>
+                    <th>Carried Robots</th>
                     <th>Comments</th>
           </tr><thead><tbody>";
 	$sql = "SELECT * FROM robots";
@@ -99,15 +99,54 @@ $(document).ready(function() {
 	while($row = mysqli_fetch_assoc($result))
 	{
 	    extract($row);
-	    echo "<tr>
+	           echo "<tr>
                     <td>$robotNumber</td>
-                    <td>$crossedBaseline</td>
-                    <td>$placedCubeAuto</td>
+                    <td>"
+                    /* Code to display better text values */
+                        ?><?php
+                        if ($crossedBaseline == "yes") {
+                            echo "Did cross baseline";
+                        } elseif ($crossedBaseline == "no") {
+                            echo "Did not cross baseline";
+                        }
+                        ?><?php
+              echo "</td>
+                    <td>"
+                        ?><?php
+                        if ($placedCubeAuto == "placedOnScale") {
+                            echo "Placed on Scale";
+                        } elseif ($placedCubeAuto == "placedOnSwitch") {
+                            echo "Placed on Switch";
+                        } elseif ($placedCubeAuto == "didNotPlace") {
+                            echo "Did not place";
+                        }
+                        ?><?php
+               echo "</td>
                     <td>$allySwitch</td>
                     <td>$enemySwitch</td>
                     <td>$scale</td>
-                    <td>$attemptedClimb</td>
-                    <td>$carriedRobots</td>
+                    <td>"
+                        ?><?php
+                        if ($attemptedClimb == "successfulClimb") {
+                            echo "Successful Climb";
+                        } elseif ($attemptedClimb == "unsuccessfulClimb") {
+                            echo "Unsuccessful Climb";
+                        } elseif ($attemptedClimb == "parked") {
+                            echo "Parked";
+                        } elseif ($attemptedClimb == "didNotTry") {
+                            echo "Did not try";
+                        }
+                        ?><?php
+              echo "</td>
+                    <td>"
+                        ?><?php
+                        if ($carriedRobots == "yes") {
+                            echo "Did carry others";
+                        } elseif ($carriedRobots == "no") {
+                            echo "Did not carry others";
+                        }
+                        ?><?php
+              echo "</td>
                     <td>$comments</td>
             </tr>";
 	}
