@@ -165,7 +165,7 @@
 			
 			<b><font size="+3">Comments:</font></b><br>
 		<div>
-			<textarea name="comments" id="comments" rows="8" placeholder="ex. speed/accuracy of the robot, did it break down, did their drive team seem confused, etc."></textarea>
+			<textarea name="comments" id="comments" rows="6" placeholder="ex. speed/accuracy of the robot, did it break down, did their drive team seem confused, etc."></textarea>
 		</div>
 		<br>
 			<input type="submit" value="Submit">
