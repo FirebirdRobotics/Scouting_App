@@ -19,7 +19,7 @@
 $(document).ready(function() {
     $('#table1').DataTable({
   lengthMenu: [[10, 20, 100, -1], [10, 20, 100, "All"]],
-  order: [0, 'asc'],
+  order: [1, 'desc'],
 }
 );
 } );
@@ -78,14 +78,15 @@ $(document).ready(function() {
 	    die("Connection failed: " . $conn->connect_error);
 	}
 	
-	echo "<br><br>";
+	echo "<br><br>"; 
 	?>
-	<table class="display" id="table1"><thead>
+	<table class="table-responsive table-hover table display table-bordered" id="table1" width="98%"><thead>
 	<?php 
 	echo "<tr>
                     <th>Robot Number</th>
-                    <th>Crossed Baseline?</th>
-                    <th>Placed Cube Autonomous</th>
+                    <th>Rank</th>
+                    <th>Crossed Baseline</th>
+                    <th>Placed Cube in Autonomous</th>
                     <th>Cubes on Ally Switch</th>
                     <th>Cubes on Enemy Switch</th>
                     <th>Cubes on Scale</th>
@@ -99,25 +100,34 @@ $(document).ready(function() {
 	while($row = mysqli_fetch_assoc($result))
 	{
 	    extract($row);
+	    $rank = 0;
+	    $rank += ($crossedBaseline == 'yes' ? 10 : 0);
+	    $rank += ($placedCubeAuto == 'placedOnScale' || $placedCubeAuto == 'placedOnSwitch' ? 10 : 0); 
+	    $rank += ($allySwitch >= 10 ? 10 : 0);
+	    $rank += ($enemySwitch < 1 ? 10 : 0);
+	    $rank += ($scale >= 1 ? 10 : 0);
+	    $rank += ($attemptedClimb == 'successfulClimb' ? 10 : 0);
+	    $rank += ($carriedRobots == 'yes' ? 10 : 0);
 	           echo "<tr>
                     <td>$robotNumber</td>
+                    <td>$rank</td>
                     <td>"
                     /* Code to display better text values */
                         ?><?php
-                        if ($crossedBaseline == "yes") {
+                        if ($crossedBaseline == 'yes') {
                             echo "Did cross baseline";
-                        } elseif ($crossedBaseline == "no") {
+                        } elseif ($crossedBaseline == 'no') {
                             echo "Did not cross baseline";
                         }
                         ?><?php
               echo "</td>
                     <td>"
                         ?><?php
-                        if ($placedCubeAuto == "placedOnScale") {
+                        if ($placedCubeAuto == 'placedOnScale') {
                             echo "Placed on Scale";
-                        } elseif ($placedCubeAuto == "placedOnSwitch") {
+                        } elseif ($placedCubeAuto == 'placedOnSwitch') {
                             echo "Placed on Switch";
-                        } elseif ($placedCubeAuto == "didNotPlace") {
+                        } elseif ($placedCubeAuto == 'didNotPlace') {
                             echo "Did not place";
                         }
                         ?><?php
