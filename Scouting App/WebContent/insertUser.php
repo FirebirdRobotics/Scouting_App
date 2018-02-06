@@ -1,6 +1,6 @@
 <html>
 <head>
-	<meta http-equiv="refresh" content="0; index.php">
+	<!--  <meta http-equiv="refresh" content="10; index.php"> -->
 </head>
 <body>
 
@@ -21,16 +21,19 @@
 	}
 	
 	// Add variables
+	$username = mysqli_real_escape_string($conn, $_POST['username']);
+	echo $username;
 	$first_name = mysqli_real_escape_string($conn, $_POST['firstName']);
 	$last_name = mysqli_real_escape_string($conn, $_POST['lastName']);
-	$username = mysqli_real_escape_string($conn, $_POST['username']);
 	$password = mysqli_real_escape_string($conn, $_POST['password']);
 	$confirm_password = mysqli_real_escape_string($conn, $_POST['confirmPassword']);
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
 	
+	var_dump($_POST);
+	
 	// Insert the above variables into the table values
-	$sql="REPLACE INTO users (`firstName`, `lastName`, `username`, `password`, `confirmPassword`, `email`)
-		               VALUES ('$first_name', '$last_name', '$username', '$password', '$confirm_password', '$email')";
+	$sql="REPLACE INTO users (`username`, `firstName`, `lastName`, `password`, `confirmPassword`, `email`)
+		              VALUES ('$username', '$first_name', '$last_name', '$password', '$confirm_password', '$email')";
 	
 	
 	if ($conn->query($sql) === TRUE) {
