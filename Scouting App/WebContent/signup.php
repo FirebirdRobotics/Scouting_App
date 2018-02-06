@@ -49,16 +49,16 @@
 		<form action="insertUser.php">
 		<table>
 		<tr>
+			<td><label align="left">Username</label></td> <!-- Would like to add a username checker -->
+			<td><input type="text" name="username" required></td>
+		</tr>
+		<tr>
 			<td><label align="left">First Name</label></td>
 			<td><input type="text" name="firstName" required></td>
 		</tr>
 		<tr>
 			<td><label align="left">Last Name</label></td>
 			<td><input type="text" name="lastName" required></td>
-		</tr>
-		<tr>
-			<td><label align="left">Username</label></td> <!-- Would like to add a username checker -->
-			<td><input type="text" name="username" required></td>
 		</tr>
 		<tr>
 			<td><label align="left">Password</label></td> <!-- Also would like to add character blurs/blocks for password -->
