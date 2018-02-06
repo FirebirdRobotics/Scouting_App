@@ -22,13 +22,13 @@
 	
 	// Add variables
 	$robot_number = mysqli_real_escape_string($conn, $_POST['robotNumber']);
-	$crossed_baseline = mysqli_real_escape_string($conn, $_POST['crossedBaseline']); // for these four sets, we need to have it so that when the data is taken from the database, it displays something else
-	$place_cube_auto = mysqli_real_escape_string($conn, $_POST['placedCubeAuto']); // above comment
+	$crossed_baseline = mysqli_real_escape_string($conn, $_POST['crossedBaseline']);
+	$place_cube_auto = mysqli_real_escape_string($conn, $_POST['placedCubeAuto']);
 	$ally_switch = mysqli_real_escape_string($conn, $_POST['allySwitch']);
 	$enemy_switch = mysqli_real_escape_string($conn, $_POST['enemySwitch']);
 	$scale_cube = mysqli_real_escape_string($conn, $_POST['scale']);
-	$attempt_climb = mysqli_real_escape_string($conn, $_POST['attemptedClimb']); // above comment
-	$carry_robots = mysqli_real_escape_string($conn, $_POST['carriedRobots']); // above comment
+	$attempt_climb = mysqli_real_escape_string($conn, $_POST['attemptedClimb']);
+	$carry_robots = mysqli_real_escape_string($conn, $_POST['carriedRobots']);
 	$comments = mysqli_real_escape_string($conn, $_POST['comments']);
 	
 	// Insert the above variables into the table values
