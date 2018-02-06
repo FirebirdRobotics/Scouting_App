@@ -87,9 +87,9 @@ $(document).ready(function() {
                     <th>Rank</th>
                     <th>Crossed Baseline</th>
                     <th>Placed Cube in Autonomous</th>
-                    <th>Cubes on Ally Switch</th>
-                    <th>Cubes on Enemy Switch</th>
-                    <th>Cubes on Scale</th>
+                    <th>Cubes (Ally Switch)</th>
+                    <th>Cubes (Enemy Switch)</th>
+                    <th>Cubes (Scale)</th>
                     <th>Attempted Climb</th>
                     <th>Carried Robots</th>
                     <th>Comments</th>
