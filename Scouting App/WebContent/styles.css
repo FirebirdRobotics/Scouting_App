@@ -138,7 +138,7 @@ input[type="radio"]{
 }
 
 input[type="submit"]{
-	font-size: 40px;
+	font-size: 90%;
 	display: block;
 	text-align: center;
 	padding: 2%;
@@ -409,8 +409,5 @@ input::-webkit-inner-spin-button {
 	
 	.robotNumber{
 		margin-left: 23%;
-	}
-	input[type="submit"]{
-		font-size: 16px;
 	}
 }
