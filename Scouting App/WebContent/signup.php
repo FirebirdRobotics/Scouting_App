@@ -44,9 +44,9 @@
 	</div>
 	
 	<div class="innerCreateAccountBox">
-		<img align="middle" class="loginImage" src="H:/transparentLogo.png">
+		<img align="middle" class="loginImage" src="transparentLogo.png" alt="Logo">
 		<hr>
-		<form action="insertUser.php">
+		<form action="insertUser.php" method="post">
 		<table>
 		<tr>
 			<td><label align="left">Username</label></td> <!-- Would like to add a username checker -->
@@ -62,11 +62,11 @@
 		</tr>
 		<tr>
 			<td><label align="left">Password</label></td> <!-- Also would like to add character blurs/blocks for password -->
-			<td><input type="text" name="password" required></td>
+			<td><input type="password" name="password" required></td>
 		</tr>
 		<tr>
 			<td><label align="left">Confirm Password</label></td> <!-- ALSO would like password dots for this -->
-			<td><input type="text" name="confirmPassword" required></td>
+			<td><input type="password" name="confirmPassword" required></td>
 		</tr>
 		<tr>
 			<td><label align="left">Email</label></td>

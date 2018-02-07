@@ -44,7 +44,7 @@
 		<a href="viewData.php">View Data</a>
 	</div>
 <div class="images">
-	<img src="H:/Logo.png" width=100% height=auto>
+	<img src="Logo.png" alt="Logo" width=100% height=auto>
 </div>
 	<script type="text/javascript">
 		//Sidebar

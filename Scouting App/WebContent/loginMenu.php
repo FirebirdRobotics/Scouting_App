@@ -44,12 +44,16 @@
 		<a href="viewData.php">View Data</a>
 	</div>
 	
+	<!-- 
+	       USE SESSION COOKIES, ADD PASSWORD DOTS, LEARN MORE ABOUT COOKIES OVERALL
+	 -->
+	
 	<div class="innerBox">
-		<img align="middle" class="loginImage" src="H:/transparentLogo.png" alt="Logo">
+		<img align="middle" class="loginImage" src="transparentLogo.png" alt="Logo">
 		<hr>
 		<form class="loginForm" action="loginUser.php" method="post" id="login">
 			<input type="text" name="username" id="username" class="form-control" placeholder="Username">
-			<input type="text" name="password" id="username" class="form-control" placeholder="Password">
+			<input type="password" name="password" id="username" class="form-control" placeholder="Password">
 			<button type="submit" class="loginbtn" id="loginbtn">Log In</button>
 		</form>
 	</div>
