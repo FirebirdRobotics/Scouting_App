@@ -3,11 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Firebirds Robotics Scouting</title>
 	<link href="styles.css" type="text/css" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
-<body class="login-bg">
+<body>
 	<nav class="navbar">
 		<span class="open-slide">
 			<a href="#" onClick="openSlideMenu()">
@@ -42,45 +43,9 @@
 		<a href="addNewRobot.php">Add Robot</a>
 		<a href="viewData.php">View Data</a>
 	</div>
-	
-	<div class="innerCreateAccountBox">
-		<img align="middle" class="loginImage" src="transparentLogo.png" alt="Logo">
-		<hr>
-		<form action="insertUser.php" method="post">
-		<table>
-		<tr>
-			<td><label align="left">Username</label></td> <!-- Would like to add a username checker -->
-			<td><input type="text" name="username" required></td>
-		</tr>
-		<tr>
-			<td><label align="left">First Name</label></td>
-			<td><input type="text" name="firstName" required></td>
-		</tr>
-		<tr>
-			<td><label align="left">Last Name</label></td>
-			<td><input type="text" name="lastName" required></td>
-		</tr>
-		<tr>
-			<td><label align="left">Password</label></td> <!-- Also would like to add character blurs/blocks for password -->
-			<td><input type="password" name="password" required></td>
-		</tr>
-		<tr>
-			<td><label align="left">Confirm Password</label></td> <!-- ALSO would like password dots for this -->
-			<td><input type="password" name="confirmPassword" required></td>
-		</tr>
-		<tr>
-			<td><label align="left">Email</label></td>
-			<td><input type="text" name="email" required></td>
-		</tr>
-		</table>
-		<button type="submit" class="signupButton">Create a New Account</button>
-		</form>
-	</div>
-	
-	<div class="footerDiv">
-	<br><br><br>
-	</div>
-	
+<div class="images">
+	<img src="Logo.png" alt="Logo" width=100% height=auto>
+</div>
 	<script type="text/javascript">
 		//Sidebar
 	function openSlideMenu(){

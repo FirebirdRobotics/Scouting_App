@@ -1,16 +1,15 @@
 <html>
 <head>
-	<meta http-equiv="refresh" content="0; index.php">
+	<meta http-equiv="refresh" content="0; home.php">
 </head>
 <body>
 
 <?php
 	
-	$servername = "localhost";
-	$username = "root";
-	$password = "root";
-	$dbname = "firebirds";
-	
+    $servername = 'localhost';
+    $username = 'root';
+    $password = 'root';
+    $dbname = 'firebirds';
 	
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);

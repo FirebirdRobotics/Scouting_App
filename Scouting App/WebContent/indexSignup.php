@@ -8,40 +8,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body class="login-bg">
-	<nav class="navbar">
-		<span class="open-slide">
-			<a href="#" onClick="openSlideMenu()">
-				<svg width="30" height="30">
-					<path d="M0,6 30,6" stroke="#fff" stroke-width="4"/>
-					<path d="M0,17 30,17" stroke="#fff" stroke-width="4"/>
-					<path d="M0,28 30,28" stroke="#fff" stroke-width="4"/>
-				</svg>
-			</a>
-		</span>
-		
-		<span class="login">
-			<a href="profile.php"> <!-- THIS SHOULD BE THE LOGOUT -->
-				<svg width="30" height="30">
-					<path d="M28,30 28,4" stroke="#fff" stroke-width="4"/>
-					<path d="M11,6 28,6" stroke="#fff" stroke-width="4"/>
-					<path d="M11,28 28,28" stroke="#fff" stroke-width="4"/>
-					<path d="M13,6 13,10" stroke="#fff" stroke-width="4"/>
-					<path d="M13,28 13,24" stroke="#fff" stroke-width="4"/>
-					
-					<path d="M0,17 21,17" stroke="#fff" stroke-width="3"/>
-					<path d="M10,12 21,18" stroke="#fff" stroke-width="3"/>
-					<path d="M10,22 21,17" stroke="#fff" stroke-width="3"/>
-				</svg>
-			</a>
-		</span>
-	</nav>
-	
-	<div id="side-menu" class="side-navbar">
-		<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br>
-		<a href="home.php">Home</a>
-		<a href="addNewRobot.php">Add Robot</a>
-		<a href="viewData.php">View Data</a>
-	</div>
 	
 	<div class="innerCreateAccountBox">
 		<img align="middle" class="loginImage" src="transparentLogo.png" alt="Logo">
@@ -77,21 +43,15 @@
 		</form>
 	</div>
 	
+	<div class="innerBoxLower">
+		<h2>Already have an account?</h2>
+		<form class="signupForm" action="index.php" method="get" id="signup">
+			<button type="submit" class="signupButton">Log In</button>
+		</form>
+	</div>
+	
 	<div class="footerDiv">
 	<br><br><br>
 	</div>
-	
-	<script type="text/javascript">
-		//Sidebar
-	function openSlideMenu(){
-		document.getElementById('side-menu').style.width ='250px';
-		document.getElementById('main').style.marginLeft ='250px';
-	}
-	
-	function closeSlideMenu(){
-		document.getElementById('side-menu').style.width ='0';
-		document.getElementById('main').style.marginLeft ='0';
-	}
-	</script>
 </body>
 </html>

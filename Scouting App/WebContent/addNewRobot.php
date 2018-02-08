@@ -20,7 +20,7 @@
 		</span>
 		
 		<span class="login">
-			<a href="loginMenu.php">
+			<a href="profile.php"> <!-- THIS SHOULD BE THE LOGOUT -->
 				<svg width="30" height="30">
 					<path d="M28,30 28,4" stroke="#fff" stroke-width="4"/>
 					<path d="M11,6 28,6" stroke="#fff" stroke-width="4"/>
@@ -38,7 +38,7 @@
 	
 	<div id="side-menu" class="side-navbar">
 		<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br>
-		<a href="index.php">Home</a>
+		<a href="home.php">Home</a>
 		<a href="addNewRobot.php">Add Robot</a>
 		<a href="viewData.php">View Data</a>
 	</div>
