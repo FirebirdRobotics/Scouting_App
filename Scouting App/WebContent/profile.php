@@ -44,10 +44,22 @@
 		<a href="viewData.php">View Data</a>
 	</div>
 	
-	<!-- 
-	       THIS FILE WILL HAVE THE USER'S NAME AND A LOGOUT BUTTON
-	 -->
+	<div class="profileBackground">
+		<div class="profilePicture">
+		</div>
+	</div>
 	
+	<script type="text/javascript">
+		//Sidebar
+	function openSlideMenu(){
+		document.getElementById('side-menu').style.width ='250px';
+		document.getElementById('main').style.marginLeft ='250px';
+	}
 	
+	function closeSlideMenu(){
+		document.getElementById('side-menu').style.width ='0';
+		document.getElementById('main').style.marginLeft ='0';
+	}
+	</script>
 </body>
 </html>
