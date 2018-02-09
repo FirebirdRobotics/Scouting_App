@@ -47,6 +47,7 @@
 	<div class="profileBackground">
 		<div class="profilePicture">
 		</div>
+		Name
 	</div>
 	
 	<script type="text/javascript">
