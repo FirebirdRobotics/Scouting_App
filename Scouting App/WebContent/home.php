@@ -8,7 +8,7 @@
 	<link href="styles.css" type="text/css" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
-<body>
+<body class="homeBody">
 	<nav class="navbar">
 		<span class="open-slide">
 			<a href="#" onClick="openSlideMenu()">
@@ -43,9 +43,16 @@
 		<a href="addNewRobot.php">Add Robot</a>
 		<a href="viewData.php">View Data</a>
 	</div>
-<div class="images">
-	<img src="Logo.png" alt="Logo" width=100% height=auto>
-</div>
+	
+    <div class="images">
+    	<img src="Logo.png" alt="Logo" width=100% height=auto>
+    </div>
+	
+	<div class="scoutingDescription">
+		<b>Scouting Description</b><br>
+		<font size="-1">(to be added)</font>
+	</div>
+	
 	<script type="text/javascript">
 		//Sidebar
 	function openSlideMenu(){

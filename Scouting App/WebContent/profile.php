@@ -8,7 +8,7 @@
 	<link href="styles.css" type="text/css" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
-<body class="login-bg">
+<body class="profileBody">
     <nav class="navbar">
 		<span class="open-slide">
 			<a href="#" onClick="openSlideMenu()">
@@ -47,10 +47,20 @@
 	<div class="profileBackground">
 		<div class="profilePicture">
 		</div>
-		Name
-		<br>
-		<br>
-		<button>Logout</button>
+		<?php 
+    		// link to the username, firstname, and lastname (check loginUser for hints on how to reference)
+    		
+    		echo "Username<br>";
+    		
+            echo "<font size='+1'>Firstname Lastname</font><br><br>";
+		?>
+		<form action="logoutUser.php">
+			<button class="logoutButton">Logout</button>
+		</form>
+	</div>
+	 
+	<div class="footerDiv">
+	<br><br><br>
 	</div>
 	
 	<script type="text/javascript">

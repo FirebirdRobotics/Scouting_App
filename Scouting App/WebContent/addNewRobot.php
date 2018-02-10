@@ -46,16 +46,8 @@
 	<div id="main">
 		<form action="insertRobot.php" method="POST">
 		
-		<!-- 
-		
-		TO ADD: 
-		
-		- Add a round selection for which round the data is for
-		- Hoping to add something like a username checker for the robotNumber and roundNumber
-		
-		-->
-		
 		<b><font size="+3">Robot/Team Number:</font></b><br>
+		<font size="-1">(Please communicate with scouting team members)</font><br>
 			<input type="number" class="robotNumber" name="robotNumber" required><br>
 		<br>
 		<b><font size="+3">Autonomous:</font></b><br>
