@@ -48,6 +48,9 @@
 		<div class="profilePicture">
 		</div>
 		Name
+		<br>
+		<br>
+		<button>Logout</button>
 	</div>
 	
 	<script type="text/javascript">
