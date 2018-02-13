@@ -17,8 +17,8 @@
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
     
 	// Insert the above variables into the table values
-	$sql="REPLACE INTO users (`username`, `firstName`, `lastName`, `password`, `confirmPassword`, `email`)
-		              VALUES ('$username', '$first_name', '$last_name', '$password', '$confirm_password', '$email')";
+	$sql="INSERT INTO users (`username`, `firstName`, `lastName`, `password`, `confirmPassword`, `email`)
+		             VALUES ('$username', '$first_name', '$last_name', '$password', '$confirm_password', '$email')";
 	
 	
 	if ($conn->query($sql) === TRUE) {

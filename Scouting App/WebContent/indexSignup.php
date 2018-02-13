@@ -13,33 +13,13 @@
 		<img align="middle" class="loginImage" src="transparentLogo.png" alt="Logo">
 		<hr>
 		<form action="insertUser.php" method="post">
-		<table>
-		<tr>
-			<td><label align="left">Username</label></td> <!-- Would like to add a username checker -->
-			<td><input type="text" name="username" required></td>
-		</tr>
-		<tr>
-			<td><label align="left">First Name</label></td>
-			<td><input type="text" name="firstName" required></td>
-		</tr>
-		<tr>
-			<td><label align="left">Last Name</label></td>
-			<td><input type="text" name="lastName" required></td>
-		</tr>
-		<tr>
-			<td><label align="left">Password</label></td> <!-- Also would like to add character blurs/blocks for password -->
-			<td><input type="password" name="password" required></td>
-		</tr>
-		<tr>
-			<td><label align="left">Confirm Password</label></td> <!-- ALSO would like password dots for this -->
-			<td><input type="password" name="confirmPassword" required></td>
-		</tr>
-		<tr>
-			<td><label align="left">Email</label></td>
-			<td><input type="text" name="email" required></td>
-		</tr>
-		</table>
-		<button type="submit" class="signupButton">Create a New Account</button>
+			<input type="text" name="username" placeholder="Username" class="form-control" required> <!-- Would like to add a username checker -->
+			<input type="text" name="firstName" placeholder="First Name" class="form-control" required>
+			<input type="text" name="lastName" placeholder="Last Name" class="form-control" required>
+			<input type="password" name="password" placeholder="Password" class="form-control" required>
+			<input type="password" name="confirmPassword" placeholder="Confirm Password" class="form-control" required> <!-- Need to make sure that it is the same -->
+			<input type="text" name="email" placeholder="Email" class="form-control" required>
+			<button type="submit" class="signupButton">Create a New Account</button>
 		</form>
 	</div>
 	

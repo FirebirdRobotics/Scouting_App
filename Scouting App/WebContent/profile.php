@@ -49,10 +49,17 @@
 		</div>
 		<?php 
     		// link to the username, firstname, and lastname (check loginUser for hints on how to reference)
+    		include("database.php");
+    		$sql = "SELECT * FROM users";
+    		$result = $conn->query($sql);
     		
-    		echo "Username<br>";
+    		$username
+    		echo "<br>"; // WHERE USERNAME SHOULD GO
     		
-            echo "<font size='+1'>Firstname Lastname</font><br><br>";
+            echo "<font size='+1'>"; // WHERE FIRSTNAME && LASTNAME SHOULD GO
+	        $firstName;
+	        $lastName;
+            echo "</font><br><br>";
 		?>
 		<form action="logoutUser.php">
 			<button class="logoutButton">Logout</button>

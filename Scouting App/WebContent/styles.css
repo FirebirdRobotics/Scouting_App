@@ -160,6 +160,10 @@ input[type="submit"]{
 	padding: 10px;
 }
 
+.signUpFormWidth{
+	max-width: 95%;
+}
+
 .loginbtn{
 	margin-top: 20px;
 	color: #f0f0f0;
@@ -257,11 +261,6 @@ img{
 	display: table-cell;
 	padding: 20px;
 	font-size: 80%;
-}
-
-.innerCreateAccountBox input{
-	display: table-cell;
-	width: 90%;
 }
 
 .homeBody{
@@ -457,5 +456,8 @@ input::-webkit-inner-spin-button {
 		width: 60%;
 		padding-top: 60%;
 		margin-left: 20%;
+	}
+	input{
+		width: 70%;
 	}
 }
