@@ -17,8 +17,10 @@
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
 	
 	if ($_POST['password'] != $_POST['confirmPassword']) {
-		die('Passwords do not match<br>' . '<a href="indexSignup.php">Click here to go back</a>')
+		die('Passwords do not match<br>' . '<a href="indexSignup.php">Click here to go back</a>');
 	}
+	
+	//add an email checker here
     
 	// Insert the above variables into the table values
 	$sql="INSERT INTO users (`username`, `firstName`, `lastName`, `password`, `confirmPassword`, `email`)
