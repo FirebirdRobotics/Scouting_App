@@ -48,18 +48,19 @@
 		<div class="profilePicture">
 		</div>
 		<?php 
-    		// link to the username, firstname, and lastname (check loginUser for hints on how to reference)
+    		// link to the username, firstname, and lastname
     		include("database.php");
-    		$sql = "SELECT * FROM users";
+    		$sql = "SELECT * FROM users where username = '". mysql_real_escape_string($_SESSION['user']['username']) ."'";
     		$result = $conn->query($sql);
+    		$row = mysqli_fetch_assoc($result);
     		
-    		$username;
-    		echo "<br>"; // WHERE USERNAME SHOULD GO
+    		extract($row);
     		
-            echo "<font size='+1'>"; // WHERE FIRSTNAME && LASTNAME SHOULD GO
-	        $firstName;
-	        $lastName;
-            echo "</font><br><br>";
+        	echo "$row[username]<br>";
+        		
+            echo "<font size='+1'>$row[firstName] $row[lastName]</font><br><br>";
+    		
+    		$conn->close();
 		?>
 		<form action="logoutUser.php">
 			<button class="logoutButton">Logout</button>

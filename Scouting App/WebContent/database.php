@@ -1,12 +1,12 @@
 <?php
 
     $servername = 'localhost';
-    $username = 'root';
-    $password = 'root';
+    $dbusername = 'root';
+    $dbpassword = 'root';
     $dbname = 'firebirds';
     
     // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
 	
 	// Check connection
 	if (mysqli_connect_errno()) {

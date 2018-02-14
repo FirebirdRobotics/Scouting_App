@@ -53,7 +53,7 @@
         return true;
     }
 
-    mysqli_close($conn);
+    $conn->close();
 
 ?>
 

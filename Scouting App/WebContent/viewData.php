@@ -64,19 +64,7 @@ $(document).ready(function() {
 	
 	<?php
 	
-	$servername = "localhost";
-	$username = "root";
-	$password = "root";
-	$dbname = "firebirds";
-	
-	
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	
-	// Check connection
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	}
+	include("database.php");
 	
 	echo "<br><br>"; 
 	?>
@@ -102,10 +90,10 @@ $(document).ready(function() {
 	    extract($row);
 	    $rank = 0;
 	    $rank += ($crossedBaseline == 'yes' ? 10 : 0);
-	    $rank += ($placedCubeAuto == 'placedOnScale' || $placedCubeAuto == 'placedOnSwitch' ? 10 : 0); 
+	    $rank += ($placedCubeAuto == 'placedOnScale' || $placedCubeAuto == 'placedOnSwitch' ? 10 : 0);
 	    $rank += ($allySwitch >= 10 ? 10 : 0);
-	    $rank += ($enemySwitch < 1 ? 10 : 0);
-	    $rank += ($scale >= 1 ? 10 : 0);
+	    $rank += ($enemySwitch < 1 ? 10 : 0); 
+	    $rank += ($scale >= 1 ? 10 : 0);                                                           
 	    $rank += ($attemptedClimb == 'successfulClimb' ? 10 : 0);
 	    $rank += ($carriedRobots == 'yes' ? 10 : 0);
 	           echo "<tr>

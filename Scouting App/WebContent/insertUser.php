@@ -1,6 +1,5 @@
 <html>
 <head>
-	<meta http-equiv="refresh" content="0; home.php">
 </head>
 <body>
 
@@ -16,24 +15,48 @@
 	$confirm_password = mysqli_real_escape_string($conn, $_POST['confirmPassword']);
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
 	
-	if ($_POST['password'] != $_POST['confirmPassword']) {
-		die('Passwords do not match<br>' . '<a href="indexSignup.php">Click here to go back</a>');
-	}
+	// strpos variables
+	$contains = '@';
+    $pos = strpos($email, $contains);
 	
-	//add an email checker here
-    
 	// Insert the above variables into the table values
 	$sql="INSERT INTO users (`username`, `firstName`, `lastName`, `password`, `confirmPassword`, `email`)
 		             VALUES ('$username', '$first_name', '$last_name', '$password', '$confirm_password', '$email')";
 	
+	if (!empty($_POST['username'])) {
+    	if ($_POST['password'] !== $_POST['confirmPassword']) {
+    	    die('Passwords do not match<br>' . '<a href="indexSignup.php">Click here to go back</a>');
+    	}
+    	
+    	if ($pos === FALSE) {
+    	    die('Not a valid email<br>' . '<a href="indexSignup.php">Click here to go back</a>');
+    	}
+	}
+	
+	if (CheckLoginInDB($username,$conn)) {
+	    die('A user with this username already exists' . '<br><a href="indexSignup.php">Click here to go back</a>');
+	}
 	
 	if ($conn->query($sql) === TRUE) {
 	    echo "New record created successfully";
+	    header('Location: home.php');
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 	
-	echo "<br><br>";
+	function CheckLoginInDB($username,$conn) {
+	    
+	    $qry = "Select * from users where username='$username'";
+	    
+	    $result = mysqli_query($conn, $qry);
+	    
+	    if(!$result || mysqli_num_rows($result) <= 0) {
+	        $_SESSION["error"] = "A user with this username already exists";
+	        return false;
+	    }
+	    
+	    return true;
+	}
 	
 	$conn->close();
 	
