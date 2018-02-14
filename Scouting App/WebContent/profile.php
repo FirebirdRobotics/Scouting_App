@@ -53,7 +53,7 @@
     		$sql = "SELECT * FROM users";
     		$result = $conn->query($sql);
     		
-    		$username
+    		$username;
     		echo "<br>"; // WHERE USERNAME SHOULD GO
     		
             echo "<font size='+1'>"; // WHERE FIRSTNAME && LASTNAME SHOULD GO
