@@ -40,10 +40,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`username`, `firstName`, `lastName`, `password`, `confirmPassword`, `email`) VALUES
-('bob', 'bob', 'bob', 'bob', 'bob', 'bob'),
+('bob', 'bob', 'bob', 'bob', 'bob', 'bob@'),
 ('bobjoe', 'bob', 'joe', 'bobjoe', 'bobjoe', 'bobjoe@mail.com'),
 ('ricefarmer', 'Branden', 'Yang', 'password', 'password', 'yang.branden@gmail.com'),
-('test', 'test', 'test', 'test', 'test', 'test');
+('test', 'test', 'test', 'test', 'test', 'test@');
 
 --
 -- Indexes for dumped tables
