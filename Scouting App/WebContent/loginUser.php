@@ -36,7 +36,7 @@
         
         $_SESSION["username"] = $username;
         
-        header('Location: home.php');
+        echo '<script type="text/javascript">location.href = "home.php";</script>';
     }
 
     function CheckLoginInDB($username,$password,$conn) {

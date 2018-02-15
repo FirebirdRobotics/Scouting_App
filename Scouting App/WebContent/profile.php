@@ -50,7 +50,7 @@
 		<?php 
     		// link to the username, firstname, and lastname
     		include("database.php");
-    		$sql = "SELECT * FROM users where username = '". mysql_real_escape_string($_SESSION['user']['username']) ."'";
+    		$sql = "SELECT * FROM users where username = '". $username ."'";
     		$result = $conn->query($sql);
     		$row = mysqli_fetch_assoc($result);
     		

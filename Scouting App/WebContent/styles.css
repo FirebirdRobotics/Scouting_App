@@ -144,8 +144,16 @@ input[type="submit"]{
 	padding: 2%;
 	width: 45%;
 	margin-left: 30%;
-	margin-right: 30%;
 	margin-bottom: 2%;
+	background-color: #999;
+}
+
+input[type="text"]{
+	border: 1px solid;
+}
+
+input[type="number"]{
+	border: 1px solid;
 }
 
 .robotNumber{
@@ -189,7 +197,7 @@ textarea{
 	font-size: 18px;
 	font-family: 'Open Sans', sans-serif;
 	width: 98%;
-	margin-left: 1%;
+	border: 1px solid black;
 }
 
 img{
@@ -268,9 +276,19 @@ img{
 	color: #ffffff;
 }
 
+.scoutingDescriptionAll{
+	background-color: #111;
+	width: 93%;
+	font-size: 44px;
+	padding-left: 3%;
+	padding-top: 5%;
+	padding-bottom: 20%;
+	margin-left: 2%;
+}
+
 .scoutingDescription{
-	font-size: 60px;
-	margin-left: 3%;
+	font-size: 24px;
+	width: 96%;
 }
 
 .signupForm{
@@ -447,7 +465,7 @@ input::-webkit-inner-spin-button {
 	}
 	
 	.robotNumber{
-		margin-left: 23%;
+		margin-left: 15%;
 	}
 	.scoutingDescription{
 		font-size: 24px;
@@ -459,5 +477,14 @@ input::-webkit-inner-spin-button {
 	}
 	input{
 		width: 70%;
+	}
+	input[type="submit"]{
+		margin-left: 25%;
+	}
+	.counterButton{
+		width: 49.5%;
+	}
+	.redButton{
+		margin-right: 1%;
 	}
 }

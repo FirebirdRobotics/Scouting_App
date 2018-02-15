@@ -39,7 +39,7 @@
 	
 	if ($conn->query($sql) === TRUE) {
 	    echo "New record created successfully";
-	    header('Location: home.php');
+	    echo '<script type="text/javascript">location.href = "home.php";</script>';
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}

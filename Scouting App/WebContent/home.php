@@ -48,9 +48,17 @@
     	<img src="Logo.png" alt="Logo" width=100% height=auto>
     </div>
 	
-	<div class="scoutingDescription">
-		<b>Scouting Description</b><br>
-		<font size="-1">(to be added)</font>
+	<div class="scoutingDescriptionAll">
+		<b>What is scouting?</b><br>
+		<div class="scoutingDescription">
+        		The purpose of scouting is to collect information about other teams' robots. 
+        		With this information, we can then see how our and other teams compare to each other. 
+        		This data is also useful for forming alliances in the final rounds of competitions. <br><br>
+        		You can help collect information by clicking the 'Add Robot' tab in the side bar.
+        		From there you will be taken to a form to fill out with information about how the robot did in the round.
+        		To view current data, you can click on the 'View Data' tab in the side bar.
+        		This will show you a table full of all the data collected on the robots.
+		</div>
 	</div>
 	
 	<script type="text/javascript">
