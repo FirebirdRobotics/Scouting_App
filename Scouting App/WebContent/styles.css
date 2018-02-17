@@ -97,7 +97,7 @@ body{
 	text-decoration: none;
 	font-size: 40px;
 	width: 50%;
-	height: auto;
+	height: 70px;
 	font-weight: bold;
 	text-align: center;
 }
@@ -196,7 +196,7 @@ input[type="number"]{
 textarea{
 	font-size: 18px;
 	font-family: 'Open Sans', sans-serif;
-	width: 98%;
+	width: 100%;
 	border: 1px solid black;
 }
 
@@ -485,5 +485,8 @@ input::-webkit-inner-spin-button {
 	}
 	input[type="submit"]{
 		margin-left: 25%;
+	}
+	textarea{
+		width: 98%;
 	}
 }
