@@ -38,8 +38,7 @@
 	}
 	
 	if ($conn->query($sql) === TRUE) {
-	    echo "New record created successfully";
-	    echo '<script type="text/javascript">location.href = "home.php";</script>';
+	    die('New record created successfully' . '<br><a href="index.php>Click here to log in</a>"');
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}

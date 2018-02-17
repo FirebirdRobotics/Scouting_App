@@ -46,11 +46,15 @@
 	
 	<div class="profileBackground">
 		<div class="profilePicture">
+			<img align="middle" class="loginImage" src="transparentLogo.png" alt="placeholder image">
 		</div>
 		<?php 
     		// link to the username, firstname, and lastname
     		include("database.php");
-    		$sql = "SELECT * FROM users where username = '". $username ."'";
+    		
+    		session_start();
+    		
+    		$sql = "SELECT * FROM users where username = '". $_SESSION["username"] ."'";
     		$result = $conn->query($sql);
     		$row = mysqli_fetch_assoc($result);
     		

@@ -335,13 +335,19 @@ img{
 }
 
 .profilePicture{
-	margin-bottom: 5%;
-	width: 20%;
-	padding-top: 20%;
-	background-color: white;
+	height: 8em;
+	width: 8em;
+	background-color: #222;
 	border-radius: 50%;
 	display: block;
-	margin-left: 40%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.profilePicture img {
+	max-width: 100%;
+	max-height: 100%;
+	margin-top: 20%;
 }
 
 .logoutButton{
@@ -471,9 +477,8 @@ input::-webkit-inner-spin-button {
 		font-size: 24px;
 	}
 	.profilePicture{
-		width: 60%;
-		padding-top: 60%;
-		margin-left: 20%;
+		height: 6em;
+		width: 6em;
 	}
 	input{
 		width: 70%;
