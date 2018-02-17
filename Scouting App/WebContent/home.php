@@ -9,6 +9,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body class="homeBody">
+
+	<?php 
+    	include("database.php");
+    	
+    	if (!isset($_SESSION['username'])) {
+    	    echo '<script type="text/javascript">location.href = "index.php";</script>';
+    	}
+	?>
+	
 	<nav class="navbar">
 		<span class="open-slide">
 			<a href="#" onClick="openSlideMenu()">
