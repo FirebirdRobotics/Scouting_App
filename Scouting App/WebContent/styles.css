@@ -486,10 +486,4 @@ input::-webkit-inner-spin-button {
 	input[type="submit"]{
 		margin-left: 25%;
 	}
-	.counterButton{
-		width: 49.5%;
-	}
-	.redButton{
-		margin-right: 1%;
-	}
 }
