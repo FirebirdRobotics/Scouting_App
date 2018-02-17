@@ -38,7 +38,7 @@
 	}
 	
 	if ($conn->query($sql) === TRUE) {
-	    die('New record created successfully' . '<br><a href="index.php>Click here to log in</a>"');
+	    die('New account successfully created' . '<br><a href="index.php>Click here to log in</a>"');
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}

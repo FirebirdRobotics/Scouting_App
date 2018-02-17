@@ -8,7 +8,7 @@
     include("database.php");
     
     if (isset($_SESSION['username'])) {
-        header('Location: home.php');
+        echo '<script type="text/javascript">location.href = "home.php";</script>';
     }
     
     if (empty($_POST['username']) && empty($_POST['password'])) {
@@ -36,7 +36,7 @@
         
         $_SESSION["username"] = $username;
         
-        header('Location: home.php');
+        echo '<script type="text/javascript">location.href = "home.php";</script>';
     }
 
     function CheckLoginInDB($username,$password,$conn) {
