@@ -17,33 +17,11 @@
     	}
 	?>
 
-	<nav class="navbar">
-		<span class="open-slide">
-			<a href="#" onClick="openSlideMenu()">
-				<svg width="30" height="30">
-					<path d="M0,6 30,6" stroke="#fff" stroke-width="4"/>
-					<path d="M0,17 30,17" stroke="#fff" stroke-width="4"/>
-					<path d="M0,28 30,28" stroke="#fff" stroke-width="4"/>
-				</svg>
-			</a>
-		</span>
-		
-		<span class="login">
-			<a href="profile.php"> <!-- THIS SHOULD BE THE LOGOUT -->
-				<svg width="30" height="30">
-					<path d="M28,30 28,4" stroke="#fff" stroke-width="4"/>
-					<path d="M11,6 28,6" stroke="#fff" stroke-width="4"/>
-					<path d="M11,28 28,28" stroke="#fff" stroke-width="4"/>
-					<path d="M13,6 13,10" stroke="#fff" stroke-width="4"/>
-					<path d="M13,28 13,24" stroke="#fff" stroke-width="4"/>
-					
-					<path d="M0,17 21,17" stroke="#fff" stroke-width="3"/>
-					<path d="M10,12 21,18" stroke="#fff" stroke-width="3"/>
-					<path d="M10,22 21,17" stroke="#fff" stroke-width="3"/>
-				</svg>
-			</a>
-		</span>
-	</nav>
+	<?php 
+    
+        include("navbar.php");
+    
+    ?>
 	
 	<div id="side-menu" class="side-navbar">
 		<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br>
@@ -102,22 +80,22 @@
 			How many cubes did it place on ally switch?<br>
 			<div class="numCounter">
 				<input class="qty" id="qty" value="0" name="allySwitch"/>
-				<button class="redButton counterButton" id="sub" onclick="modifyQty(-1); return false;">â”�</button>
-				<button class="greenButton counterButton" id="add" onclick="modifyQty(1); return false;">â•‹</button>
+				<button class="redButton counterButton" id="sub" onclick="modifyQty(-1); return false;">━</button>
+				<button class="greenButton counterButton" id="add" onclick="modifyQty(1); return false;">╋</button>
 			</div><br><br><br><br>
 			
 			How many cubes did it place on the enemy switch?<br>
 			<div class="numCounter">
 				<input class="qty" id="qty2" value="0" name="enemySwitch"/>
-				<button class="redButton counterButton" id="sub" onclick="modifyQty2(-1); return false;">â”�</button>
-				<button class="greenButton counterButton" id="add" onclick="modifyQty2(1); return false;">â•‹</button>
+				<button class="redButton counterButton" id="sub" onclick="modifyQty2(-1); return false;">━</button>
+				<button class="greenButton counterButton" id="add" onclick="modifyQty2(1); return false;">╋</button>
 			</div><br><br><br><br>
 			
 			How many cubes did it place on the scale?<br>
 			<div class="numCounter">
 				<input class="qty" id="qty3" value="0" name="scale"/>
-				<button class="redButton counterButton" id="sub" onclick="modifyQty3(-1); return false;">â”�</button>
-				<button class="greenButton counterButton" id="add" onclick="modifyQty3(1); return false;">â•‹</button>
+				<button class="redButton counterButton" id="sub" onclick="modifyQty3(-1); return false;">━</button>
+				<button class="greenButton counterButton" id="add" onclick="modifyQty3(1); return false;">╋</button>
 			</div><br><br><br><br>
 			
 			Do they park or attempt to climb? Are they successful in their climb?
