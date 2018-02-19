@@ -61,6 +61,7 @@ $(document).ready(function() {
                     <th>Cubes (Ally Switch)</th>
                     <th>Cubes (Enemy Switch)</th>
                     <th>Cubes (Scale)</th>
+                    <th>Cubes (Exchange)</th>
                     <th>Attempted Climb</th>
                     <th>Carried Robots</th>
                     <th>Comments</th>
@@ -72,18 +73,73 @@ $(document).ready(function() {
 	{
 	    extract($row);
 	    $rank = 0;
+	    // add rank points for baseline
 	    $rank += ($crossedBaseline == 'yes' ? 10 : 0);
-	    $rank += ($placedCubeAuto == 'placedOnScale' || $placedCubeAuto == 'placedOnSwitch' ? 10 : 0);
-	    $rank += ($allySwitch >= 10 ? 10 : 0);
-	    $rank += ($enemySwitch < 1 ? 10 : 0); 
-	    $rank += ($scale >= 1 ? 10 : 0);                                                           
+	    
+	    // add rank points for autonomous cube
+	    $rank += ($placedCubeAuto == 'placedOnScale' || $placedCubeAuto == 'placedOnAllySwitch' ? 10 : 0);
+        $rank += ($placedCubeAuto != 'placedOnEnemySwitch' ? -10 : 0);
+	    
+	    // add rank points for ally switch
+	    $rank += ($allySwitch >= 1 ? 5 : 0);
+	    $rank += ($allySwitch >= 2 ? 5 : 0);
+	    $rank += ($allySwitch >= 3 ? 5 : 0);
+	    $rank += ($allySwitch >= 4 ? 5 : 0);
+	    $rank += ($allySwitch >= 5 ? 5 : 0);
+	    $rank += ($allySwitch >= 6 ? 5 : 0);
+	    $rank += ($allySwitch >= 7 ? 5 : 0);
+	    $rank += ($allySwitch >= 8 ? 5 : 0);
+	    $rank += ($allySwitch >= 9 ? 5 : 0);
+	    $rank += ($allySwitch >= 10 ? 5 : 0);
+	    
+	    // add rank points for enemy switch
+	    $rank += ($enemySwitch < 1 ? -5 : 0);
+	    $rank += ($enemySwitch < 2 ? -5 : 0);
+	    $rank += ($enemySwitch < 3 ? -5 : 0);
+	    $rank += ($enemySwitch < 4 ? -5 : 0);
+	    $rank += ($enemySwitch < 5 ? -5 : 0);
+	    $rank += ($enemySwitch < 6 ? -5 : 0);
+	    $rank += ($enemySwitch < 7 ? -5 : 0);
+	    $rank += ($enemySwitch < 8 ? -5 : 0);
+	    $rank += ($enemySwitch < 9 ? -5 : 0);
+	    $rank += ($enemySwitch < 10 ? -5 : 0);
+	    
+	    // add rank points for scale
+	    $rank += ($scale >= 1 ? 5 : 0);
+	    $rank += ($scale >= 2 ? 5 : 0);
+	    $rank += ($scale >= 3 ? 5 : 0);
+	    $rank += ($scale >= 4 ? 5 : 0);
+	    $rank += ($scale >= 5 ? 10 : 0);
+	    $rank += ($scale >= 6 ? 10 : 0);
+	    $rank += ($scale >= 7 ? 10 : 0);
+	    $rank += ($scale >= 8 ? 10 : 0);
+	    $rank += ($scale >= 9 ? 10 : 0);
+	    $rank += ($scale >= 10 ? 10 : 0);
+	    
+	    // add rank points for cube exchange
+	    $rank += ($cubeExchange >= 1 ? 10 : 0);
+	    $rank += ($cubeExchange >= 2 ? 10 : 0);
+	    $rank += ($cubeExchange >= 3 ? 10 : 0);
+	    $rank += ($cubeExchange >= 4 ? 10 : 0);
+	    $rank += ($cubeExchange >= 5 ? 10 : 0);
+	    $rank += ($cubeExchange >= 6 ? 10 : 0);
+	    $rank += ($cubeExchange >= 7 ? 10 : 0);
+	    $rank += ($cubeExchange >= 8 ? 10 : 0);
+	    $rank += ($cubeExchange >= 9 ? 10 : 0);
+	    $rank += ($cubeExchange >= 10 ? 10 : 0);
+	    
+	    // add rank points for climb
 	    $rank += ($attemptedClimb == 'successfulClimb' ? 10 : 0);
+	    
+	    // add rank points for carrying other robots
 	    $rank += ($carriedRobots == 'yes' ? 10 : 0);
+	    
+	    // text values that display in the table
 	           echo "<tr>
                     <td>$robotNumber</td>
                     <td>$rank</td>
                     <td>"
-                    /* Code to display better text values */
+                    // Code to display better text values
                         ?><?php
                         if ($crossedBaseline == 'yes') {
                             echo "Did cross baseline";
@@ -106,6 +162,7 @@ $(document).ready(function() {
                     <td>$allySwitch</td>
                     <td>$enemySwitch</td>
                     <td>$scale</td>
+                    <td>$cubeExchange</td>
                     <td>"
                         ?><?php
                         if ($attemptedClimb == "successfulClimb") {

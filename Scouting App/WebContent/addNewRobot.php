@@ -63,8 +63,14 @@
 				<div class="check"><div class="inside"></div></div>
 			</li>
 			<li>
-				<input type="radio" name="placedCubeAuto" value="placedOnSwitch" id="autoCube-switch">
-				<label for="autoCube-switch">Yes, on switch</label>
+				<input type="radio" name="placedCubeAuto" value="placedOnAllySwitch" id="autoCubeAllySwitch">
+				<label for="autoCubeAllySwitch">Yes, on ally switch</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			<li>
+				<input type="radio" name="placedCubeAuto" value="placedOnEnemySwitch" id="autoCubeEnemySwitch">
+				<label for="autoCubeEnemySwitch">Yes, on enemy switch</label>
 				
 				<div class="check"><div class="inside"></div></div>
 			</li>
@@ -96,6 +102,13 @@
 				<input class="qty" id="qty3" value="0" name="scale"/>
 				<button class="redButton counterButton" id="sub" onclick="modifyQty3(-1); return false;">━</button>
 				<button class="greenButton counterButton" id="add" onclick="modifyQty3(1); return false;">╋</button>
+			</div><br><br><br><br>
+			
+			How many cubes did it place in the cube exchange?<br>
+			<div class="numCounter">
+				<input class="qty" id="qty4" value="0" name="cubeExchange"/>
+				<button class="redButton counterButton" id="sub" onclick="modifyQty4(-1); return false;">━</button>
+				<button class="greenButton counterButton" id="add" onclick="modifyQty4(1); return false;">╋</button>
 			</div><br><br><br><br>
 			
 			Do they park or attempt to climb? Are they successful in their climb?
@@ -186,6 +199,18 @@
     	}
     	
     	document.getElementById('qty3').value = new_qty;
+    	return new_qty;
+	}
+
+	function modifyQty4(val) {
+    	var qty = document.getElementById('qty4').value;
+    	var new_qty = parseInt(qty,10) + val;
+    	
+    	if (new_qty < 0) {
+    	    new_qty = 0;
+    	}
+    	
+    	document.getElementById('qty4').value = new_qty;
     	return new_qty;
 	}
 	
