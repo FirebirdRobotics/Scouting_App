@@ -29,8 +29,12 @@
     	}
     	
     	if ($pos === FALSE) {
-    	    die('Not a valid email<br>' . '<a href="indexSignup.php">Click here to go back</a>');
+    	    die('Invalid email<br>' . '<a href="indexSignup.php">Click here to go back</a>');
     	}
+	}
+	
+	if($_POST['signupCode'] != "3019"){
+	    die('Invalid signup code<br>' . '<a href="indexSignup.php">Click here to go back</a>');
 	}
 	
 	if (CheckLoginInDB($username,$conn)) {

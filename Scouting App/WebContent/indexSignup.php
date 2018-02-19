@@ -19,6 +19,7 @@
 			<input type="password" name="password" placeholder="Password" class="form-control" required>
 			<input type="password" name="confirmPassword" placeholder="Confirm Password" class="form-control" required> <!-- Need to make sure that it is the same -->
 			<input type="text" name="email" placeholder="Email" class="form-control" required>
+			<input type="text" name="signupCode" placeholder="Signup Code" class="form-control" required>
 			<button type="submit" class="signupButton">Create a New Account</button>
 		</form>
 	</div>

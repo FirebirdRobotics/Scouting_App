@@ -33,10 +33,16 @@
 	<div id="main">
 		<form action="insertRobot.php" method="POST">
 		
-		<b><font size="+3">Robot/Team Number:</font></b><br>
+		<b><font size="+3">Robot/Team:</font></b><br>
 		<font size="-1">(Please communicate with scouting team members)</font><br>
-			<input type="number" class="robotNumber" name="robotNumber" required><br>
-		<br>
+			Team Number:
+			<br>
+			<input type="number" class="robotNumber" name="robotNumber" placeholder="ex. 3019" required><br>
+			<br>
+			Team Name:
+			<br>
+			<input type="text" class="teamName" name="teamName" placeholder="ex. Firebird Robotics" required><br>
+			<br>
 		<b><font size="+3">Autonomous:</font></b><br>
 			Did it cross the base line?
 			<ul>

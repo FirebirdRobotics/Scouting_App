@@ -152,6 +152,10 @@ input[type="text"]{
 	border: 1px solid;
 }
 
+input[type="password"]{
+	border: 1px solid;
+}
+
 input[type="number"]{
 	border: 1px solid;
 }
@@ -159,6 +163,13 @@ input[type="number"]{
 .robotNumber{
 	font-size: 40px;
 	margin-left: 20px;
+	width: 350px;
+}
+
+.teamName{
+	font-size: 24px;
+	margin-left: 20px;
+	width: 350px;
 }
 
 .form-control{
@@ -469,9 +480,11 @@ input::-webkit-inner-spin-button {
 	.innerCreateAccountBox{
 		width: 80%;
 	}
-	
 	.robotNumber{
-		margin-left: 15%;
+		margin-left: 5%;
+	}
+	.teamName{
+		margin-left: 5%;
 	}
 	.scoutingDescription{
 		font-size: 24px;

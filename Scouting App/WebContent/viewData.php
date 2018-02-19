@@ -19,7 +19,7 @@
 $(document).ready(function() {
     $('#table1').DataTable({
       lengthMenu: [[10, 20, 100, -1], [10, 20, 100, "All"]],
-      order: [1, 'desc'],
+      order: [2, 'desc'],
     });
 });
 </script>
@@ -55,6 +55,7 @@ $(document).ready(function() {
 	<?php 
 	echo "<tr>
                     <th>Robot Number</th>
+                    <th>Team Name</th>
                     <th>Rank</th>
                     <th>Crossed Baseline</th>
                     <th>Placed Cube in Autonomous</th>
@@ -78,7 +79,7 @@ $(document).ready(function() {
 	    
 	    // add rank points for autonomous cube
 	    $rank += ($placedCubeAuto == 'placedOnScale' || $placedCubeAuto == 'placedOnAllySwitch' ? 10 : 0);
-        $rank += ($placedCubeAuto != 'placedOnEnemySwitch' ? -10 : 0);
+        $rank += ($placedCubeAuto == 'placedOnEnemySwitch' ? -10 : 0);
 	    
 	    // add rank points for ally switch
 	    $rank += ($allySwitch >= 1 ? 5 : 0);
@@ -93,16 +94,16 @@ $(document).ready(function() {
 	    $rank += ($allySwitch >= 10 ? 5 : 0);
 	    
 	    // add rank points for enemy switch
-	    $rank += ($enemySwitch < 1 ? -5 : 0);
-	    $rank += ($enemySwitch < 2 ? -5 : 0);
-	    $rank += ($enemySwitch < 3 ? -5 : 0);
-	    $rank += ($enemySwitch < 4 ? -5 : 0);
-	    $rank += ($enemySwitch < 5 ? -5 : 0);
-	    $rank += ($enemySwitch < 6 ? -5 : 0);
-	    $rank += ($enemySwitch < 7 ? -5 : 0);
-	    $rank += ($enemySwitch < 8 ? -5 : 0);
-	    $rank += ($enemySwitch < 9 ? -5 : 0);
-	    $rank += ($enemySwitch < 10 ? -5 : 0);
+	    $rank += ($enemySwitch >= 1 ? -5 : 0);
+	    $rank += ($enemySwitch >= 2 ? -5 : 0);
+	    $rank += ($enemySwitch >= 3 ? -5 : 0);
+	    $rank += ($enemySwitch >= 4 ? -5 : 0);
+	    $rank += ($enemySwitch >= 5 ? -5 : 0);
+	    $rank += ($enemySwitch >= 6 ? -5 : 0);
+	    $rank += ($enemySwitch >= 7 ? -5 : 0);
+	    $rank += ($enemySwitch >= 8 ? -5 : 0);
+	    $rank += ($enemySwitch >= 9 ? -5 : 0);
+	    $rank += ($enemySwitch >= 10 ? -5 : 0);
 	    
 	    // add rank points for scale
 	    $rank += ($scale >= 1 ? 5 : 0);
@@ -130,6 +131,9 @@ $(document).ready(function() {
 	    
 	    // add rank points for climb
 	    $rank += ($attemptedClimb == 'successfulClimb' ? 10 : 0);
+	    $rank += ($attemptedClimb == 'unsuccessfulClimb' ? -5 : 0);
+	    $rank += ($attemptedClimb == 'parked' ? 5 : 0);
+	    $rank += ($attemptedClimb == 'didNotTry' ? -10 : 0);
 	    
 	    // add rank points for carrying other robots
 	    $rank += ($carriedRobots == 'yes' ? 10 : 0);
@@ -137,6 +141,7 @@ $(document).ready(function() {
 	    // text values that display in the table
 	           echo "<tr>
                     <td>$robotNumber</td>
+                    <td>$teamName</td>
                     <td>$rank</td>
                     <td>"
                     // Code to display better text values
