@@ -59,8 +59,8 @@ $(document).ready(function() {
                     <th>Rank</th>
                     <th>Crossed Baseline</th>
                     <th>Placed Cube in Autonomous</th>
-                    <th>Cubes (Ally Switch)</th>
-                    <th>Cubes (Enemy Switch)</th>
+                    <th>Cubes (Switch)</th>
+                    <th>Cubes (Dropped)</th>
                     <th>Cubes (Scale)</th>
                     <th>Cubes (Exchange)</th>
                     <th>Attempted Climb</th>
@@ -82,28 +82,28 @@ $(document).ready(function() {
         $rank += ($placedCubeAuto == 'placedOnEnemySwitch' ? -10 : 0);
 	    
 	    // add rank points for ally switch
-	    $rank += ($allySwitch >= 1 ? 5 : 0);
-	    $rank += ($allySwitch >= 2 ? 5 : 0);
-	    $rank += ($allySwitch >= 3 ? 5 : 0);
-	    $rank += ($allySwitch >= 4 ? 5 : 0);
-	    $rank += ($allySwitch >= 5 ? 5 : 0);
-	    $rank += ($allySwitch >= 6 ? 5 : 0);
-	    $rank += ($allySwitch >= 7 ? 5 : 0);
-	    $rank += ($allySwitch >= 8 ? 5 : 0);
-	    $rank += ($allySwitch >= 9 ? 5 : 0);
-	    $rank += ($allySwitch >= 10 ? 5 : 0);
+	    $rank += ($switch >= 1 ? 5 : 0);
+	    $rank += ($switch >= 2 ? 5 : 0);
+	    $rank += ($switch >= 3 ? 5 : 0);
+	    $rank += ($switch >= 4 ? 5 : 0);
+	    $rank += ($switch >= 5 ? 5 : 0);
+	    $rank += ($switch >= 6 ? 5 : 0);
+	    $rank += ($switch >= 7 ? 5 : 0);
+	    $rank += ($switch >= 8 ? 5 : 0);
+	    $rank += ($switch >= 9 ? 5 : 0);
+	    $rank += ($switch >= 10 ? 5 : 0);
 	    
 	    // add rank points for enemy switch
-	    $rank += ($enemySwitch >= 1 ? -5 : 0);
-	    $rank += ($enemySwitch >= 2 ? -5 : 0);
-	    $rank += ($enemySwitch >= 3 ? -5 : 0);
-	    $rank += ($enemySwitch >= 4 ? -5 : 0);
-	    $rank += ($enemySwitch >= 5 ? -5 : 0);
-	    $rank += ($enemySwitch >= 6 ? -5 : 0);
-	    $rank += ($enemySwitch >= 7 ? -5 : 0);
-	    $rank += ($enemySwitch >= 8 ? -5 : 0);
-	    $rank += ($enemySwitch >= 9 ? -5 : 0);
-	    $rank += ($enemySwitch >= 10 ? -5 : 0);
+	    $rank += ($dropped >= 1 ? -5 : 0);
+	    $rank += ($dropped >= 2 ? -5 : 0);
+	    $rank += ($dropped >= 3 ? -5 : 0);
+	    $rank += ($dropped >= 4 ? -5 : 0);
+	    $rank += ($dropped >= 5 ? -5 : 0);
+	    $rank += ($dropped >= 6 ? -5 : 0);
+	    $rank += ($dropped >= 7 ? -5 : 0);
+	    $rank += ($dropped >= 8 ? -5 : 0);
+	    $rank += ($dropped >= 9 ? -5 : 0);
+	    $rank += ($dropped >= 10 ? -5 : 0);
 	    
 	    // add rank points for scale
 	    $rank += ($scale >= 1 ? 5 : 0);
@@ -164,8 +164,8 @@ $(document).ready(function() {
                         }
                         ?><?php
                echo "</td>
-                    <td>$allySwitch</td>
-                    <td>$enemySwitch</td>
+                    <td>$switch</td>
+                    <td>$dropped</td>
                     <td>$scale</td>
                     <td>$cubeExchange</td>
                     <td>"
