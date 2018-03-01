@@ -48,25 +48,16 @@ $(document).ready(function() {
 	<?php 
 	echo "<tr>
                     <th>Robot Number</th>
-                    <th>Round Number</th>
+                    <th>Team Name</th>
                     <th>Rank</th>
-                    <th>Crossed Baseline</th>
-                    <th>Placed Cube in Autonomous</th>
-                    <th>Cubes (Switch)</th>
-                    <th>Cubes (Dropped)</th>
-                    <th>Cubes (Scale)</th>
-                    <th>Cubes (Exchange)</th>
-                    <th>Attempted Climb</th>
-                    <th>Carried Robots</th>
-                    <th>Comments</th>
           </tr><thead><tbody>";
 	$sql = "SELECT * FROM robots";
 	$result = $conn->query($sql);
+	$rank = 0;
 	
 	while($row = mysqli_fetch_assoc($result))
 	{
 	    extract($row);
-	    $rank = 0;
 	    // add rank points for baseline
 	    $rank += ($crossedBaseline == 'yes' ? 10 : 0);
 	    
@@ -130,70 +121,26 @@ $(document).ready(function() {
 	    
 	    // add rank points for carrying other robots
 	    $rank += ($carriedRobots == 'yes' ? 10 : 0);
-	    
-	    // text values that display in the table
-	           echo "<tr>
-                    <td>$robotNumber</td>
-                    <td>$matchNumber</td>
-                    <td>$rank</td>
-                    <td>"
-                    // Code to display better text values
-                        ?><?php
-                        if ($crossedBaseline == 'yes') {
-                            echo "Did cross baseline";
-                        } elseif ($crossedBaseline == 'no') {
-                            echo "Did not cross baseline";
-                        }
-                        ?><?php
-              echo "</td>
-                    <td>"
-                        ?><?php
-                        if ($placedCubeAuto == 'placedOnScale') {
-                            echo "Placed on Scale";
-                        } elseif ($placedCubeAuto == 'placedOnSwitch') {
-                            echo "Placed on Switch";
-                        } elseif ($placedCubeAuto == 'didNotPlace') {
-                            echo "Did not place";
-                        }
-                        ?><?php
-               echo "</td>
-                    <td>$switch</td>
-                    <td>$dropped</td>
-                    <td>$scale</td>
-                    <td>$cubeExchange</td>
-                    <td>"
-                        ?><?php
-                        if ($attemptedClimb == "successfulClimb") {
-                            echo "Successful Climb";
-                        } elseif ($attemptedClimb == "unsuccessfulClimb") {
-                            echo "Unsuccessful Climb";
-                        } elseif ($attemptedClimb == "parked") {
-                            echo "Parked";
-                        } elseif ($attemptedClimb == "didNotTry") {
-                            echo "Did not try";
-                        }
-                        ?><?php
-              echo "</td>
-                    <td>"
-                        ?><?php
-                        if ($carriedRobots == "yes") {
-                            echo "Did carry others";
-                        } elseif ($carriedRobots == "no") {
-                            echo "Did not carry others";
-                        }
-                        ?><?php
-              echo "</td>
-                    <td>$comments</td>
-            </tr>";
 	}
+	
+	$sql = "SELECT * FROM teams";
+	$result = $conn->query($sql);
+	
+	while($row = mysqli_fetch_assoc($result))
+	{
+	    extract($row);
+	// text values that display in the table
+	echo "<tr>
+                    <td>$robotNumber</td>
+                    <td>$teamName</td>
+                    <td>$rank</td>
+                    <tr>";
+	}
+	
 	echo "</tbody></table><br><br>";
 	
 	$conn->close();
 	
 	?>
-	
-	<form action="addNewRobot.php">
-		<input type="submit" value="Add another robot">
-	</form>
 </body>
 </html>

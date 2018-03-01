@@ -25,3 +25,25 @@
 			</a>
 		</span>
 	</nav>
+	
+	<div id="side-menu" class="side-navbar">
+		<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br>
+		<a href="home.php">Home</a>
+		<a href="addNewTeam.php">Add Team</a>
+		<a href="addNewRobot.php">Add Robot</a>
+		<a href="viewData.php">View Data</a>
+		<a href="viewSummary.php">View Summary</a>
+	</div>
+	
+	<script type="text/javascript">
+		//Sidebar
+	function openSlideMenu(){
+		document.getElementById('side-menu').style.width ='250px';
+		document.getElementById('main').style.marginLeft ='250px';
+	}
+	
+	function closeSlideMenu(){
+		document.getElementById('side-menu').style.width ='0';
+		document.getElementById('main').style.marginLeft ='0';
+	}
+	</script>

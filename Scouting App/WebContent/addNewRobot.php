@@ -23,26 +23,13 @@
     
     ?>
 	
-	<div id="side-menu" class="side-navbar">
-		<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br>
-		<a href="home.php">Home</a>
-		<a href="addNewRobot.php">Add Robot</a>
-		<a href="viewData.php">View Data</a>
-	</div>
-	
 	<div id="main">
 		<form action="insertRobot.php" method="POST">
 		
 		<b><font size="+3">Robot/Team:</font></b><br>
-		<font size="-1">(Please communicate with scouting team members)</font><br>
-			Team Number:
-			<br>
-			<input type="number" class="robotNumber" name="robotNumber" placeholder="ex. 3019" required><br>
-			<br>
-			Team Name:
-			<br>
-			<input type="text" class="teamName" name="teamName" placeholder="ex. Firebird Robotics" required><br>
-			<br>
+		<i><font size="+1">Note: Please communicate with scouting team members</font></i><br>
+		<b>*Add dropdown here*</b><br><br>
+		
 		<b><font size="+3">Autonomous:</font></b><br>
 			Did it cross the base line?
 			<ul>
@@ -218,17 +205,6 @@
     	
     	document.getElementById('qty4').value = new_qty;
     	return new_qty;
-	}
-	
-		// Sidebar
-	function openSlideMenu(){
-		document.getElementById('side-menu').style.width ='250px';
-		document.getElementById('main').style.marginLeft ='250px';
-	}
-	
-	function closeSlideMenu(){
-		document.getElementById('side-menu').style.width ='0';
-		document.getElementById('main').style.marginLeft ='0';
 	}
 	</script>
 </body>
