@@ -24,12 +24,12 @@
     ?>
     
     <div id="main">
-		<form action="insertTeam.php" method="POST">
+		<form action="insertTeam.php" method="post">
 		
 		<b><font size="+3">Robot/Team:</font></b><br>
 			Team Number:
 			<br>
-			<input type="number" class="robotNumber" name="robotNumber" placeholder="ex. 3019" required><br>
+			<input type="number" class="teamNumber" name="teamNumber" placeholder="ex. 3019" required><br>
 			<br>
 			Team Name:
 			<br>

@@ -3,8 +3,7 @@
 This is a file for improvements available on the application
 ------------------------------------------------------------
 
-	> make the logins on the same file so we don't have to have the "Click here to go back" and can instead just display an error message
-		Links: https://github.com/Daniel-Redmond/College-Work/blob/Actual-Work/College%20GitHub/2nd%20Year/Web%20Development%202/Library%20Assignment/login.html
 	> have an instantaneous checker for robotNumber so that people in scouting don't have to communicate with each other
 	> round selection for which round the robot is in
 	> import scores automatically for the robots
+	> FIX THE DROPDOWN

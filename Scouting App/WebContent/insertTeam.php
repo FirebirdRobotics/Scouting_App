@@ -8,17 +8,17 @@
 	
     include("database.php");
 	
-	// Add variables
-	$robot_number = mysqli_real_escape_string($conn, $_POST['robotNumber']);
+	// Add variables 
+	$team_number = mysqli_real_escape_string($conn, $_POST['teamNumber']);
 	$team_name = mysqli_real_escape_string($conn, $_POST['teamName']);
 	
 	// Insert the above variables into the table values
-	$sql="REPLACE INTO teams (`robotNumber`, `teamName`)
-		               VALUES ('$robot_number', '$team_name')";
+	$sql="REPLACE INTO teams (`teamNumber`, `teamName`)
+		               VALUES ('$team_number', '$team_name')";
 	
 	
 	if ($conn->query($sql) === TRUE) {
-	    echo 'New robot successfully added' . '<br><a href="viewData.php">Click here to view data</a>';
+	    echo 'New team successfully added' . '<br><a href="viewData.php">Click here to view data</a>';
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}

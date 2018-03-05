@@ -32,7 +32,7 @@
 		<a href="addNewTeam.php">Add Team</a>
 		<a href="addNewRobot.php">Add Robot</a>
 		<a href="viewData.php">View Data</a>
-		<a href="viewSummary.php">View Summary</a>
+		<a href="viewSummary.php">View Ranking</a>
 	</div>
 	
 	<script type="text/javascript">

@@ -39,7 +39,7 @@
         		From there you will be taken to a form to fill out with information about how the robot did in the round.
         		To view round data, you can click on the 'View Data' tab in the side bar.
         		This will show you a table full of all the data collected on the robots per round.
-        		To view ranking data, you can click on the 'View Summary' tab in the side bar.
+        		To view ranking data, you can click on the 'View Ranking' tab in the side bar.
         		This will show you a table comparing robots/teams to each other. 
 		</div>
 	</div>

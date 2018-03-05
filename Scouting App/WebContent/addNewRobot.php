@@ -24,11 +24,40 @@
     ?>
 	
 	<div id="main">
-		<form action="insertRobot.php" method="POST">
+		<form action="insertRobot.php" method="post">
 		
 		<b><font size="+3">Robot/Team:</font></b><br>
-		<i><font size="+1">Note: Please communicate with scouting team members</font></i><br>
-		<b>*Add dropdown here*</b><br><br>
+		<i><font size="+1">Note: Please communicate with fellow scouting team members about who is scouting each robot</font></i><br>
+		<?php 
+		
+    		$sql = "SELECT teamNumber FROM teams";
+    		$result = $conn->query($sql);
+    		
+    		echo "<select name='teamNumber' class='dropdown-button'>
+                  <option value='' disabled selected>Select Team</option>";
+    		while ($row = mysqli_fetch_array($result)) {
+    		    extract($row);
+    		    echo "<option value='" . $row['teamNumber'] . "'>" . $row['teamNumber'] . "</option>";
+    		}
+    		echo "</select>";
+    		
+		?>
+		
+		<select name='matchNumber' class='dropdown-button'>
+			<option value='' disabled selected>Round #</option>
+			<option value='1'>1</option>
+			<option value='2'>2</option>
+			<option value='3'>3</option>
+			<option value='4'>4</option>
+			<option value='5'>5</option>
+			<option value='6'>6</option>
+			<option value='7'>7</option>
+			<option value='8'>8</option>
+		</select>
+		
+		<br><br>
+		
+		
 		
 		<b><font size="+3">Autonomous:</font></b><br>
 			Did it cross the base line?
@@ -51,25 +80,25 @@
 			<ul>
 			<li>
 				<input type="radio" name="placedCubeAuto" value="placedOnScale" id="autoCube-scale">
-				<label for="autoCube-scale">Yes, on scale</label>
+				<label for="autoCube-scale">Yes, scale</label>
 				
 				<div class="check"><div class="inside"></div></div>
 			</li>
 			<li>
-				<input type="radio" name="placedCubeAuto" value="placedOnAllySwitch" id="autoCubeAllySwitch">
-				<label for="autoCubeAllySwitch">Yes, on ally switch</label>
+				<input type="radio" name="placedCubeAuto" value="placedOnSwitch" id="autoCubeSwitch">
+				<label for="autoCubeSwitch">Yes, switch</label>
 				
 				<div class="check"><div class="inside"></div></div>
 			</li>
 			<li>
-				<input type="radio" name="placedCubeAuto" value="placedOnEnemySwitch" id="autoCubeEnemySwitch">
-				<label for="autoCubeEnemySwitch">Yes, on enemy switch</label>
+				<input type="radio" name="placedCubeAuto" value="placedOnExchange" id="autoCubeExchange">
+				<label for="autoCubeExchange">Yes, cube exchange</label>
 				
 				<div class="check"><div class="inside"></div></div>
 			</li>
 			<li>
-				<input type="radio" name="placedCubeAuto" value="didNotPlace" id="autoCube-none">
-				<label for="autoCube-none">None</label>
+				<input type="radio" name="placedCubeAuto" value="didNotPlace" id="autoCubeNone">
+				<label for="autoCubeNone">None</label>
 				
 				<div class="check"><div class="inside"></div></div>
 			</li>

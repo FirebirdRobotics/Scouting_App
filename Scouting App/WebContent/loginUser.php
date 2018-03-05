@@ -32,6 +32,8 @@
             die('Invalid username and/or password' . '<br><a href="index.php">Click here to go back</a>');
         }
         
+        session_start();
+        
         $_SESSION["username"] = $username;
         
         echo '<script type="text/javascript">location.href = "home.php";</script>';

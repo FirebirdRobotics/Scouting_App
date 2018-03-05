@@ -160,7 +160,39 @@ input[type="number"]{
 	border: 1px solid;
 }
 
+.dropdown-button{
+	background-color: #333;
+    color: white;
+    padding: 16px;
+    margin-top: 16px;
+    margin-left: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.dropdown-button option{
+	color: white;
+	padding: 8px;
+	font-size: 18px;
+	background-color: #555;
+}
+
+.dropdown-button option:disabled{
+    color: graytext;
+    background-color: #333;
+    padding: 8px;
+	font-size: 18px;
+}
+
 .robotNumber{
+	font-size: 40px;
+	margin-left: 20px;
+	width: 350px;
+}
+
+.teamNumber{
 	font-size: 40px;
 	margin-left: 20px;
 	width: 350px;
@@ -483,8 +515,15 @@ input::-webkit-inner-spin-button {
 	.robotNumber{
 		margin-left: 5%;
 	}
+	.teamNumber{
+		margin-left: 2%;
+		margin-right: 3%;
+		width: 95%;
+	}
 	.teamName{
-		margin-left: 5%;
+		margin-left: 2%;
+		margin-right: 3%;
+		width: 95%;
 	}
 	.scoutingDescription{
 		font-size: 24px;
