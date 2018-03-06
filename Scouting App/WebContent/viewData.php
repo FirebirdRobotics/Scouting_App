@@ -47,7 +47,7 @@ $(document).ready(function() {
 	<table class="table-responsive table-hover table display table-bordered" id="dataTable" width="98%"><thead>
 	<?php 
 	echo "<tr>
-                    <th>Robot Number</th>
+                    <th>Team Number</th>
                     <th>Round Number</th>
                     <th>Crossed Baseline</th>
                     <th>Placed Cube in Autonomous</th>
