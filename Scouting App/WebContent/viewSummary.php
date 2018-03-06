@@ -76,6 +76,8 @@ $(document).ready(function() {
     	    
     	    // add rank points for autonomous cube
     	    $rank += ($placedCubeAuto == 'placedOnScale' || $placedCubeAuto == 'placedOnSwitch' || $placedCubeExchange == 'placedOnExchange' ? 10 : 0);
+    	    $rank += ($placedCubeAuto == 'placedOnScaleAndSwitch' || $placedCubeAuto == 'placedOnScaleAndExchange' || $placedCubeAuto == 'placedOnSwitchAndExchange' ? 15 : 0);
+    	    $rank += ($placedCubeAuto == 'placedOnAll' ? 20 : 0);
     	    $rank += ($placedCubeAuto == 'didNotPlace' ? -10 : 0);
     	    
     	    // add rank points for ally switch

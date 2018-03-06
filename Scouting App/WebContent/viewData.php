@@ -89,6 +89,14 @@ $(document).ready(function() {
                             echo "Placed on Switch";
                         } elseif ($placedCubeAuto == 'placedOnExchange') {
                             echo "Placed in Cube Exchange";
+                        } elseif ($placedCubeAuto == 'placedOnScaleAndSwitch') {
+                            echo "Placed on Scale & Switch";
+                        }  elseif ($placedCubeAuto == 'placedOnScaleAndExchange') {
+                            echo "Placed in Scale & Exchange";
+                        }  elseif ($placedCubeAuto == 'placedOnSwitchAndExchange') {
+                            echo "Placed in Switch & Exchange";
+                        }  elseif ($placedCubeAuto == 'placedOnAll') {
+                            echo "Placed in all";
                         } elseif ($placedCubeAuto == 'didNotPlace') {
                             echo "Did not place";
                         }
