@@ -98,25 +98,25 @@
 			</li>
 			<li>
 				<input type="radio" name="placedCubeAuto" value="placedOnScaleAndSwitch" id="autoCubeScaleAndSwitch">
-				<label for="autoCubeSwitch">Yes, scale and switch</label>
+				<label for="autoCubeScaleAndSwitch">Yes, scale and switch</label>
 				
 				<div class="check"><div class="inside"></div></div>
 			</li>
 			<li>
 				<input type="radio" name="placedCubeAuto" value="placedOnScaleAndExchange" id="autoCubeScaleAndExchange">
-				<label for="autoCubeSwitch">Yes, scale and cube exchange</label>
+				<label for="autoCubeScaleAndExchange">Yes, scale and cube exchange</label>
 				
 				<div class="check"><div class="inside"></div></div>
 			</li>
 			<li>
 				<input type="radio" name="placedCubeAuto" value="placedOnSwitchAndExchange" id="autoCubeSwitchAndExchange">
-				<label for="autoCubeSwitch">Yes, switch and cube exchange</label>
+				<label for="autoCubeSwitchAndExchange">Yes, switch and cube exchange</label>
 				
 				<div class="check"><div class="inside"></div></div>
 			</li>
 			<li>
 				<input type="radio" name="placedCubeAuto" value="placedOnAll" id="autoCubeAll">
-				<label for="autoCubeSwitch">Yes, all</label>
+				<label for="autoCubeAll">Yes, all</label>
 				
 				<div class="check"><div class="inside"></div></div>
 			</li>
