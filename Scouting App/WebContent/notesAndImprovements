@@ -9,3 +9,4 @@ This is a file for improvements available on the application
 	> make the roundNumber a text field
 	> record the user who scouted the robot & implement rewards system (make it something fun ex. display top 3 scouting team on home page)
 	> fix the profile page (profile picture)
+	> fix styles for ios (on iphone the dropdown and text fields have weird borders and stuff)
