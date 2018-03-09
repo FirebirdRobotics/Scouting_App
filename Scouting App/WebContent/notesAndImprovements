@@ -4,9 +4,7 @@ This is a file for improvements available on the application
 ------------------------------------------------------------
 
 	> have an instantaneous checker for robotNumber so that people in scouting don't have to communicate with each other
-	> import scores automatically for the robots
-	> remove the name for the dropdown
-	> make the roundNumber a text field
+	> need pit scouting
 	> record the user who scouted the robot & implement rewards system (make it something fun ex. display top 3 scouting team on home page)
 	> fix the profile page (profile picture)
 	> fix styles for ios (on iphone the dropdown and text fields have weird borders and stuff)
