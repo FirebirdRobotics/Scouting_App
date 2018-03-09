@@ -11,3 +11,4 @@ This is a file for improvements available on the application
 	> fix the profile page (profile picture)
 	> fix styles for ios (on iphone the dropdown and text fields have weird borders and stuff)
 	> add a type for the match number (qualification/quarterfinals/semifinals/finals)
+	> make it an average rank instead of accumulative
