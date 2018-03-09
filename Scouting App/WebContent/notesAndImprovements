@@ -7,3 +7,5 @@ This is a file for improvements available on the application
 	> import scores automatically for the robots
 	> remove the name for the dropdown
 	> make the roundNumber a text field
+	> record the user who scouted the robot & implement rewards system (make it something fun ex. display top 3 scouting team on home page)
+	> fix the profile page (profile picture)
