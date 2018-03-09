@@ -43,7 +43,7 @@
     		
 		?>
 		
-		<input type='text' name='matchNumber' style='max-width:100px' placeholder='Match #'>
+		<input type='text' name='matchNumber' style='max-width:100px' placeholder='Match #' required>
 			
 		<br><br> 
 		
