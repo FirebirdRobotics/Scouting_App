@@ -5,4 +5,5 @@ This is a file for improvements available on the application
 
 	> have an instantaneous checker for robotNumber so that people in scouting don't have to communicate with each other
 	> import scores automatically for the robots
-	> fix the placedCubeAuto
+	> remove the name for the dropdown
+	> make the roundNumber a text field
