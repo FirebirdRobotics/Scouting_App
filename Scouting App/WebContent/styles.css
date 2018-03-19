@@ -126,10 +126,6 @@ body{
 	width: 100%;
 }
 
-select{
-	-webkit-appearance:none;
-}
-
 input{
 	font-size: 24px;
 	font-family: 'Open Sans', sans-serif;
@@ -154,18 +150,14 @@ input[type="submit"]{
 
 input[type="text"]{
 	border: 1px solid;
-	border-radius: 0px;
-	
 }
 
 input[type="password"]{
 	border: 1px solid;
-	border-radius: 0px;
 }
 
 input[type="number"]{
 	border: 1px solid;
-	border-radius: 0px;
 }
 
 .dropdown-button{
@@ -173,11 +165,11 @@ input[type="number"]{
     color: white;
     padding: 16px;
     margin-top: 16px;
-    margin-left: 16px;
-    font-size: 16px;
+    margin-left: 2%;
     border: none;
     cursor: pointer;
     font-size: 24px;
+    width: 60%;
 }
 
 .dropdown-button option{
@@ -200,10 +192,14 @@ input[type="number"]{
 	width: 350px;
 }
 
+.matchNumber{
+	max-width: 35%;
+	padding: 10px;
+}
+
 .teamNumber{
 	font-size: 40px;
 	margin-left: 20px;
-	width: 350px;
 }
 
 .teamName{
@@ -418,7 +414,7 @@ table{
 }
 
 td, th{
-	border: 1px solid black;
+	       border: 1px solid black;
 }
 
 .login-bg{
@@ -535,7 +531,6 @@ input::-webkit-inner-spin-button {
 	.teamName{
 		margin-left: 2%;
 		margin-right: 3%;
-		width: 95%;
 	}
 	.scoutingDescription{
 		font-size: 24px;
