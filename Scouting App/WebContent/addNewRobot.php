@@ -6,6 +6,8 @@
 	<title>Firebirds Robotics Scouting</title>
 	<link href="styles.css" type="text/css" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
 
@@ -43,7 +45,7 @@
     		
 		?>
                 
-                <input style="max-width:100px;" type="text" size="5" name="matchNumber" placeholder="Match#" REQUIRED>
+                <input style="max-width:100px;" type="text" size="5" name="matchNumber" placeholder="Match #" REQUIRED>
 		
 		<br><br>
 		

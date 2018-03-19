@@ -6,23 +6,18 @@
 	<title>Firebirds Robotics Scouting</title>
 	<link href="styles.css" type="text/css" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<style>
-	   td,th{
-	       border: 1px solid black;
-	   }
-	</style>
-<link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('#summaryTable').DataTable({
-      lengthMenu: [[10, 20, 100, -1], [10, 20, 100, "All"]],
-      order: [2, 'desc'],
-    });
-});
-</script>
+    <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#summaryTable').DataTable({
+              lengthMenu: [[10, 20, 100, -1], [10, 20, 100, "All"]],
+              order: [2, 'desc'],
+            });
+        });
+    </script>
 </head>
 <body>
 

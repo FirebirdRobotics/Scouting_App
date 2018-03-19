@@ -126,6 +126,10 @@ body{
 	width: 100%;
 }
 
+select{
+	-webkit-appearance:none;
+}
+
 input{
 	font-size: 24px;
 	font-family: 'Open Sans', sans-serif;
@@ -150,14 +154,18 @@ input[type="submit"]{
 
 input[type="text"]{
 	border: 1px solid;
+	border-radius: 0px;
+	
 }
 
 input[type="password"]{
 	border: 1px solid;
+	border-radius: 0px;
 }
 
 input[type="number"]{
 	border: 1px solid;
+	border-radius: 0px;
 }
 
 .dropdown-button{
@@ -407,6 +415,10 @@ h1{
 table{
 	width: 100%;
 	text-align: left;
+}
+
+td, th{
+	border: 1px solid black;
 }
 
 .login-bg{
