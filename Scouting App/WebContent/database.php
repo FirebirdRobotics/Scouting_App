@@ -1,8 +1,8 @@
 <?php
 
     $servername = 'localhost';
-    $username = 'firebirds';
-    $password = 'fbpass*p';
+    $username = 'root';
+    $password = 'root';
     $dbname = 'firebirds';
     
     // Create connection

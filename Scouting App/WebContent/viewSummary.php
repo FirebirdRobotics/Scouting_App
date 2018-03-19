@@ -75,7 +75,7 @@ $(document).ready(function() {
     	    $tot_rank += ($crossedBaseline == 'yes' ? 10 : 0);
     	    
     	    // add rank points for autonomous cube
-    	    $tot_rank += ($placedCubeAuto == 'placedOnScale' || $placedCubeAuto == 'placedOnSwitch' || $placedCubeExchange == 'placedOnExchange' ? 10 : 0);
+    	    $tot_rank += ($placedCubeAuto == 'placedOnScale' || $placedCubeAuto == 'placedOnSwitch' || $placedCubeAuto == 'placedOnExchange' ? 10 : 0);
     	    $tot_rank += ($placedCubeAuto == 'placedOnScaleAndSwitch' || $placedCubeAuto == 'placedOnScaleAndExchange' || $placedCubeAuto == 'placedOnSwitchAndExchange' ? 15 : 0);
     	    $tot_rank += ($placedCubeAuto == 'placedOnAll' ? 20 : 0);
     	    $tot_rank += ($placedCubeAuto == 'didNotPlace' ? 0 : 0);
