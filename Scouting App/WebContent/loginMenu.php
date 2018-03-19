@@ -1,3 +1,19 @@
+<!--  
+	L I N K    F O R    L O G I N : https://www.formget.com/login-form-in-php/
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Firebirds Robotics Scouting</title>
+	<link href="styles.css" type="text/css" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body class="login-bg">
+<header class="large">
 	<nav class="navbar">
 		<span class="open-slide">
 			<a href="#" onClick="openSlideMenu()">
@@ -10,7 +26,7 @@
 		</span>
 		
 		<span class="login">
-			<a href="profile.php">
+			<a href="loginMenu.php">
 				<svg width="30" height="30">
 					<path d="M28,30 28,4" stroke="#fff" stroke-width="4"/>
 					<path d="M11,6 28,6" stroke="#fff" stroke-width="4"/>
@@ -28,15 +44,37 @@
 	
 	<div id="side-menu" class="side-navbar">
 		<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br>
-		<a href="home.php">Home</a>
+		<a href="index.php">Home</a>
 		<a href="addNewRobot.php">Add Robot</a>
 		<a href="viewData.php">View Data</a>
-		<a href="viewSummary.php">View Ranking</a>
-                <hr style="width:80%;">
-                 <font style="color:YELLOW;">&nbsp;&nbsp;&nbsp;Admin ONLY</font><br>
-         	<a href="addNewTeam.php">Add Team</a>
 	</div>
 	
+	<!-- 
+	       USE SESSION COOKIES, ADD PASSWORD DOTS, LEARN MORE ABOUT COOKIES OVERALL
+	 -->
+	
+	<div class="innerBox">
+		<img align="middle" class="loginImage" src="transparentLogo.png" alt="Logo">
+		<hr>
+		<form class="loginForm" action="loginUser.php" method="post" id="login">
+			<input type="text" name="username" id="username" class="form-control" placeholder="Username">
+			<input type="password" name="password" id="username" class="form-control" placeholder="Password">
+			<button type="submit" class="loginbtn" id="loginbtn">Log In</button>
+		</form>
+	</div>
+	
+	<div class="innerBoxLower">
+		<h2>Need to create an account?</h2>
+		<form class="signupForm" action="signup.php" method="get" id="signup">
+			<button type="submit" class="signupButton">Sign Up</button>
+		</form>
+	</div>
+	
+	<div class="footerDiv">
+	<br><br><br>
+	</div>
+</header>
+
 	<script type="text/javascript">
 		//Sidebar
 	function openSlideMenu(){
@@ -49,3 +87,5 @@
 		document.getElementById('main').style.marginLeft ='0';
 	}
 	</script>
+</body>
+</html>

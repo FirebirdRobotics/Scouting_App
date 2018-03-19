@@ -49,7 +49,7 @@ $(document).ready(function() {
 	echo "<tr>
                     <th>Team Number</th>
                     <th>Team Name</th>
-                    <th>Rank/Score</th>
+                    <th>Rank/Avg</th>
           </tr></thead><tbody>";
 	
 	$sql = "SELECT * FROM teams";
@@ -63,88 +63,88 @@ $(document).ready(function() {
 	
     	$sqlForRank = "SELECT * FROM robots where robotNumber = '$teamNumber'";
     	$resultForRank = $conn->query($sqlForRank);
-    	$rank = 0;
-    	$scoresExist = false;
+    	$tot_rank = 0;
+    	$count = 0;
     	
     	while($rowForRank = mysqli_fetch_assoc($resultForRank))
     	{
     	    extract($rowForRank);
-    	    $scoresExist = true;
+    	    $count++;
     	    
     	    // add rank points for baseline
-    	    $rank += ($crossedBaseline == 'yes' ? 10 : 0);
+    	    $tot_rank += ($crossedBaseline == 'yes' ? 10 : 0);
     	    
     	    // add rank points for autonomous cube
-    	    $rank += ($placedCubeAuto == 'placedOnScale' || $placedCubeAuto == 'placedOnSwitch' || $placedCubeExchange == 'placedOnExchange' ? 10 : 0);
-    	    $rank += ($placedCubeAuto == 'placedOnScaleAndSwitch' || $placedCubeAuto == 'placedOnScaleAndExchange' || $placedCubeAuto == 'placedOnSwitchAndExchange' ? 15 : 0);
-    	    $rank += ($placedCubeAuto == 'placedOnAll' ? 20 : 0);
-    	    $rank += ($placedCubeAuto == 'didNotPlace' ? -10 : 0);
+    	    $tot_rank += ($placedCubeAuto == 'placedOnScale' || $placedCubeAuto == 'placedOnSwitch' || $placedCubeExchange == 'placedOnExchange' ? 10 : 0);
+    	    $tot_rank += ($placedCubeAuto == 'placedOnScaleAndSwitch' || $placedCubeAuto == 'placedOnScaleAndExchange' || $placedCubeAuto == 'placedOnSwitchAndExchange' ? 15 : 0);
+    	    $tot_rank += ($placedCubeAuto == 'placedOnAll' ? 20 : 0);
+    	    $tot_rank += ($placedCubeAuto == 'didNotPlace' ? 0 : 0);
     	    
     	    // add rank points for ally switch
-    	    $rank += ($switch >= 1 ? 5 : 0);
-    	    $rank += ($switch >= 2 ? 5 : 0);
-    	    $rank += ($switch >= 3 ? 5 : 0);
-    	    $rank += ($switch >= 4 ? 5 : 0);
-    	    $rank += ($switch >= 5 ? 5 : 0);
-    	    $rank += ($switch >= 6 ? 5 : 0);
-    	    $rank += ($switch >= 7 ? 5 : 0);
-    	    $rank += ($switch >= 8 ? 5 : 0);
-    	    $rank += ($switch >= 9 ? 5 : 0);
-    	    $rank += ($switch >= 10 ? 5 : 0);
+    	    $tot_rank += ($switch >= 1 ? 5 : 0);
+    	    $tot_rank += ($switch >= 2 ? 5 : 0);
+    	    $tot_rank += ($switch >= 3 ? 5 : 0);
+    	    $tot_rank += ($switch >= 4 ? 5 : 0);
+    	    $tot_rank += ($switch >= 5 ? 5 : 0);
+    	    $tot_rank += ($switch >= 6 ? 5 : 0);
+    	    $tot_rank += ($switch >= 7 ? 5 : 0);
+    	    $tot_rank += ($switch >= 8 ? 5 : 0);
+    	    $tot_rank += ($switch >= 9 ? 5 : 0);
+    	    $tot_rank += ($switch >= 10 ? 5 : 0);
     	    
     	    // add rank points for enemy switch
-    	    $rank += ($dropped >= 1 ? -5 : 0);
-    	    $rank += ($dropped >= 2 ? -5 : 0);
-    	    $rank += ($dropped >= 3 ? -5 : 0);
-    	    $rank += ($dropped >= 4 ? -5 : 0);
-    	    $rank += ($dropped >= 5 ? -5 : 0);
-    	    $rank += ($dropped >= 6 ? -5 : 0);
-    	    $rank += ($dropped >= 7 ? -5 : 0);
-    	    $rank += ($dropped >= 8 ? -5 : 0);
-    	    $rank += ($dropped >= 9 ? -5 : 0);
-    	    $rank += ($dropped >= 10 ? -5 : 0);
+    	    $tot_rank += ($dropped >= 1 ? 5 : 0);
+    	    $tot_rank += ($dropped >= 2 ? 5 : 0);
+    	    $tot_rank += ($dropped >= 3 ? 5 : 0);
+    	    $tot_rank += ($dropped >= 4 ? 5 : 0);
+    	    $tot_rank += ($dropped >= 5 ? 5 : 0);
+    	    $tot_rank += ($dropped >= 6 ? 5 : 0);
+    	    $tot_rank += ($dropped >= 7 ? 5 : 0);
+    	    $tot_rank += ($dropped >= 8 ? 5 : 0);
+    	    $tot_rank += ($dropped >= 9 ? 5 : 0);
+    	    $tot_rank += ($dropped >= 10 ? 5 : 0);
     	    
     	    // add rank points for scale
-    	    $rank += ($scale >= 1 ? 5 : 0);
-    	    $rank += ($scale >= 2 ? 5 : 0);
-    	    $rank += ($scale >= 3 ? 5 : 0);
-    	    $rank += ($scale >= 4 ? 5 : 0);
-    	    $rank += ($scale >= 5 ? 10 : 0);
-    	    $rank += ($scale >= 6 ? 10 : 0);
-    	    $rank += ($scale >= 7 ? 10 : 0);
-    	    $rank += ($scale >= 8 ? 10 : 0);
-    	    $rank += ($scale >= 9 ? 10 : 0);
-    	    $rank += ($scale >= 10 ? 10 : 0);
+    	    $tot_rank += ($scale >= 1 ? 10 : 0);
+    	    $tot_rank += ($scale >= 2 ? 10 : 0);
+    	    $tot_rank += ($scale >= 3 ? 10 : 0);
+    	    $tot_rank += ($scale >= 4 ? 10 : 0);
+    	    $tot_rank += ($scale >= 5 ? 10 : 0);
+    	    $tot_rank += ($scale >= 6 ? 10 : 0);
+    	    $tot_rank += ($scale >= 7 ? 10 : 0);
+    	    $tot_rank += ($scale >= 8 ? 10 : 0);
+    	    $tot_rank += ($scale >= 9 ? 10 : 0);
+    	    $tot_rank += ($scale >= 10 ? 10 : 0);
     	    
     	    // add rank points for cube exchange
-    	    $rank += ($cubeExchange >= 1 ? 10 : 0);
-    	    $rank += ($cubeExchange >= 2 ? 10 : 0);
-    	    $rank += ($cubeExchange >= 3 ? 10 : 0);
-    	    $rank += ($cubeExchange >= 4 ? 10 : 0);
-    	    $rank += ($cubeExchange >= 5 ? 10 : 0);
-    	    $rank += ($cubeExchange >= 6 ? 10 : 0);
-    	    $rank += ($cubeExchange >= 7 ? 10 : 0);
-    	    $rank += ($cubeExchange >= 8 ? 10 : 0);
-    	    $rank += ($cubeExchange >= 9 ? 10 : 0);
-    	    $rank += ($cubeExchange >= 10 ? 10 : 0);
+    	    $tot_rank += ($cubeExchange >= 1 ? 5 : 0);
+    	    $tot_rank += ($cubeExchange >= 2 ? 5 : 0);
+    	    $tot_rank += ($cubeExchange >= 3 ? 5 : 0);
+    	    $tot_rank += ($cubeExchange >= 4 ? 5 : 0);
+    	    $tot_rank += ($cubeExchange >= 5 ? 5 : 0);
+    	    $tot_rank += ($cubeExchange >= 6 ? 5 : 0);
+    	    $tot_rank += ($cubeExchange >= 7 ? 5 : 0);
+    	    $tot_rank += ($cubeExchange >= 8 ? 5 : 0);
+    	    $tot_rank += ($cubeExchange >= 9 ? 5 : 0);
+    	    $tot_rank += ($cubeExchange >= 10 ? 5 : 0);
     	    
     	    // add rank points for climb
-    	    $rank += ($attemptedClimb == 'successfulClimb' ? 10 : 0);
-    	    $rank += ($attemptedClimb == 'unsuccessfulClimb' ? -5 : 0);
-    	    $rank += ($attemptedClimb == 'parked' ? 5 : 0);
-    	    $rank += ($attemptedClimb == 'didNotTry' ? -10 : 0);
+    	    $tot_rank += ($attemptedClimb == 'successfulClimb' ? 25 : 0);
+    	    $tot_rank += ($attemptedClimb == 'unsuccessfulClimb' ? 5 : 0);
+    	    $tot_rank += ($attemptedClimb == 'parked' ? 2 : 0);
+    	    $tot_rank += ($attemptedClimb == 'didNotTry' ? 0 : 0);
     	    
     	    // add rank points for carrying other robots
-    	    $rank += ($carriedRobots == 'yes' ? 10 : 0);
+    	    $tot_rank += ($carriedRobots == 'yes' ? 50 : 0);
 	    
     	}
 	    
-    	if ($scoresExist)
+    	if ($count)
     	{
           	echo "<tr>
                   <td><a href='viewData.php?team=$teamNumber'>$teamNumber</a></td>
                   <td>$teamName</td>";
-    	    echo "<td>$rank</td>
+    	    echo "<td>". number_format($tot_rank / $count, 2) . "</td>
                   </tr>";
     	}
 	}

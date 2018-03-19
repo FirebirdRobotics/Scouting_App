@@ -30,22 +30,23 @@
 		<i><font size="+1">Note: Please communicate with fellow scouting team members about who is scouting each robot</font></i><br>
 		<?php 
 		
-    		$sql = "SELECT teamNumber FROM teams";
+    		$sql = "SELECT teamNumber, teamName FROM teams";
     		$result = $conn->query($sql);
     		
     		echo "<select name='teamNumber' class='dropdown-button'>
                   <option value='' disabled selected>Select Team</option>";
     		while ($row = mysqli_fetch_array($result)) {
     		    extract($row);
-    		    echo "<option value='" . $row['teamNumber'] . "'>" . $row['teamNumber'] . "</option>";
+    		    echo "<option value='" . $row['teamNumber'] . "'>" . $row['teamNumber'] . ' - ' . substr($row['teamName'],0,20) .  "</option>";
     		}
     		echo "</select>";
     		
 		?>
+                
+                <input style="max-width:100px;" type="text" size="5" name="matchNumber" placeholder="Match#" REQUIRED>
 		
-		<input type='text' name='matchNumber' style='max-width:100px' placeholder='Match #' required>
-			
-		<br><br> 
+		<br><br>
+		
 		
 		
 		<b><font size="+3">Autonomous:</font></b><br>

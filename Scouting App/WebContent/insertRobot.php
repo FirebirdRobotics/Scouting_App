@@ -21,6 +21,7 @@
 	$carry_robots = mysqli_real_escape_string($conn, $_POST['carriedRobots']);
 	$comments = mysqli_real_escape_string($conn, $_POST['comments']);
 	$rank = 0;
+
 	
 	// Insert the above variables into the table values
 	$sql="REPLACE INTO robots (`robotNumber`, `matchNumber`, `crossedBaseline`, `placedCubeAuto`, `switch`, `dropped`, `scale`, `cubeExchange`, `attemptedClimb`, `carriedRobots`, `comments`, `rank`)
