@@ -29,7 +29,7 @@
     
     <?php 
         
-        
+        // add button that deletes records here
         
     ?>
     

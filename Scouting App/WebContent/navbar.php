@@ -35,7 +35,7 @@
         	<hr style="width:80%;">
         		<font style="color:YELLOW;">&nbsp;&nbsp;&nbsp;Admin ONLY</font><br>
         	<a href="addNewTeam.php">Add Team</a>
-        	<a href="deleteRecords.php">Remove Data</a>
+        	<a href="deleteRecords.php">Delete Records</a>
 	</div>
 	
 	<script type="text/javascript">
