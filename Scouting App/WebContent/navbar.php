@@ -29,7 +29,7 @@
 	<div id="side-menu" class="side-navbar">
 		<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br>
 		<a href="home.php">Home</a>
-		<a href="addNewRobot.php">Add Robot</a>
+		<a href="addNewRobot.php" >Add Robot</a>
 		<a href="viewData.php">View Data</a>
 		<a href="viewSummary.php">View Ranking</a>
         	<hr style="width:80%;">
