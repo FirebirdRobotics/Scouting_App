@@ -5,6 +5,9 @@ This is a file for improvements available on the application
 
 	> have an instantaneous checker for robotNumber so that people in scouting don't have to communicate with each other
 	> need pit scouting
+	> automatically import robots in comp. from thebluealliance
 	> record the user who scouted the robot & implement reward system
 	> fix the profile page
-	> fix styles on ios (dropdown & text field)
+	> test styles fix on ios (dropdown & text field)
+	> remove data page
+	> create pop-ups for the 'ADMIN ONLY' pages making them require an admin code

@@ -45,7 +45,7 @@
     		
 		?>
                 
-                <input style="max-width: 28%;padding: 10px;" type="text" size="5" name="matchNumber" placeholder="Match #" REQUIRED>
+                <input class="matchNumberInput" type="text" size="5" name="matchNumber" placeholder="Match #" REQUIRED>
 		
 		<br><br>
 		
