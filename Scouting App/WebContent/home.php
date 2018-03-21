@@ -39,12 +39,11 @@
         		With this information, we can then see how our and other teams compare to each other. 
         		This data is also useful for forming alliances in the final rounds of competitions. <br><br>
         		You can help collect information by clicking the 'Add Robot' tab in the side bar.
-        		The 'Add Team' tab can be used to add team numbers before the competition for easy selection of the number.
         		From there you will be taken to a form to fill out with information about how the robot did in the round.
         		To view round data, you can click on the 'View Data' tab in the side bar.
         		This will show you a table full of all the data collected on the robots per round.
         		To view ranking data, you can click on the 'View Ranking' tab in the side bar.
-        		This will show you a table comparing robots/teams to each other. 
+        		This will show you a table comparing robots/teams by average performance per round. 
 		</div>
 	</div>
 </body>
