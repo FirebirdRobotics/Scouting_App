@@ -1,6 +1,6 @@
 <html>
 <head>
-	<meta http-equiv="refresh" content="0; viewSummary.php">
+	<meta http-equiv="refresh" content="0; addNewTeam.php">
 </head>
 <body>
 
@@ -18,7 +18,7 @@
 	
 	
 	if ($conn->query($sql) === TRUE) {
-	    echo 'New team successfully added' . '<br><a href="viewData.php">Click here to view data</a>';
+	    echo 'New team successfully added' . '<br><a href="addNewTeam.php">Click here to add another team</a>';
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}
