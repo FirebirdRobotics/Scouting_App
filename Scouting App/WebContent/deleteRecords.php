@@ -27,11 +27,18 @@
     
     ?>
     
-    <?php 
-        
-        // add button that deletes records here
-        
-    ?>
+    <div id="main">
+		<form action="deleteRecordsAction.php" method="post"><br>
+		
+			<input type="radio" class="" name=""><br>
+			<label for="">Delete robot entries</label><br><br>
+			
+			<input type="radio" class="" name=""><br>
+			<label for="">Delete teams</label><br><br>
+			
+			<input type="submit" value="Submit">
+    	</form>
+    </div>
     
 </body>
 </html>
