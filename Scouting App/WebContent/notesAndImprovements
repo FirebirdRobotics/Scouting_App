@@ -9,4 +9,5 @@ This is a file for improvements available on the application
 	> record the user who scouted the robot & implement reward system
 	> fix the profile page
 	> test styles fix on ios (dropdown & text field)
-	> remove data page
+	> 'remove data' page:
+		- create a die statement in the deleteRecordsAction file if the adminCode field isn't correctly put in
