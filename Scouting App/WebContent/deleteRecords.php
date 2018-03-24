@@ -6,10 +6,8 @@
 	<title>Firebirds Robotics Scouting</title>
 	<link href="styles.css" type="text/css" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
 
@@ -28,13 +26,24 @@
     ?>
     
     <div id="main">
-		<form action="deleteRecordsAction.php" method="post"><br>
-		
-			<input type="radio" class="" name=""><br>
-			<label for="">Delete robot entries</label><br><br>
-			
-			<input type="radio" class="" name=""><br>
-			<label for="">Delete teams</label><br><br>
+		<form action="deleteRecordsAction.php">
+			<ul>
+    			<li>
+        			<input type="radio" name="deleteRecords" value="deleteRecords-robots" id="deleteRecords-robots">
+        			<label for="deleteRecords-robots" class="deleteRecordsRadioLabels">Delete robot entries</label><br><br>
+        			
+        			<div class="check"><div class="inside"></div></div>
+    			</li>
+    			<li>
+        			<input type="radio" name="deleteRecords" value="deleteRecords-teams" id="deleteRecords-teams">
+        			<label for="deleteRecords-teams" class="deleteRecordsRadioLabels">Delete teams</label><br><br>
+        			
+        			<div class="check"><div class="inside"></div></div>
+    			</li>
+			</ul>
+			<br><br>
+			<font size="+1">Type in the admin code to confirm:</font><br>
+			<input type="text" class="form-control adminCode" placeholder="Admin ONLY"><br><br>
 			
 			<input type="submit" value="Submit">
     	</form>

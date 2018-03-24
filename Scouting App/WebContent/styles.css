@@ -213,6 +213,14 @@ input[type="number"]{
 	padding: 10px;
 }
 
+.adminCode{
+	width: 400px;
+}
+
+.deleteRecordsRadioLabels{
+	font-size: 22px;
+}
+
 .signUpFormWidth{
 	max-width: 95%;
 }
@@ -542,6 +550,9 @@ input::-webkit-inner-spin-button {
 	.profilePicture{
 		height: 6em;
 		width: 6em;
+	}
+	.adminCode{
+		width: 80%;
 	}
 	input{
 		font-size: 22px;
