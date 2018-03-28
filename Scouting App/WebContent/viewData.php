@@ -53,6 +53,7 @@
                     <th>Attempted Climb</th>
                     <th>Carried Robots</th>
                     <th>Comments</th>
+                    <th>Added By:</th>
           </tr></thead><tbody>";
 	$where = (isset($_GET['team']) ? "where robotNumber = '{$_GET['team']}'" : '');
 	$sql = "SELECT * FROM robots $where";
@@ -124,6 +125,7 @@
                         ?><?php
               echo "</td>
                     <td>$comments</td>
+                    <td>$user</td>
             </tr>";
 	}
 	echo "</tbody></table><br><br>";
