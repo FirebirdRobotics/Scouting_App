@@ -19,6 +19,7 @@
 	// Add variables
 	$robot_number = mysqli_real_escape_string($conn, $_POST['teamNumber']);
 	$match_number = mysqli_real_escape_string($conn, $_POST['matchNumber']);
+	$started_with_cube = mysqli_real_escape_string($conn, $_POST['startedWithCube']);
 	$crossed_baseline = mysqli_real_escape_string($conn, $_POST['crossedBaseline']);
 	$place_cube_auto = mysqli_real_escape_string($conn, $_POST['placedCubeAuto']);
 	$switch_cube = mysqli_real_escape_string($conn, $_POST['switch']);
@@ -33,8 +34,8 @@
 
 	
 	// Insert the above variables into the table values
-	$sql="REPLACE INTO robots (`robotNumber`, `matchNumber`, `crossedBaseline`, `placedCubeAuto`, `switch`, `dropped`, `scale`, `cubeExchange`, `attemptedClimb`, `carriedRobots`, `comments`, `user`, `rank`)
-		               VALUES ('$robot_number', '$match_number', '$crossed_baseline', '$place_cube_auto', '$switch_cube', '$drop_cube', '$scale_cube', '$cube_exchange', '$attempt_climb', '$carry_robots', '$comments', '$user', '$rank')";
+	$sql="REPLACE INTO robots (`robotNumber`, `matchNumber`, `startedWithCube`, `crossedBaseline`, `placedCubeAuto`, `switch`, `dropped`, `scale`, `cubeExchange`, `attemptedClimb`, `carriedRobots`, `comments`, `user`, `rank`)
+		               VALUES ('$robot_number', '$match_number', '$started_with_cube', '$crossed_baseline', '$place_cube_auto', '$switch_cube', '$drop_cube', '$scale_cube', '$cube_exchange', '$attempt_climb', '$carry_robots', '$comments', '$user', '$rank')";
 	
 	
 	if ($conn->query($sql) === TRUE) {

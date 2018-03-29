@@ -44,6 +44,7 @@
 	echo "<tr>
                     <th>Team Number</th>
                     <th>Round Number</th>
+                    <th>Started With Cube</th>
                     <th>Crossed Baseline</th>
                     <th>Placed Cube in Autonomous</th>
                     <th>Cubes (Switch)</th>
@@ -69,6 +70,15 @@
                     <td>$matchNumber</td>
                     <td>"
                     // Code to display better text values
+                        ?><?php
+                        if ($startedWithCube == 'yes') {
+                            echo "Did start with cube";
+                        } elseif ($startedWithCube == 'no') {
+                            echo "Did not start with cube";
+                        }
+                        ?><?php
+              echo "</td>
+                    <td>"
                         ?><?php
                         if ($crossedBaseline == 'yes') {
                             echo "Did cross baseline";

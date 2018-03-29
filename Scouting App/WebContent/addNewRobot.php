@@ -52,6 +52,22 @@
 		
 		
 		<b><font size="+3">Autonomous:</font></b><br>
+			Did it start with a cube?
+			<ul>
+			<li>
+				<input type="radio" name="startedWithCube" value="yes" id="startCube-yes">
+				<label for="startCube-yes">Yes</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			<li>
+				<input type="radio" name="startedWithCube" value="no" id="startCube-no">
+				<label for="startCube-no">No</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			</ul>
+			
 			Did it cross the base line?
 			<ul>
 			<li>

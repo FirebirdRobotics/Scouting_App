@@ -43,7 +43,7 @@
 			</ul>
 			<br><br>
 			<font size="+1">Type in the admin code to confirm:</font><br>
-			<input type="text" class="form-control adminCode" placeholder="Admin ONLY"><br><br>
+			<input type="text" name="adminCode" class="form-control adminCode" placeholder="Admin ONLY"><br><br>
 			
 			<input type="submit" value="Submit">
     	</form>
