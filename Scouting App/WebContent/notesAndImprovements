@@ -4,10 +4,8 @@ This is a file for improvements available on the application
 ------------------------------------------------------------
 
 	> have an instantaneous checker for robotNumber so that people in scouting don't have to communicate with each other
-	> need pit scouting
+	> need pit scouting 
 	> automatically import robots in comp. from thebluealliance
 	> implement reward system
-	> fix the profile page
 	> test styles fix on ios (dropdown & text field)
-	> 'remove data' page:
-		- create a die statement in the deleteRecordsAction file if the adminCode field isn't correctly put in
+	> 'remove data' page fixes
