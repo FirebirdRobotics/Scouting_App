@@ -1,6 +1,6 @@
 <html>
 <head>
-	<meta http-equiv="refresh" content="0; deleteRecords.php">
+	<meta http-equiv="refresh" content="10; home.php">
 </head>
 <body>
 
@@ -13,6 +13,9 @@
 	
 	if ($admin_code != 'Admin3019') {
 	    die('Invalid code' . '<br><a href="home.php">Click here to return to Home</a>');
+	} else {
+	    $sql = "GRANT DROP ON robots TO '*'@'localhost'";
+	    $sql = "GRANT DROP ON teams TO '*'@'localhost'";
 	}
 	
 	// STILL NEED TO TEST

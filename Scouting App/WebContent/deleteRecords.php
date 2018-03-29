@@ -26,7 +26,7 @@
     ?>
     
     <div id="main">
-		<form action="deleteRecordsAction.php">
+		<form action="deleteRecordsAction.php" method="post">
 			<ul>
     			<li>
         			<input type="radio" name="deleteRecords" value="deleteRecords-robots" id="deleteRecords-robots">
@@ -43,7 +43,7 @@
 			</ul>
 			<br><br>
 			<font size="+1">Type in the admin code to confirm:</font><br>
-			<input type="text" name="adminCode" class="form-control adminCode" placeholder="Admin ONLY" required><br><br>
+			<input type="password" name="adminCode" class="form-control adminCode" placeholder="Admin ONLY" required><br><br>
 			
 			<input type="submit" value="Submit">
     	</form>
