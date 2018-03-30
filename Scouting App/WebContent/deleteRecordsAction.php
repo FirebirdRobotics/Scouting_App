@@ -20,9 +20,9 @@
 	
 	// STILL NEED TO TEST
 	if ($delete_option == 'deleteRecords-teams') {
-	    $sql = "TRUNCATE TABLE 'teams'";
+	    $sql = "TRUNCATE TABLE teams";
 	} else if ($delete_option == 'deleteRecords-robots') {
-	    $sql = "TRUNCATE TABLE 'robots'";
+	    $sql = "TRUNCATE TABLE robots";
 	} else {
 	    die('No option selected' . '<br><a href="deleteRecords.php">Click here to go back</a>');
 	}
