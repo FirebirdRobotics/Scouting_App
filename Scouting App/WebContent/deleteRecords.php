@@ -35,6 +35,12 @@
         			<div class="check"><div class="inside"></div></div>
     			</li>
     			<li>
+        			<input type="radio" name="deleteRecords" value="deleteRecords-pitrobots" id="deleteRecords-pitrobots">
+        			<label for="deleteRecords-pitrobots" class="deleteRecordsRadioLabels">Delete pit robot entries</label><br><br>
+        			
+        			<div class="check"><div class="inside"></div></div>
+    			</li>
+    			<li>
         			<input type="radio" name="deleteRecords" value="deleteRecords-teams" id="deleteRecords-teams">
         			<label for="deleteRecords-teams" class="deleteRecordsRadioLabels">Delete teams</label><br><br>
         			

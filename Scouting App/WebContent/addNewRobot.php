@@ -29,7 +29,7 @@
 		<form action="insertRobot.php" method="post">
 		
 		<b><font size="+3">Robot/Team:</font></b><br>
-		<i><font size="+1">Note: Please communicate with fellow scouting team members about who is scouting each robot</font></i><br>
+		<font size="+1">Note: Please communicate with fellow scouting team members about who is scouting each robot</font><br>
 		<?php 
 		
     		$sql = "SELECT teamNumber, teamName FROM teams";
@@ -45,7 +45,7 @@
     		
 		?>
                 
-                <input class="matchNumberInput" type="text" size="5" name="matchNumber" placeholder="Match #" REQUIRED>
+                <input class="robotWeight" type="text" size="5" name="matchNumber" placeholder="Match #" REQUIRED>
 		
 		<br><br>
 		

@@ -38,6 +38,7 @@
         		The purpose of scouting is to collect information about other teams' robots. 
         		With this information, we can then see how our and other teams compare to each other. 
         		This data is also useful for forming alliances in the final rounds of competitions. <br><br>
+        		There are two different categories of scouting: Pit Scouting and Stand Scouting.
         		You can help collect information by clicking the 'Add Robot' tab in the side bar.
         		From there you will be taken to a form to fill out with information about how the robot did in the round.
         		To view round data, you can click on the 'View Data' tab in the side bar.

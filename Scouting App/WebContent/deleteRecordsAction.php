@@ -13,9 +13,6 @@
 	
 	if ($admin_code != 'Admin3019') {
 	    die('Invalid code' . '<br><a href="home.php">Click here to return to Home</a>');
-	} else {
-	    $sql = "GRANT DROP ON robots TO '*'@'localhost'";
-	    $sql = "GRANT DROP ON teams TO '*'@'localhost'";
 	}
 	
 	// STILL NEED TO TEST
@@ -23,12 +20,14 @@
 	    $sql = "TRUNCATE TABLE teams";
 	} else if ($delete_option == 'deleteRecords-robots') {
 	    $sql = "TRUNCATE TABLE robots";
+	} else if ($delete_option == 'deleteRecords-pitrobots') {
+	    $sql = "TRUNCATE TABLE pitrobots";
 	} else {
 	    die('No option selected' . '<br><a href="deleteRecords.php">Click here to go back</a>');
 	}
 	
 	if ($conn->query($sql) === TRUE) {
-	    echo 'New team successfully added' . '<br><a href="deleteRecords.php">Click here to go back</a>';
+	    echo 'Table successfully truncated' . '<br><a href="deleteRecords.php">Click here to go back</a>';
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}

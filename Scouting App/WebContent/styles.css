@@ -353,6 +353,11 @@ img{
 	width: 100px;
 }
 
+.robotWeight{
+	padding: 10px;
+	width: 300px;
+}
+
 .signupButton{
 	margin-top: 20px;
 	color: #f0f0f0;
@@ -571,5 +576,9 @@ input::-webkit-inner-spin-button {
 	.matchNumberInput{
 		padding: 10px;
 		max-width: 28%;
+	}
+	.robotWeight{
+		padding: 10px;
+		max-width: 40%;
 	}
 }
