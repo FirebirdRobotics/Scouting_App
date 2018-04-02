@@ -40,7 +40,7 @@
         		This data is also useful for forming alliances in the final rounds of competitions. <br><br>
         		There are two different categories of scouting: Pit Scouting and Stand Scouting.
         		You can help collect information by clicking the 'Add Robot' tab in the side bar.
-        		From there you will be taken to a form to fill out with information about how the robot did in the round.
+        		From there you will be taken to a form to fill out with information about a specific robot.
         		To view round data, you can click on the 'View Data' tab in the side bar.
         		This will show you a table full of all the data collected on the robots per round.
         		To view ranking data, you can click on the 'View Ranking' tab in the side bar.

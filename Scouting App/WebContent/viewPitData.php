@@ -48,6 +48,7 @@
                     <th>Climber</th>
                     <th>Weight</th>
                     <th>Drive Train</th>
+                    <th>Rating</th>
                     <th>Added By:</th>
           </tr></thead><tbody>";
 	$where = (isset($_GET['team']) ? "where robotNumber = '{$_GET['team']}'" : '');
@@ -66,6 +67,7 @@
                     <td>$botClimber</td>
                     <td>$robotWeight</td>
                     <td>$driveTrain</td>
+                    <td>$rating</td>
                     <td>$user</td>
             </tr>";
 	}
