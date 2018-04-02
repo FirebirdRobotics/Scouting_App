@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 02, 2018 at 11:34 PM
+-- Generation Time: Apr 02, 2018 at 11:56 PM
 -- Server version: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -33,6 +33,7 @@ CREATE TABLE `pitrobots` (
   `botClimber` varchar(20) DEFAULT NULL,
   `robotWeight` varchar(20) DEFAULT NULL,
   `driveTrain` varchar(20) DEFAULT NULL,
+  `rating` int(11) DEFAULT NULL,
   `user` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
