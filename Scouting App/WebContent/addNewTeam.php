@@ -35,7 +35,7 @@
 			<br>
 			Team Name:
 			<br>
-			<input type="text" class="teamName" name="teamName" placeholder="ex. Firebird Robotics" required><br>
+			<input type="text" class="teamName" name="teamName" placeholder="ex. Firebirds" required><br>
 			<br>
 			<input type="submit" value="Submit">
     	</form>
