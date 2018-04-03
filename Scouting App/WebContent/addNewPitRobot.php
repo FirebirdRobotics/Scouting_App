@@ -47,33 +47,38 @@
         <b><font size="+3">Comments:</font></b><br>
         What can your bot do?
 		<div>
-			<textarea name="botAbility" id="botAbility" rows="6" placeholder="ex. Switch/Scale/Climb"></textarea>
+			<textarea name="botAbility" id="botAbility" rows="6" placeholder="ex. switch/scale/climb"></textarea>
 		</div>
 		<br>
 		What is your game strategy?
 		<div>
-			<textarea name="gameStrategy" id="gameStrategy" rows="6" placeholder="ex. Do you focus on just the switch/scale, do you try for power-ups, etc."></textarea>
+			<textarea name="gameStrategy" id="gameStrategy" rows="6" placeholder="ex. focus on just the switch/scale, try for power-ups, etc."></textarea>
 		</div>
 		<br>
 		What is your climber (if any) like?
 		<div>
-			<textarea name="botClimber" id="botClimber" rows="6" placeholder="ex. Does it allow for multiple climbs, bots driving on your bot, etc."></textarea>
+			<textarea name="botClimber" id="botClimber" rows="6" placeholder="ex. allows for multiple climbs, bots driving on your bot, etc."></textarea>
 		</div>
 		<br>
 		What is the weight of your robot?
 		<div>
-			<input class="robotWeight" type="text" name="robotWeight" placeholder="# lbs">
+			<textarea name="robotWeight" id="robotWeight" rows="6" placeholder="# lbs"></textarea>
+		</div>
+		<br>
+		What is your robot's center of mass?
+		<div>
+			<textarea name="centerOfMass" id="centerOfMass" rows="6" placeholder="ex. front/back/center/left/right"></textarea>
 		</div>
 		<br>
 		What drive train does your robot use?
 		<div>
-			<textarea name="driveTrain" id="driveTrain" rows="6" placeholder="ex. U-frame"></textarea>
+			<textarea name="driveTrain" id="driveTrain" rows="6" placeholder="ex. swerve/tank(west coast)/mecanum/omni"></textarea>
 		</div>
 		<br>
-		Overall Rating: 
+		How would you rate your robot?
 		<div>
 			<select name="rating" class="dropdown-button">
-			<option value="" disabled selected>#</option>
+			<option value="" disabled selected># out of 10</option>
 			<option value="1">1</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
