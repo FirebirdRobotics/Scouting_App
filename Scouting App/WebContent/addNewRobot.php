@@ -42,7 +42,7 @@
     		$sql = "SELECT teamNumber, teamName FROM teams";
     		$result = $conn->query($sql);
     		
-    		echo "<select name='teamNumber' class='selectpicker dropdown-button' data-style='btn-primary'>
+    		echo "<select name='teamNumber' class='selectpicker dropdown-button' data-style='btn-primary' required>
                   <option value='' disabled selected>Select Team</option>";
     		while ($row = mysqli_fetch_array($result)) {
     		    extract($row);
