@@ -163,6 +163,7 @@ input[type="number"]{
 }
 
 .dropdown-button{
+	
 	background-color: #333;
     color: white;
     padding: 16px;
@@ -570,8 +571,9 @@ input::-webkit-inner-spin-button {
 		width: 98%;
 	}
 	.dropdown-button{
+		margin-left: 0%;
 		font-size: 22px;
-    	width: 60%;
+    	width: 50%;
 	}
 	.matchNumberInput{
 		padding: 10px;

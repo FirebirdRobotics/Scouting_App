@@ -6,8 +6,15 @@
 	<title>Firebirds Robotics Scouting</title>
 	<link href="styles.css" type="text/css" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+	<style>
+	   body{
+	       font-family: 'Open Sans', sans-serif;
+	       font-size: 24px;
+	   }
+	</style>
 </head>
 <body>
 
@@ -35,7 +42,7 @@
     		$sql = "SELECT teamNumber, teamName FROM teams";
     		$result = $conn->query($sql);
     		
-    		echo "<select name='teamNumber' class='dropdown-button'>
+    		echo "<select name='teamNumber' class='selectpicker dropdown-button' data-style='btn-primary'>
                   <option value='' disabled selected>Select Team</option>";
     		while ($row = mysqli_fetch_array($result)) {
     		    extract($row);
