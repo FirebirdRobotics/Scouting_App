@@ -166,31 +166,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`username`, `firstName`, `lastName`, `password`, `confirmPassword`, `email`) VALUES
-('185643', 'Ben', 'Schnip', '08202001', '08202001', 'benschnieper@gmail.com'),
-('199753', 'Jackson', 'Smith', '04252003', '04252003', 'Jsmith53@susdgapps.org'),
-('a', 'a', 'a', 'a', 'a', 'hgoldschmidt57@susdgapps.org'),
-('altneu ', 'Theo', 'Altneu', 'idonttrustyang', 'idonttrustyang', 'taltneu@icloud.com'),
-('Asha', 'Asha', 'Ramaswamy', '08102003', '08102003', 'Ashaaaz10@gmail.com'),
-('ASharkey', 'Amanda', 'Sharkey', 'pandashark', 'pandashark', 'aroseshark@gmail.com '),
-('avaclaire', 'Ava Claire', 'Lariego', '07062003', '07062003', 'alariego46@susdgapps.org'),
-('Clay', 'Clayton', 'Petersen', 'mrmejr10', 'mrmejr10', 'claypete45@gmail.com'),
-('DShark', 'Danielle', 'Sharkey', 'happyaye88', 'happyaye88', 'Dsharkey94@susdgapps.org'),
-('Firebirdster', 'Martin ', 'Hussey', '1-JohnDoe', '1-JohnDoe', 'Jrbrilliant@yahoo.com '),
-('Jaym', 'Jay', 'Macintyre', 'Ginsam11', 'Ginsam11', 'jaym1231@gmail.com'),
-('JdHenry', 'JD', 'Henry', 'Asdfghjkl1234', 'Asdfghjkl1234', 'jd.henry097@gmail.com '),
-('KindaWorks', 'Adnaan', 'Ali', 'aonla@786', 'aonla@786', 'adnaan.kool@gmail.com'),
-('LauraHeinzen', 'Laura', 'Heinzen', '10082002', '10082002', 'Laura.heinzen12@gmail.com'),
-('Lexi24', 'Lexi', 'Brister', 'JunoBuno24', 'JunoBuno24', 'alexandra7234@hotmail.com'),
-('Matthew', 'Matthew', 'Schwartz', '02052003', '02052003', 'Mattmaxaz@gmail.com'),
-('msharkey', 'Mike', 'Sharkey', '3019', '3019', 'mike@sharkey.com'),
-('Pokemon', 'Elliot', 'Teitel ', 'Oldman123', 'Oldman123', 'emteitel@gmail.com'),
-('ricefarmer', 'Branden', 'Yang', 'TS25692ts', 'TS25692ts', 'yang.branden@gmail.com'),
-('sirikops', 'Siri ', 'Kopparapu', 'sukibuki', 'sukibuki', 'sirikops@hotmail.com'),
-('Sophie Wallace', 'Sophie', 'Wallace', '12182002', '12182002', 'sophie.wallace@cox.net'),
-('surajkops', 'Suraj', 'Kopparapu', 'Smlysun2', 'Smlysun2', 'surajkops@hotmail.com'),
-('Vak_269', 'Vak', 'Klein', 'Butter1234', 'Butter1234', 'Vaughnklein533@gmail.com'),
-('Yola', 'Sid', 'The Science Kid', 'ratata', 'ratata', 'siddhantsaxena@hotmail.com'),
-('zod', 'Steve', 'Jones', 'chones', 'chones', 'allsystemsgo19@gmail.com');
+('test', 'test', 'account', 'test', 'test', 'test@gmail.com');
 
 --
 -- Indexes for dumped tables
