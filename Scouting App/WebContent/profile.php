@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Firebirds Robotics Scouting</title>
-	<link href="styles.css" type="text/css" rel="stylesheet"/>
+	<link href="css/styles.css" type="text/css" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body class="profileBody">
@@ -33,7 +33,7 @@
 	
 	<div class="profileBackground">
 		<div class="profilePicture">
-			<img align="middle" class="loginImage" src="transparentLogo.png" alt="placeholder image">
+			<img align="middle" class="loginImage" src="images/transparentLogo.png" alt="placeholder image">
 		</div>
 		<?php 
     		

@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-	<link href="styles.css" type="text/css" rel="stylesheet"/>
+	<link href="css/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 
