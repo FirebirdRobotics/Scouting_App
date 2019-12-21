@@ -44,7 +44,7 @@
 	</div>
 	
 	<div class="innerCreateAccountBox">
-		<img align="middle" class="loginImage" src="images/transparentLogo.png" alt="Logo">
+		<img class="loginImage" src="./images/transparentLogo.png" alt="Logo">
 		<hr>
 		<form action="insertUser.php" method="post">
 		<table>

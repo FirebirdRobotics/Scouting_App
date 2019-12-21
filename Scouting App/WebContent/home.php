@@ -29,7 +29,7 @@
     ?>
 	
     <div class="images">
-    	<img src="images/Logo.png" alt="Logo" width=100% height=auto>
+    	<img src="./images/Logo.png" alt="Logo" width=100% height=auto>
     </div>
 	
 	<div class="scoutingDescriptionAll">

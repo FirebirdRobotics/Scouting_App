@@ -33,7 +33,7 @@
 	
 	<div class="profileBackground">
 		<div class="profilePicture">
-			<img align="middle" class="loginImage" src="images/transparentLogo.png" alt="placeholder image">
+			<img class="loginImage" src="./images/transparentLogo.png" alt="placeholder image">
 		</div>
 		<?php 
     		

@@ -54,7 +54,7 @@
 	 -->
 	
 	<div class="innerBox">
-		<img align="middle" class="loginImage" src="images/transparentLogo.png" alt="Logo">
+		<img class="loginImage" src="./images/transparentLogo.png" alt="Logo">
 		<hr>
 		<form class="loginForm" action="loginUser.php" method="post" id="login">
 			<input type="text" name="username" id="username" class="form-control" placeholder="Username">
