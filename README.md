@@ -2,7 +2,7 @@
 This is the Scouting App Web project for the Firebirds Robotics team.
 
 ## Current Link:
-http://firebirdrobotics.net/scouting/
+http://firebirdrobotics.com/scouting/
 
 Symbols to Copy-paste b/c for whatever reason they disappear when transferring from github to eclipse:
 
