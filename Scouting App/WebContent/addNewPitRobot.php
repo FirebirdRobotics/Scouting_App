@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-	<link href="css/styles.css" type="text/css" rel="stylesheet"/>
+	<link href="styles.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -48,12 +48,12 @@
         <b><font size="+3">Comments:</font></b><br>
         What can your bot do?
 		<div>
-			<textarea name="botAbility" id="botAbility" rows="6" placeholder="ex. switch/scale/climb"></textarea>
+			<textarea name="botAbility" id="botAbility" rows="6" placeholder="ex. lowGoal/highGoal/innerHighGoal/spinTheColorWheel/climb"></textarea>
 		</div>
 		<br>
 		What is your game strategy?
 		<div>
-			<textarea name="gameStrategy" id="gameStrategy" rows="6" placeholder="ex. focus on just the switch/scale, try for power-ups, etc."></textarea>
+			<textarea name="gameStrategy" id="gameStrategy" rows="6" placeholder="ex. focus on just shooting into the lowGoal/highGoal/innerHighGoal, spinTheColorWheel, etc."></textarea>
 		</div>
 		<br>
 		What is your climber (if any) like?

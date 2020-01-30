@@ -10,7 +10,7 @@
 <body class="login-bg">
 	
 	<div class="innerCreateAccountBox">
-		<img class="loginImage" src="./images/transparentLogo.png" alt="Logo">
+		<img align="middle" class="loginImage" src="transparentLogo.png" alt="Logo">
 		<hr>
 		<form action="insertUser.php" method="post">
 			<input type="text" name="username" placeholder="Username" class="form-control" required> <!-- Would like to add a username checker -->

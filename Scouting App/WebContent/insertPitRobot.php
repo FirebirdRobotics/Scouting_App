@@ -29,7 +29,7 @@
 	
 	// Insert the above variables into the table values
 	$sql="REPLACE INTO pitrobots (`robotNumber`, `botAbility`, `gameStrategy`, `botClimber`, `robotWeight`, `centerOfMass`, `driveTrain`, `rating`, `user`)
-		               VALUES ('$robot_number', '$bot_ability', '$game_strategy', '$bot_climber', '$robot_weight', '$center_of_mass', '$drive_train', '$rating', '$user')";
+		        	VALUES ('$robot_number', '$bot_ability', '$game_strategy', '$bot_climber', '$robot_weight', '$center_of_mass', '$drive_train', '$rating', '$user')";
 	
 	if ($conn->query($sql) === TRUE) {
 	    echo 'New robot successfully added' . '<br><a href="viewData.php">Click here to view data</a>';

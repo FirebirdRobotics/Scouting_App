@@ -44,12 +44,9 @@
 	echo "<tr>
                     <th>Team Number</th>
                     <th>Round Number</th>
-                    <th>Started With Power Cell</th>
+                    <th>Started With Ball</th>
                     <th>Crossed Baseline</th>
-                    <th>Power Cells (Low Goal Auto)</th>
-                    <th>Power Cells (Dropped Auto)</th>
-                    <th>Power Cells (High Goal Auto)</th>
-                    <th>Power Cells (Inner High Goal Auto)</th>
+                    <th>Placed Ball in Autonomous</th>
                     <th>Power Cells (Low Goal)</th>
                     <th>Power Cells (Dropped)</th>
                     <th>Power Cells (High Goal)</th>
@@ -59,6 +56,9 @@
                     <th>Balanced Climb</th>
                     <th>Attempted Climb</th>
                     <th>Carried Robots</th>
+                    <th>Stage One</th>
+                    <th>Stage two</th>
+                    <th>Stage three</th>
                     <th>Comments</th>
                     <th>Added By:</th>
           </tr></thead><tbody>";
@@ -74,12 +74,18 @@
 	           echo "<tr>
                     <td>$robotNumber</td>
                     <td>$matchNumber</td>
-                    "
+                    <td>"
                     // Code to display better text values
-                 ?> 
-                  <?php 
-              echo "<td>$startedWithBall</td><td>"?>
-                        <?php
+                        ?><?php
+                        if ($startedWithBall == 'yes') {
+                            echo "Did start with power cell";
+                        } elseif ($startedWithBall == 'no') {
+                            echo "Did not start with power cell";
+                        }
+                        ?><?php
+              echo "</td>
+                    <td>"
+                        ?><?php
                         if ($crossedBaseline == 'yes') {
                             echo "Did cross baseline";
                         } elseif ($crossedBaseline == 'no') {
@@ -87,13 +93,26 @@
                         }
                         ?><?php
               echo "</td>
-              <td>$lowGoalAuto</td>
-              <td>$droppedBallAuto</td>
-              <td>$highGoalAuto</td>
-              <td>$innerHighGoalAuto</td>
-                    "
+                    <td>"
                         ?><?php
-               echo "<td>$lowGoal</td>
+                        if ($shotBallAuto == 'shotLowGoal') {
+                            echo "Shot in the low goal";
+                        } elseif ($shotBallAuto == 'shotHighGoal') {
+                            echo "Shot in the high goal";
+                        } elseif ($shotBallAuto == 'shotHighandLowGoal') {
+                            echo "Shot in high and low goal";
+                        } elseif ($shotBallAuto == 'shotHighandInnerGoal') {
+                            echo "Shot in high and inner high goal";
+                        } elseif ($shotBallAuto == 'shotLowandInnerGoal') {
+                            echo "Shot in low and inner goal";
+                        } elseif ($shotBallAuto == 'shotAllAuto') {
+                            echo "Shot in all goals";
+                        }elseif ($shotBallAuto == 'didNotShoot') {
+                            echo "Did not try";
+                        }
+                        ?><?php
+               echo "</td>
+                    <td>$lowGoal</td>
                     <td>$dropped</td>
                     <td>$highGoal</td>
                     <td>$innerHighGoal</td>
@@ -140,10 +159,9 @@
                         } elseif ($carriedRobots == 'no') {
                             echo "Did not carry others";
                         }?>
-        <?php echo "</td>"?>
-        
                         <?php
-              echo "<td>$comments</td>
+              echo "</td>
+                    <td>$comments</td>
                     <td>$user</td>
             </tr>";
                          }

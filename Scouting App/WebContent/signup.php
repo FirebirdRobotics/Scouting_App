@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Firebirds Robotics Scouting</title>
-	<link href="css/styles.css" type="text/css" rel="stylesheet"/>
+	<link href="styles.css" type="text/css" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body class="login-bg">
@@ -44,7 +44,7 @@
 	</div>
 	
 	<div class="innerCreateAccountBox">
-		<img class="loginImage" src="./images/transparentLogo.png" alt="Logo">
+		<img align="middle" class="loginImage" src="transparentLogo.png" alt="Logo">
 		<hr>
 		<form action="insertUser.php" method="post">
 		<table>

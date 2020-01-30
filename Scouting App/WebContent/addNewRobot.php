@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-	<link href="css/styles.css" type="text/css" rel="stylesheet"/>
+	<link href="styles.css" type="text/css" rel="stylesheet"/>
 	<style>
 	   body{
 	       font-family: 'Open Sans', sans-serif;
@@ -56,26 +56,17 @@
 		
 		<br><br>
 		
-		
+		<!-- need to fix the id and label later -->
 		
 		<b><font size="+3">Autonomous:</font></b><br>
-			Did it start with a cube?
-			<ul>
-			<li>
-				<input type="radio" name="startedWithCube" value="yes" id="startCube-yes">
-				<label for="startCube-yes">Yes</label>
-				
-				<div class="check"><div class="inside"></div></div>
-			</li>
-			<li>
-				<input type="radio" name="startedWithCube" value="no" id="startCube-no">
-				<label for="startCube-no">No</label>
-				
-				<div class="check"><div class="inside"></div></div>
-			</li>
-			</ul>
-			
-			Did it cross the base line?
+			How many power cells did the robot start with (0-3)?
+			<div class="numCounter">
+				<input class="qty" id="qty10" value="0" name="startedWithBall">
+				<button class="redButton counterButton" id="sub" onclick="modifyQty10(-1); return false;">━</button>
+				<button class="greenButton counterButton" id="add" onclick="modifyQty10(1); return false;">╋</button>
+			</div><br><br><br><br>
+
+			Did it cross the initiation line?
 			<ul>
 			<li>
 				<input type="radio" name="crossedBaseline" value="yes" id="baseline-yes">
@@ -91,90 +82,113 @@
 			</li>
 			</ul>
 			
-			Did it place a cube? Where?
+			Did it shoot a power cell? Where?
 			<ul>
-			<li>
-				<input type="radio" name="placedCubeAuto" value="placedOnScale" id="autoCube-scale">
-				<label for="autoCube-scale">Yes, scale</label>
-				
-				<div class="check"><div class="inside"></div></div>
-			</li>
-			<li>
-				<input type="radio" name="placedCubeAuto" value="placedOnSwitch" id="autoCubeSwitch">
-				<label for="autoCubeSwitch">Yes, switch</label>
-				
-				<div class="check"><div class="inside"></div></div>
-			</li>
-			<li>
-				<input type="radio" name="placedCubeAuto" value="placedOnExchange" id="autoCubeExchange">
-				<label for="autoCubeExchange">Yes, cube exchange</label>
-				
-				<div class="check"><div class="inside"></div></div>
-			</li>
-			<li>
-				<input type="radio" name="placedCubeAuto" value="placedOnScaleAndSwitch" id="autoCubeScaleAndSwitch">
-				<label for="autoCubeScaleAndSwitch">Yes, scale and switch</label>
-				
-				<div class="check"><div class="inside"></div></div>
-			</li>
-			<li>
-				<input type="radio" name="placedCubeAuto" value="placedOnScaleAndExchange" id="autoCubeScaleAndExchange">
-				<label for="autoCubeScaleAndExchange">Yes, scale and cube exchange</label>
-				
-				<div class="check"><div class="inside"></div></div>
-			</li>
-			<li>
-				<input type="radio" name="placedCubeAuto" value="placedOnSwitchAndExchange" id="autoCubeSwitchAndExchange">
-				<label for="autoCubeSwitchAndExchange">Yes, switch and cube exchange</label>
-				
-				<div class="check"><div class="inside"></div></div>
-			</li>
-			<li>
-				<input type="radio" name="placedCubeAuto" value="placedOnAll" id="autoCubeAll">
-				<label for="autoCubeAll">Yes, all</label>
-				
-				<div class="check"><div class="inside"></div></div>
-			</li>
-			<li>
-				<input type="radio" name="placedCubeAuto" value="didNotPlace" id="autoCubeNone">
-				<label for="autoCubeNone">None</label>
-				
-				<div class="check"><div class="inside"></div></div>
-			</li>
-			</ul>
-			
-		<b><font size="+3">Teleop:</font></b><br>
-			How many cubes did it place on the switch?<br>
+			Bottom Port<br>
 			<div class="numCounter">
-				<input class="qty" id="qty" value="0" name="switch"/>
+				<input class="qty" id="qty9" value="0" name="lowGoalAuto"/>
+				<button class="redButton counterButton" id="sub" onclick="modifyQty9(-1); return false;">━</button>
+				<button class="greenButton counterButton" id="add" onclick="modifyQty9(1); return false;">╋</button>
+			</div><br><br><br><br>
+			
+			Dropped (Failed to shoot)?<br>
+			<div class="numCounter">
+				<input class="qty" id="qty8" value="0" name="droppedBallAuto"/>
+				<button class="redButton counterButton" id="sub" onclick="modifyQty8(-1); return false;">━</button>
+				<button class="greenButton counterButton" id="add" onclick="modifyQty8(1); return false;">╋</button>
+			</div><br><br><br><br>
+			
+			Outer high goal<br>
+			<div class="numCounter">
+				<input class="qty" id="qty7" value="0" name="highGoalAuto"/>
+				<button class="redButton counterButton" id="sub" onclick="modifyQty7(-1); return false;">━</button>
+				<button class="greenButton counterButton" id="add" onclick="modifyQty7(1); return false;">╋</button>
+			</div><br><br><br><br>
+			
+            Inner high goal<br>
+			<div class="numCounter">
+				<input class="qty" id="qty6" value="0" name="innerHighGoalAuto"/>
+				<button class="redButton counterButton" id="sub" onclick="modifyQty6(-1); return false;">━</button>
+				<button class="greenButton counterButton" id="add" onclick="modifyQty6(1); return false;">╋</button>
+			</div><br><br><br><br>
+            
+		<b><font size="+3">Teleop:</font></b><br>
+			How many power cells did it shot in the bottom port?<br>
+			<div class="numCounter">
+				<input class="qty" id="qty" value="0" name="lowGoal"/>
 				<button class="redButton counterButton" id="sub" onclick="modifyQty(-1); return false;">━</button>
 				<button class="greenButton counterButton" id="add" onclick="modifyQty(1); return false;">╋</button>
 			</div><br><br><br><br>
 			
-			How many cubes did it drop (fail to place)?<br>
+			How many power cells did it drop (fail to shoot)?<br>
 			<div class="numCounter">
 				<input class="qty" id="qty2" value="0" name="dropped"/>
 				<button class="redButton counterButton" id="sub" onclick="modifyQty2(-1); return false;">━</button>
 				<button class="greenButton counterButton" id="add" onclick="modifyQty2(1); return false;">╋</button>
 			</div><br><br><br><br>
 			
-			How many cubes did it place on the scale?<br>
+			How many power cells did it shoot in the high goal?<br>
 			<div class="numCounter">
-				<input class="qty" id="qty3" value="0" name="scale"/>
+				<input class="qty" id="qty3" value="0" name="highGoal"/>
 				<button class="redButton counterButton" id="sub" onclick="modifyQty3(-1); return false;">━</button>
 				<button class="greenButton counterButton" id="add" onclick="modifyQty3(1); return false;">╋</button>
 			</div><br><br><br><br>
 			
-			How many cubes did it place in the cube exchange?<br>
+            How many power cells did it shoot in the inner high goal?<br>
 			<div class="numCounter">
-				<input class="qty" id="qty4" value="0" name="cubeExchange"/>
+				<input class="qty" id="qty5" value="0" name="innerHighGoal"/>
+				<button class="redButton counterButton" id="sub" onclick="modifyQty5(-1); return false;">━</button>
+				<button class="greenButton counterButton" id="add" onclick="modifyQty5(1); return false;">╋</button>
+			</div><br><br><br><br>
+			
+            Did they spin the color wheel? If so, how many times?<br>
+			<div class="numCounter">
+				<input class="qty" id="qty4" value="0" name="colorWheelSpun"/>
 				<button class="redButton counterButton" id="sub" onclick="modifyQty4(-1); return false;">━</button>
 				<button class="greenButton counterButton" id="add" onclick="modifyQty4(1); return false;">╋</button>
 			</div><br><br><br><br>
-			
-			Do they park or attempt to climb? Are they successful in their climb?
-			<ul>
+            
+            Did they spin the color wheel and attempt to land on a color? If so, were they successful?<br>
+				<ul>
 			<li>
+				<input type="radio" name="colorWheel" value="setColor" id="setColor-successful">
+				<label for="setColor-successful">Attempted to set color on wheel, successful</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			<li>
+				<input type="radio" name="colorWheel" value="setColorUnsuccessful" id="setColor-unsuccessful">
+				<label for="setColor-unsuccessful">Attempted to set color on wheel, unsuccessful</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			<li>
+				<input type="radio" name="colorWheel" value="didNotSpin" id="didNotSpin">
+				<label for="didNotSpin">Did not spin the wheel</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			</ul>
+			
+            Did they balance?
+			<ul>
+                <li>
+				<input type="radio" name="balancedClimb" value="balancedClimbSuccessful" id="balancedClimbSuccessful">
+				<label for="balancedClimbSuccessful">Attempted to balance on generator switch, successful</label>
+				
+				<div class="check"><div class="inside"></div></div>
+			</li>
+			<li>
+				<input type="radio" name="balancedClimb" value="balancedClimbUnsuccessful" id="balancedClimbUnsuccessful">
+				<label for="balancedClimbUnsuccessful">Attempted to balance on generator switch, unsuccessful</label>
+				
+				<div class="check"><div class="inside"></div></div>
+            </li>
+			</ul>
+            
+            Do they park or attempt to climb? Are they successful in their climb? 
+			<ul>
+                <li>
 				<input type="radio" name="attemptedClimb" value="successfulClimb" id="attemptedClimbSuccessful">
 				<label for="attemptedClimbSuccessful">Attempted climb, successful</label>
 				
@@ -200,7 +214,7 @@
 			</li>
 			</ul>
 			
-			Did it carry other robots?
+            Did it buddy climb (carry other) robots?
 			<ul>
 			<li>
 				<input type="radio" name="carriedRobots" value="yes" id="carriedRobotsYes">
@@ -274,6 +288,74 @@
     	document.getElementById('qty4').value = new_qty;
     	return new_qty;
 	}
-	</script>
+	
+        function modifyQty5(val) {
+    	var qty = document.getElementById('qty5').value;
+    	var new_qty = parseInt(qty,10) + val;
+    	
+    	if (new_qty < 0) {
+    	    new_qty = 0;
+    	}
+    	
+    	document.getElementById('qty5').value = new_qty;
+    	return new_qty;
+	}
+	function modifyQty6(val) {
+    	var qty = document.getElementById('qty6').value;
+    	var new_qty = parseInt(qty,10) + val;
+    	
+    	if (new_qty < 0) {
+    	    new_qty = 0;
+    	}
+    	
+    	document.getElementById('qty6').value = new_qty;
+    	return new_qty;
+	}
+	function modifyQty7(val) {
+    	var qty = document.getElementById('qty7').value;
+    	var new_qty = parseInt(qty,10) + val;
+    	
+    	if (new_qty < 0) {
+    	    new_qty = 0;
+    	}
+    	
+    	document.getElementById('qty7').value = new_qty;
+    	return new_qty;
+	}
+	function modifyQty8(val) {
+    	var qty = document.getElementById('qty8').value;
+    	var new_qty = parseInt(qty,10) + val;
+    	
+    	if (new_qty < 0) {
+    	    new_qty = 0;
+    	}
+    	
+    	document.getElementById('qty8').value = new_qty;
+    	return new_qty;
+	}
+	function modifyQty9(val) {
+    	var qty = document.getElementById('qty9').value;
+    	var new_qty = parseInt(qty,10) + val;
+    	
+    	if (new_qty < 0) {
+    	    new_qty = 0;
+    	}
+    	
+    	document.getElementById('qty9').value = new_qty;
+    	return new_qty;
+	}
+	function modifyQty10(val) {
+    	var qty = document.getElementById('qty10').value;
+    	var new_qty = parseInt(qty,10) + val;
+    	
+    	if (new_qty < 0) {
+    	    new_qty = 0;
+    	}
+    	
+    	document.getElementById('qty10').value = new_qty;
+    	return new_qty;
+	}
+    
+    </script>
 </body>
 </html>

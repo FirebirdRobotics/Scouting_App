@@ -5,13 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Firebirds Robotics Scouting</title>
-	<link href="css/styles.css" type="text/css" rel="stylesheet"/>
+	<link href="styles.css" type="text/css" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body class="login-bg">
 <header class="large">
     <div class="innerBox">
-		<img class="loginImage" src="./images/transparentLogo" alt="Logo">
+		<img align="middle" class="loginImage" src="transparentLogo.png" alt="Logo">
 		<hr>
 		<form class="loginForm" action="loginUser.php" method="post" id="login">
 			<input type="text" name="username" id="username" class="form-control" placeholder="Username">

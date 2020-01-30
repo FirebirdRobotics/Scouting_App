@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <link href="css/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="styles.css" type="text/css" rel="stylesheet"/>
     <script>
         $(document).ready(function() {
             $('#summaryTable').DataTable({
@@ -70,24 +70,25 @@
     	    $tot_rank += ($crossedBaseline == 'yes' ? 10 : 0);
     	    
     	    // add rank points for autonomous cube
-    	    $tot_rank += ($placedCubeAuto == 'placedOnScale' || $placedCubeAuto == 'placedOnSwitch' || $placedCubeAuto == 'placedOnExchange' ? 10 : 0);
-    	    $tot_rank += ($placedCubeAuto == 'placedOnScaleAndSwitch' || $placedCubeAuto == 'placedOnScaleAndExchange' || $placedCubeAuto == 'placedOnSwitchAndExchange' ? 15 : 0);
-    	    $tot_rank += ($placedCubeAuto == 'placedOnAll' ? 20 : 0);
+    	    $tot_rank += ($shotBallAuto == 'shotHighGoal' || $shotBallAuto == 'shotLowGoal' || $shotBallAuto == 'shotHighGoal' ? 10 : 0);
+    	    $tot_rank += ($shotBallAuto == 'shotLowAndHighGoal' || $shotBallAuto == 'shotInnerHighGoal' || $shotBallAuto == 'shotHighAndInnerGoal' ? 10 : 0);
+    	    $tot_rank += ($shotBallAuto == 'shotLowAndInnerGoal' ? 10 : 0);
+            $tot_rank += ($placedCubeAuto == 'shotAll' ? 20 : 0);
     	    $tot_rank += ($placedCubeAuto == 'didNotPlace' ? 0 : 0);
     	    
-    	    // add rank points for ally switch
-    	    $tot_rank += ($switch >= 1 ? 5 : 0);
-    	    $tot_rank += ($switch >= 2 ? 5 : 0);
-    	    $tot_rank += ($switch >= 3 ? 5 : 0);
-    	    $tot_rank += ($switch >= 4 ? 5 : 0);
-    	    $tot_rank += ($switch >= 5 ? 5 : 0);
-    	    $tot_rank += ($switch >= 6 ? 5 : 0);
-    	    $tot_rank += ($switch >= 7 ? 5 : 0);
-    	    $tot_rank += ($switch >= 8 ? 5 : 0);
-    	    $tot_rank += ($switch >= 9 ? 5 : 0);
-    	    $tot_rank += ($switch >= 10 ? 5 : 0);
+    	    // add rank points for low goal
+    	    $tot_rank += ($lowGoal >= 1 ? 5 : 0);
+    	    $tot_rank += ($lowGoal >= 2 ? 5 : 0);
+    	    $tot_rank += ($lowGoal >= 3 ? 5 : 0);
+    	    $tot_rank += ($lowGoal >= 4 ? 5 : 0);
+    	    $tot_rank += ($lowGoal >= 5 ? 5 : 0);
+    	    $tot_rank += ($lowGoal >= 6 ? 5 : 0);
+    	    $tot_rank += ($lowGoal >= 7 ? 5 : 0);
+    	    $tot_rank += ($lowGoal >= 8 ? 5 : 0);
+    	    $tot_rank += ($lowGoal >= 9 ? 5 : 0);
+    	    $tot_rank += ($lowGoal >= 10 ? 5 : 0);
     	    
-    	    // add rank points for enemy switch
+    	    // add rank points for enemy goal
     	    $tot_rank += ($dropped >= 1 ? 5 : 0);
     	    $tot_rank += ($dropped >= 2 ? 5 : 0);
     	    $tot_rank += ($dropped >= 3 ? 5 : 0);
@@ -99,37 +100,49 @@
     	    $tot_rank += ($dropped >= 9 ? 5 : 0);
     	    $tot_rank += ($dropped >= 10 ? 5 : 0);
     	    
-    	    // add rank points for scale
-    	    $tot_rank += ($scale >= 1 ? 10 : 0);
-    	    $tot_rank += ($scale >= 2 ? 10 : 0);
-    	    $tot_rank += ($scale >= 3 ? 10 : 0);
-    	    $tot_rank += ($scale >= 4 ? 10 : 0);
-    	    $tot_rank += ($scale >= 5 ? 10 : 0);
-    	    $tot_rank += ($scale >= 6 ? 10 : 0);
-    	    $tot_rank += ($scale >= 7 ? 10 : 0);
-    	    $tot_rank += ($scale >= 8 ? 10 : 0);
-    	    $tot_rank += ($scale >= 9 ? 10 : 0);
-    	    $tot_rank += ($scale >= 10 ? 10 : 0);
+    	    // add rank points for high goal
+    	    $tot_rank += ($highGoal >= 1 ? 10 : 0);
+    	    $tot_rank += ($highGoal >= 2 ? 10 : 0);
+    	    $tot_rank += ($highGoal >= 3 ? 10 : 0);
+    	    $tot_rank += ($highGoal >= 4 ? 10 : 0);
+    	    $tot_rank += ($highGoal >= 5 ? 10 : 0);
+    	    $tot_rank += ($highGoal >= 6 ? 10 : 0);
+    	    $tot_rank += ($highGoal >= 7 ? 10 : 0);
+    	    $tot_rank += ($highGoal >= 8 ? 10 : 0);
+    	    $tot_rank += ($highGoal >= 9 ? 10 : 0);
+    	    $tot_rank += ($highGoal >= 10 ? 10 : 0);
     	    
-    	    // add rank points for cube exchange
-    	    $tot_rank += ($cubeExchange >= 1 ? 5 : 0);
-    	    $tot_rank += ($cubeExchange >= 2 ? 5 : 0);
-    	    $tot_rank += ($cubeExchange >= 3 ? 5 : 0);
-    	    $tot_rank += ($cubeExchange >= 4 ? 5 : 0);
-    	    $tot_rank += ($cubeExchange >= 5 ? 5 : 0);
-    	    $tot_rank += ($cubeExchange >= 6 ? 5 : 0);
-    	    $tot_rank += ($cubeExchange >= 7 ? 5 : 0);
-    	    $tot_rank += ($cubeExchange >= 8 ? 5 : 0);
-    	    $tot_rank += ($cubeExchange >= 9 ? 5 : 0);
-    	    $tot_rank += ($cubeExchange >= 10 ? 5 : 0);
+    	    // add rank points for inner high goal
+    	    $tot_rank += ($innerHighGoal >= 1 ? 5 : 0);
+    	    $tot_rank += ($innerHighGoal >= 2 ? 5 : 0);
+    	    $tot_rank += ($innerHighGoal >= 3 ? 5 : 0);
+    	    $tot_rank += ($innerHighGoal >= 4 ? 5 : 0);
+    	    $tot_rank += ($innerHighGoal >= 5 ? 5 : 0);
+    	    $tot_rank += ($innerHighGoal >= 6 ? 5 : 0);
+    	    $tot_rank += ($innerHighGoal >= 7 ? 5 : 0);
+    	    $tot_rank += ($innerHighGoal >= 8 ? 5 : 0);
+    	    $tot_rank += ($innerHighGoal >= 9 ? 5 : 0);
+    	    $tot_rank += ($innerHighGoal >= 10 ? 5 : 0);
     	    
-    	    // add rank points for climb
+            // add rank points for climb
+    	    $tot_rank += ($attemptedClimb == 'setColor' ? 20 : 0);
+    	    $tot_rank += ($attemptedClimb == 'spunWheel' ? 10 : 0);
+    	    $tot_rank += ($attemptedClimb == 'setColorUnsuccessful' ? 2 : 0);
+    	    $tot_rank += ($attemptedClimb == 'didNotTry' ? 0 : 0);
+    	    
+    	    
+            // add rank points for color wheel
     	    $tot_rank += ($attemptedClimb == 'successfulClimb' ? 25 : 0);
     	    $tot_rank += ($attemptedClimb == 'unsuccessfulClimb' ? 5 : 0);
     	    $tot_rank += ($attemptedClimb == 'parked' ? 2 : 0);
     	    $tot_rank += ($attemptedClimb == 'didNotTry' ? 0 : 0);
     	    
     	    // add rank points for carrying other robots
+    	    $tot_rank += ($stageOne == 'yes' ? 50 : 0);
+	        $tot_rank += ($stageTwo == 'yes' ? 50 : 0);
+	        $tot_rank += ($stageThree == 'yes' ? 50 : 0);
+	     
+            // add rank points for carrying other robots
     	    $tot_rank += ($carriedRobots == 'yes' ? 50 : 0);
 	    
     	}
