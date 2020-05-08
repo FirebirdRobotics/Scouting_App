@@ -29,16 +29,16 @@
 	<div id="side-menu" class="side-navbar">
 		<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br>
 		<a href="home.php">Home</a>
-        	<hr style="width:80%;">
+        	<hr style="width:80%;opacity: 0;">
         	<font style="color:YELLOW;">&nbsp;&nbsp;&nbsp;Stand Scouting</font><br>
 		<a href="addNewRobot.php">Add Robot</a>
 		<a href="viewData.php">View Data</a>
 		<a href="viewSummary.php">View Ranking</a>
-			<hr style="width:80%;">
+			<hr style="width:80%;opacity: 0;">
         	<font style="color:YELLOW;">&nbsp;&nbsp;&nbsp;Pit Scouting</font><br>
         <a href="addNewPitRobot.php">Add Robot</a>
 		<a href="viewPitData.php">View Data</a>
-        	<hr style="width:80%;">
+        	<hr style="width:80%;opacity: 0;">
         	<font style="color:RED;">&nbsp;&nbsp;&nbsp;Admin ONLY</font><br>
         <a href="addNewTeam.php">Add Team</a>
         <a href="deleteRecords.php">Delete Records</a>
