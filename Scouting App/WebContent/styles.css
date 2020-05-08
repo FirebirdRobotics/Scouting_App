@@ -329,6 +329,27 @@ img{
 	font-size: 80%;
 }
 
+.loginAlert{
+	padding: 20px;
+  	background-color: #ff0000;
+  	color: #ffffff;
+}
+
+.alertButton{
+	margin-left: 15px;
+  	color: white;
+  	font-weight: bold;
+  	float: right;
+  	font-size: 22px;
+  	line-height: 20px;
+  	cursor: pointer;
+  	transition: 0.3s;
+}
+
+.alertButton:hover{
+	cursor: pointer;
+}
+
 .homeBody{
 	background-color: #000000;
 	color: #ffffff;

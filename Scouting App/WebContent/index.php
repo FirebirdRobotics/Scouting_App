@@ -1,3 +1,6 @@
+<?php
+	include("database.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +13,19 @@
 </head>
 <body class="login-bg">
 <header class="large">
+	<?php 
+	if(!empty($_SESSION["error"])) {
+		echo "<div class='loginAlert'>
+				<strong>Error:</strong>
+				<span id='loginMessage'>";
+					echo $_SESSION["error"];
+		echo "	</span>
+				<span class='alertButton' onclick=\"this.parentElement.style.display='none';\">&times;</span>
+			</div>";
+	}
+	?>
+	
+
     <div class="innerBox">
 		<img align="middle" class="loginImage" src="transparentLogo.png" alt="Logo">
 		<hr>

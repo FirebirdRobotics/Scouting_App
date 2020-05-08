@@ -1,7 +1,4 @@
 <html>
-<head>
-</head>
-<body>
 
 <?php
 	
@@ -64,6 +61,4 @@
 	$conn->close();
 	
 	?>
-
-</body>
 </html>

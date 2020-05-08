@@ -1,7 +1,4 @@
 <html>
-<head>
-</head>
-<body>
 
 <?php
 
@@ -12,28 +9,34 @@
     }
     
     if (empty($_POST['username']) && empty($_POST['password'])) {
-        die('Please enter in a Username and Password' . '<br><a href="index.php">Click here to go back</a>');
+        // die('Please enter in a Username and Password' . '<br><a href="index.php">Click here to go back</a>');
+        $_SESSION["error"] = "Please enter in a Username and Password.";
+        die('<script type="text/javascript">location.href = "index.php";</script>');
     }
     
     if (!empty($_POST['username']) || !empty($_POST['password'])) {
         
         if(empty($_POST['username'])) {
-            die('Username is empty' . '<br><a href="index.php">Click here to go back</a>');
+            $_SESSION["error"] = "Please enter a username.";
+            die('<script type="text/javascript">location.href = "index.php";</script>');
         }
         
         if(empty($_POST['password'])) {
-            die('Password is empty' . '<br><a href="index.php">Click here to go back</a>');
+            $_SESSION["error"] = "Please enter a password.";
+            die('<script type="text/javascript">location.href = "index.php";</script>');
         }
         
         $username = trim($_POST['username']);
         $password = trim($_POST['password']);
         
         if (!CheckLoginInDB($username,$password,$conn)) {
-            die('Invalid username and/or password' . '<br><a href="index.php">Click here to go back</a>');
+            $_SESSION["error"] = "Invalid username and/or password.";
+            die('<script type="text/javascript">location.href = "index.php";</script>');
         }
         
         $_SESSION["username"] = $username;
-        
+        $_SESSION["error"] = "";
+
         echo '<script type="text/javascript">location.href = "home.php";</script>';
     }
 
@@ -44,7 +47,7 @@
         $result = mysqli_query($conn, $qry);
         
         if(!$result || mysqli_num_rows($result) <= 0) {
-            $_SESSION["error"] = "The username or password does not match";
+            $_SESSION["error"] = "The username or password does not match.";
             return false;
         }
         
@@ -55,5 +58,4 @@
 
 ?>
 
-</body>
 </html>
