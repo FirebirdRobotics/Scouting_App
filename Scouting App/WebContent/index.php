@@ -22,9 +22,16 @@
 		echo "	</span>
 				<span class='alertButton' onclick=\"this.parentElement.style.display='none';\">&times;</span>
 			</div>";
+	} else if (!empty($_SESSION["success"])) {
+		echo "<div class='loginAlert'>
+				<strong>Success:</strong>
+				<span id='loginMessage'>";
+					echo $_SESSION["success"];
+		echo "	</span>
+				<span class='alertButton' onclick=\"this.parentElement.style.display='none';\">&times;</span>
+			</div>";
 	}
 	?>
-	
 
     <div class="innerBox">
 		<img align="middle" class="loginImage" src="transparentLogo.png" alt="Logo">

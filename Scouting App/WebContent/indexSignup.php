@@ -8,16 +8,27 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body class="login-bg">
-	
+	<?php 
+	if(!empty($_SESSION["error"])) {
+		echo "<div class='loginAlert'>
+				<strong>Error:</strong>
+				<span id='loginMessage'>";
+					echo $_SESSION["error"];
+		echo "	</span>
+				<span class='alertButton' onclick=\"this.parentElement.style.display='none';\">&times;</span>
+			</div>";
+	}
+	?>
+
 	<div class="innerCreateAccountBox">
 		<img align="middle" class="loginImage" src="transparentLogo.png" alt="Logo">
 		<hr>
 		<form action="insertUser.php" method="post">
-			<input type="text" name="username" placeholder="Username" class="form-control" required> <!-- Would like to add a username checker -->
+			<input type="text" name="username" placeholder="Username" class="form-control" required>
 			<input type="text" name="firstName" placeholder="First Name" class="form-control" required>
 			<input type="text" name="lastName" placeholder="Last Name" class="form-control" required>
 			<input type="password" name="password" placeholder="Password" class="form-control" required>
-			<input type="password" name="confirmPassword" placeholder="Confirm Password" class="form-control" required> <!-- Need to make sure that it is the same -->
+			<input type="password" name="confirmPassword" placeholder="Confirm Password" class="form-control" required>
 			<input type="text" name="email" placeholder="Email" class="form-control" required> <!-- dont really need their emails tbh -->
 			<input type="text" name="signupCode" placeholder="Signup Code" class="form-control" required>
 			<button type="submit" class="signupButton">Create a New Account</button>

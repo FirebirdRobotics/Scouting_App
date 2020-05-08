@@ -22,24 +22,29 @@
 	
 	if (!empty($_POST['username'])) {
     	if ($_POST['password'] !== $_POST['confirmPassword']) {
-    	    die('Passwords do not match<br>' . '<a href="indexSignup.php">Click here to go back</a>');
+			$_SESSION["error"] = "Passwords do not match.";
+			die('<script type="text/javascript">location.href = "indexSignup.php";</script>');
     	}
     	
     	if ($pos === FALSE) {
-    	    die('Invalid email<br>' . '<a href="indexSignup.php">Click here to go back</a>');
+			$_SESSION["error"] = "Please enter a valid email address.";
+			die('<script type="text/javascript">location.href = "indexSignup.php";</script>');
     	}
 	}
 	
 	if($_POST['signupCode'] != "3019"){
-	    die('Invalid signup code<br>' . '<a href="indexSignup.php">Click here to go back</a>');
+		$_SESSION["error"] = "Invalid signup code.";
+		die('<script type="text/javascript">location.href = "indexSignup.php";</script>');
 	}
 	
 	if (CheckLoginInDB($username,$conn)) {
-	    die('A user with this username already exists' . '<br><a href="indexSignup.php">Click here to go back</a>');
+		$_SESSION["error"] = "A user with this username already exists.";
+		die('<script type="text/javascript">location.href = "indexSignup.php";</script>');
 	}
 	
 	if ($conn->query($sql) === TRUE) {
-	    die('New account successfully created' . '<br><a href="index.php">Click here to log in</a>');
+		$_SESSION["success"] = "New account successfully created. You may now log in";
+		die('<script type="text/javascript">location.href = "index.php";</script>');
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}
@@ -51,7 +56,6 @@
 	    $result = mysqli_query($conn, $qry);
 	    
 	    if(!$result || mysqli_num_rows($result) <= 0) {
-	        $_SESSION["error"] = "A user with this username already exists";
 	        return false;
 	    }
 	    

@@ -47,7 +47,6 @@
         $result = mysqli_query($conn, $qry);
         
         if(!$result || mysqli_num_rows($result) <= 0) {
-            $_SESSION["error"] = "The username or password does not match.";
             return false;
         }
         
