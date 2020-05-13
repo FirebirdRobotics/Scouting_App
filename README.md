@@ -1,5 +1,5 @@
 # Scouting App
-This is the Scouting App Web project for the Firebirds Robotics team.
+This is the code for the web-based Scouting App/Tool for the Firebird Robotics team. Programmed in HTML, CSS, JavaScript, PHP, and SQL
 
 ## Current Link:
 http://firebirdrobotics.com/scouting/
