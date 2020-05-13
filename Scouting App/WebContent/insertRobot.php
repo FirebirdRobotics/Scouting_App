@@ -1,6 +1,6 @@
 <html>
 <head>
-<!--	<meta http-equiv="refresh" content="0; viewData.php">-->
+	<meta http-equiv="refresh" content="0; viewData.php">
 </head>
 <body>
 
