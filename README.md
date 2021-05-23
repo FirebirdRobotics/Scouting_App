@@ -9,7 +9,7 @@ If you wish to learn about the scouting app, I have created a 46-page guide that
 
 I hope that this project will help the club, and if you decide to use some other method of scouting, that's completely fine with me. I am not personally actively updating the scouting app, and will leave this version of the code untouched. 
 
-- Branden Yang
+Branden Yang
 
 ## Current Link:
 http://firebirdrobotics.com/scouting/
